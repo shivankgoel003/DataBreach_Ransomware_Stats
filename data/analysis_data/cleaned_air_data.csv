@@ -1,0 +1,2263 @@
+"municipality","year","air_quality_health_index","health_risk","original_value"
+"Red Deer",2012,"1","High Quality",0.08876
+"Fort Saskatchewan",2012,"1","High Quality",0.1423
+"Edmonton",2012,"1","High Quality",0.03852
+"Lethbridge",2012,"1","High Quality",0.03033
+"Caroline",2012,"1","High Quality",0.14105
+"Medicine Hat",2012,"1","High Quality",0.01899
+"Calgary",2012,"1","High Quality",0.0221
+"Grande Prairie",2012,"1","High Quality",0.10398
+"Parkland County",2012,"1","High Quality",0.17247
+"Fort Mackay",2012,"1","High Quality",0.34683
+"Grande Prairie County No. 1",2012,"1","High Quality",0.10398
+"Cold Lake",2012,"1","High Quality",0.15397
+"St. Paul County No. 19",2012,"1","High Quality",0.18393
+"Wood Buffalo",2012,"1","High Quality",0.26269
+"Bruderheim",2012,"1","High Quality",0.14379
+"Improvement District No. 13 Elk Island",2012,"1","High Quality",0.27155
+"Leduc County",2012,"1","High Quality",0.33725
+"Beaverlodge",2012,"1","High Quality",0.06512
+"Lamont County",2012,"1","High Quality",0.1224
+"Yellowhead County",2012,"1","High Quality",0.15794
+"Parkland County",2012,"10+","Very Low Quality",0.00023
+"Fort Mackay",2012,"10+","Very Low Quality",0.00131
+"Cold Lake",2012,"10+","Very Low Quality",0.00013
+"St. Paul County No. 19",2012,"10+","Very Low Quality",0.00036
+"Wood Buffalo",2012,"10+","Very Low Quality",0.00063
+"Red Deer",2012,"2","High Quality",0.48382
+"Fort Saskatchewan",2012,"2","High Quality",0.59252
+"Edmonton",2012,"2","High Quality",0.35402
+"Lethbridge",2012,"2","High Quality",0.57192
+"Caroline",2012,"2","High Quality",0.66128
+"Medicine Hat",2012,"2","High Quality",0.51456
+"Calgary",2012,"2","High Quality",0.36037
+"Grande Prairie",2012,"2","High Quality",0.54622
+"Parkland County",2012,"2","High Quality",0.63498
+"Fort Mackay",2012,"2","High Quality",0.44632
+"Grande Prairie County No. 1",2012,"2","High Quality",0.54622
+"Cold Lake",2012,"2","High Quality",0.63533
+"St. Paul County No. 19",2012,"2","High Quality",0.6417
+"Wood Buffalo",2012,"2","High Quality",0.59251
+"Bruderheim",2012,"2","High Quality",0.66715
+"Improvement District No. 13 Elk Island",2012,"2","High Quality",0.63039
+"Leduc County",2012,"2","High Quality",0.53805
+"Beaverlodge",2012,"2","High Quality",0.67452
+"Lamont County",2012,"2","High Quality",0.66658
+"Yellowhead County",2012,"2","High Quality",0.53631
+"Red Deer",2012,"3","High Quality",0.34147
+"Fort Saskatchewan",2012,"3","High Quality",0.21664
+"Edmonton",2012,"3","High Quality",0.47748
+"Lethbridge",2012,"3","High Quality",0.36023
+"Caroline",2012,"3","High Quality",0.18875
+"Medicine Hat",2012,"3","High Quality",0.39061
+"Calgary",2012,"3","High Quality",0.50268
+"Grande Prairie",2012,"3","High Quality",0.30593
+"Parkland County",2012,"3","High Quality",0.17766
+"Fort Mackay",2012,"3","High Quality",0.17309
+"Grande Prairie County No. 1",2012,"3","High Quality",0.30593
+"Cold Lake",2012,"3","High Quality",0.19367
+"St. Paul County No. 19",2012,"3","High Quality",0.16052
+"Wood Buffalo",2012,"3","High Quality",0.12997
+"Bruderheim",2012,"3","High Quality",0.16173
+"Improvement District No. 13 Elk Island",2012,"3","High Quality",0.09522
+"Leduc County",2012,"3","High Quality",0.11767
+"Beaverlodge",2012,"3","High Quality",0.2397
+"Lamont County",2012,"3","High Quality",0.19034
+"Yellowhead County",2012,"3","High Quality",0.28366
+"Red Deer",2012,"4","Moderate Quality",0.07813
+"Fort Saskatchewan",2012,"4","Moderate Quality",0.03942
+"Edmonton",2012,"4","Moderate Quality",0.10974
+"Lethbridge",2012,"4","Moderate Quality",0.0358
+"Caroline",2012,"4","Moderate Quality",0.00892
+"Medicine Hat",2012,"4","Moderate Quality",0.07036
+"Calgary",2012,"4","Moderate Quality",0.09707
+"Grande Prairie",2012,"4","Moderate Quality",0.03654
+"Parkland County",2012,"4","Moderate Quality",0.012
+"Fort Mackay",2012,"4","Moderate Quality",0.02165
+"Grande Prairie County No. 1",2012,"4","Moderate Quality",0.03654
+"Cold Lake",2012,"4","Moderate Quality",0.01247
+"St. Paul County No. 19",2012,"4","Moderate Quality",0.00921
+"Wood Buffalo",2012,"4","Moderate Quality",0.01059
+"Bruderheim",2012,"4","Moderate Quality",0.0224
+"Improvement District No. 13 Elk Island",2012,"4","Moderate Quality",0.00248
+"Leduc County",2012,"4","Moderate Quality",0.00391
+"Beaverlodge",2012,"4","Moderate Quality",0.01663
+"Lamont County",2012,"4","Moderate Quality",0.0178
+"Yellowhead County",2012,"4","Moderate Quality",0.01887
+"Red Deer",2012,"5","Moderate Quality",0.00769
+"Fort Saskatchewan",2012,"5","Moderate Quality",0.00722
+"Edmonton",2012,"5","Moderate Quality",0.01646
+"Lethbridge",2012,"5","Moderate Quality",0.00094
+"Medicine Hat",2012,"5","Moderate Quality",0.00443
+"Calgary",2012,"5","Moderate Quality",0.01493
+"Grande Prairie",2012,"5","Moderate Quality",0.00565
+"Parkland County",2012,"5","Moderate Quality",0.00069
+"Fort Mackay",2012,"5","Moderate Quality",0.00579
+"Grande Prairie County No. 1",2012,"5","Moderate Quality",0.00565
+"Cold Lake",2012,"5","Moderate Quality",0.00201
+"St. Paul County No. 19",2012,"5","Moderate Quality",0.00203
+"Wood Buffalo",2012,"5","Moderate Quality",0.00184
+"Bruderheim",2012,"5","Moderate Quality",0.00217
+"Improvement District No. 13 Elk Island",2012,"5","Moderate Quality",0.00037
+"Leduc County",2012,"5","Moderate Quality",0.00127
+"Beaverlodge",2012,"5","Moderate Quality",0.00335
+"Lamont County",2012,"5","Moderate Quality",0.00249
+"Yellowhead County",2012,"5","Moderate Quality",0.0019
+"Red Deer",2012,"6","Moderate Quality",0.00012
+"Fort Saskatchewan",2012,"6","Moderate Quality",0.00154
+"Edmonton",2012,"6","Moderate Quality",0.00194
+"Lethbridge",2012,"6","Moderate Quality",0.00016
+"Medicine Hat",2012,"6","Moderate Quality",0.00035
+"Calgary",2012,"6","Moderate Quality",0.00216
+"Grande Prairie",2012,"6","Moderate Quality",0.00012
+"Parkland County",2012,"6","Moderate Quality",0.00012
+"Fort Mackay",2012,"6","Moderate Quality",0.00167
+"Grande Prairie County No. 1",2012,"6","Moderate Quality",0.00012
+"Cold Lake",2012,"6","Moderate Quality",0.00067
+"St. Paul County No. 19",2012,"6","Moderate Quality",8e-04
+"Wood Buffalo",2012,"6","Moderate Quality",0.00027
+"Bruderheim",2012,"6","Moderate Quality",0.00048
+"Leduc County",2012,"6","Moderate Quality",0.00035
+"Beaverlodge",2012,"6","Moderate Quality",0.00046
+"Yellowhead County",2012,"6","Moderate Quality",0.00035
+"Fort Saskatchewan",2012,"7","Low Quality",0.00036
+"Edmonton",2012,"7","Low Quality",0.00137
+"Lethbridge",2012,"7","Low Quality",0.00016
+"Medicine Hat",2012,"7","Low Quality",0.00058
+"Calgary",2012,"7","Low Quality",0.00068
+"Grande Prairie",2012,"7","Low Quality",0.00132
+"Parkland County",2012,"7","Low Quality",0.00127
+"Fort Mackay",2012,"7","Low Quality",0.00221
+"Grande Prairie County No. 1",2012,"7","Low Quality",0.00132
+"Cold Lake",2012,"7","Low Quality",0.00107
+"St. Paul County No. 19",2012,"7","Low Quality",0.00051
+"Wood Buffalo",2012,"7","Low Quality",0.00086
+"Bruderheim",2012,"7","Low Quality",0.00181
+"Leduc County",2012,"7","Low Quality",0.00081
+"Beaverlodge",2012,"7","Low Quality",0.00023
+"Lamont County",2012,"7","Low Quality",0.00026
+"Yellowhead County",2012,"7","Low Quality",4e-04
+"Edmonton",2012,"8","Low Quality",0.00034
+"Lethbridge",2012,"8","Low Quality",0.00047
+"Medicine Hat",2012,"8","Low Quality",0.00012
+"Grande Prairie",2012,"8","Low Quality",0.00024
+"Parkland County",2012,"8","Low Quality",0.00035
+"Fort Mackay",2012,"8","Low Quality",0.00066
+"Grande Prairie County No. 1",2012,"8","Low Quality",0.00024
+"Cold Lake",2012,"8","Low Quality",4e-04
+"St. Paul County No. 19",2012,"8","Low Quality",0.00058
+"Wood Buffalo",2012,"8","Low Quality",0.00035
+"Bruderheim",2012,"8","Low Quality",0.00048
+"Leduc County",2012,"8","Low Quality",0.00035
+"Lamont County",2012,"8","Low Quality",0.00013
+"Yellowhead County",2012,"8","Low Quality",0.00017
+"Edmonton",2012,"9","Low Quality",0.00011
+"Parkland County",2012,"9","Low Quality",0.00023
+"Fort Mackay",2012,"9","Low Quality",0.00048
+"Cold Lake",2012,"9","Low Quality",0.00027
+"St. Paul County No. 19",2012,"9","Low Quality",0.00036
+"Wood Buffalo",2012,"9","Low Quality",0.00027
+"Leduc County",2012,"9","Low Quality",0.00035
+"Yellowhead County",2012,"9","Low Quality",4e-04
+"Red Deer",2013,"1","High Quality",0.09738
+"Fort Saskatchewan",2013,"1","High Quality",0.22572
+"Edmonton",2013,"1","High Quality",0.04167
+"Lethbridge",2013,"1","High Quality",0.03163
+"Caroline",2013,"1","High Quality",0.11869
+"Medicine Hat",2013,"1","High Quality",0.01921
+"Calgary",2013,"1","High Quality",0.02328
+"Grande Prairie",2013,"1","High Quality",0.09627
+"Parkland County",2013,"1","High Quality",0.12845
+"Fort Mackay",2013,"1","High Quality",0.31874
+"Grande Prairie County No. 1",2013,"1","High Quality",0.09627
+"Cold Lake",2013,"1","High Quality",0.16133
+"St. Paul County No. 19",2013,"1","High Quality",0.10978
+"Wood Buffalo",2013,"1","High Quality",0.28073
+"Bruderheim",2013,"1","High Quality",0.07772
+"Improvement District No. 13 Elk Island",2013,"1","High Quality",0.20159
+"Leduc County",2013,"1","High Quality",0.31572
+"Beaverlodge",2013,"1","High Quality",0.09576
+"Lamont County",2013,"1","High Quality",0.10274
+"Yellowhead County",2013,"1","High Quality",0.1365
+"Edmonton",2013,"10+","Very Low Quality",0.00103
+"Fort Mackay",2013,"10+","Very Low Quality",0.00012
+"Wood Buffalo",2013,"10+","Very Low Quality",4e-05
+"Red Deer",2013,"2","High Quality",0.45966
+"Fort Saskatchewan",2013,"2","High Quality",0.45144
+"Edmonton",2013,"2","High Quality",0.35895
+"Lethbridge",2013,"2","High Quality",0.57632
+"Caroline",2013,"2","High Quality",0.65648
+"Medicine Hat",2013,"2","High Quality",0.47038
+"Calgary",2013,"2","High Quality",0.33234
+"Grande Prairie",2013,"2","High Quality",0.51423
+"Parkland County",2013,"2","High Quality",0.64848
+"Fort Mackay",2013,"2","High Quality",0.46401
+"Grande Prairie County No. 1",2013,"2","High Quality",0.51423
+"Cold Lake",2013,"2","High Quality",0.5033
+"St. Paul County No. 19",2013,"2","High Quality",0.55642
+"Wood Buffalo",2013,"2","High Quality",0.57238
+"Bruderheim",2013,"2","High Quality",0.48198
+"Improvement District No. 13 Elk Island",2013,"2","High Quality",0.57549
+"Leduc County",2013,"2","High Quality",0.59011
+"Beaverlodge",2013,"2","High Quality",0.54409
+"Lamont County",2013,"2","High Quality",0.54437
+"Yellowhead County",2013,"2","High Quality",0.59569
+"Red Deer",2013,"3","High Quality",0.29338
+"Fort Saskatchewan",2013,"3","High Quality",0.23586
+"Edmonton",2013,"3","High Quality",0.40667
+"Lethbridge",2013,"3","High Quality",0.36694
+"Caroline",2013,"3","High Quality",0.20683
+"Medicine Hat",2013,"3","High Quality",0.47111
+"Calgary",2013,"3","High Quality",0.48268
+"Grande Prairie",2013,"3","High Quality",0.30434
+"Parkland County",2013,"3","High Quality",0.213
+"Fort Mackay",2013,"3","High Quality",0.19046
+"Grande Prairie County No. 1",2013,"3","High Quality",0.30434
+"Cold Lake",2013,"3","High Quality",0.30258
+"St. Paul County No. 19",2013,"3","High Quality",0.28624
+"Wood Buffalo",2013,"3","High Quality",0.13419
+"Bruderheim",2013,"3","High Quality",0.34176
+"Improvement District No. 13 Elk Island",2013,"3","High Quality",0.20229
+"Leduc County",2013,"3","High Quality",0.08627
+"Beaverlodge",2013,"3","High Quality",0.3438
+"Lamont County",2013,"3","High Quality",0.30714
+"Yellowhead County",2013,"3","High Quality",0.25467
+"Red Deer",2013,"4","Moderate Quality",0.11175
+"Fort Saskatchewan",2013,"4","Moderate Quality",0.05536
+"Edmonton",2013,"4","Moderate Quality",0.14088
+"Lethbridge",2013,"4","Moderate Quality",0.02376
+"Caroline",2013,"4","Moderate Quality",0.01702
+"Medicine Hat",2013,"4","Moderate Quality",0.03827
+"Calgary",2013,"4","Moderate Quality",0.14232
+"Grande Prairie",2013,"4","Moderate Quality",0.06817
+"Parkland County",2013,"4","Moderate Quality",0.01008
+"Fort Mackay",2013,"4","Moderate Quality",0.02204
+"Grande Prairie County No. 1",2013,"4","Moderate Quality",0.06817
+"Cold Lake",2013,"4","Moderate Quality",0.02967
+"St. Paul County No. 19",2013,"4","Moderate Quality",0.04005
+"Wood Buffalo",2013,"4","Moderate Quality",0.00995
+"Bruderheim",2013,"4","Moderate Quality",0.07011
+"Improvement District No. 13 Elk Island",2013,"4","Moderate Quality",0.01656
+"Leduc County",2013,"4","Moderate Quality",0.00743
+"Beaverlodge",2013,"4","Moderate Quality",0.01517
+"Lamont County",2013,"4","Moderate Quality",0.03743
+"Yellowhead County",2013,"4","Moderate Quality",0.01249
+"Red Deer",2013,"5","Moderate Quality",0.02788
+"Fort Saskatchewan",2013,"5","Moderate Quality",0.02052
+"Edmonton",2013,"5","Moderate Quality",0.03265
+"Lethbridge",2013,"5","Moderate Quality",0.00098
+"Caroline",2013,"5","Moderate Quality",0.00097
+"Medicine Hat",2013,"5","Moderate Quality",0.00088
+"Calgary",2013,"5","Moderate Quality",0.01628
+"Grande Prairie",2013,"5","Moderate Quality",0.01429
+"Fort Mackay",2013,"5","Moderate Quality",0.00306
+"Grande Prairie County No. 1",2013,"5","Moderate Quality",0.01429
+"Cold Lake",2013,"5","Moderate Quality",0.00311
+"St. Paul County No. 19",2013,"5","Moderate Quality",0.00612
+"Wood Buffalo",2013,"5","Moderate Quality",0.00114
+"Bruderheim",2013,"5","Moderate Quality",0.01931
+"Improvement District No. 13 Elk Island",2013,"5","Moderate Quality",0.00408
+"Leduc County",2013,"5","Moderate Quality",0.00046
+"Beaverlodge",2013,"5","Moderate Quality",0.00036
+"Lamont County",2013,"5","Moderate Quality",0.00628
+"Yellowhead County",2013,"5","Moderate Quality",0.00047
+"Red Deer",2013,"6","Moderate Quality",0.0086
+"Fort Saskatchewan",2013,"6","Moderate Quality",0.00644
+"Edmonton",2013,"6","Moderate Quality",0.01153
+"Calgary",2013,"6","Moderate Quality",0.00241
+"Grande Prairie",2013,"6","Moderate Quality",0.00269
+"Fort Mackay",2013,"6","Moderate Quality",0.00035
+"Grande Prairie County No. 1",2013,"6","Moderate Quality",0.00269
+"St. Paul County No. 19",2013,"6","Moderate Quality",0.00111
+"Wood Buffalo",2013,"6","Moderate Quality",2e-04
+"Bruderheim",2013,"6","Moderate Quality",0.00597
+"Beaverlodge",2013,"6","Moderate Quality",0.00024
+"Lamont County",2013,"6","Moderate Quality",0.00193
+"Yellowhead County",2013,"6","Moderate Quality",0.00018
+"Red Deer",2013,"7","Low Quality",0.00098
+"Fort Saskatchewan",2013,"7","Low Quality",0.00394
+"Edmonton",2013,"7","Low Quality",0.00502
+"Lethbridge",2013,"7","Low Quality",0.00037
+"Calgary",2013,"7","Low Quality",0.00034
+"Fort Mackay",2013,"7","Low Quality",0.00071
+"St. Paul County No. 19",2013,"7","Low Quality",0.00028
+"Wood Buffalo",2013,"7","Low Quality",0.00106
+"Bruderheim",2013,"7","Low Quality",0.00187
+"Beaverlodge",2013,"7","Low Quality",0.00047
+"Lamont County",2013,"7","Low Quality",0.00012
+"Red Deer",2013,"8","Low Quality",0.00037
+"Fort Saskatchewan",2013,"8","Low Quality",0.00072
+"Edmonton",2013,"8","Low Quality",0.00137
+"Medicine Hat",2013,"8","Low Quality",0.00015
+"Calgary",2013,"8","Low Quality",0.00034
+"Fort Mackay",2013,"8","Low Quality",0.00029
+"Wood Buffalo",2013,"8","Low Quality",2e-04
+"Bruderheim",2013,"8","Low Quality",0.00094
+"Beaverlodge",2013,"8","Low Quality",0.00012
+"Edmonton",2013,"9","Low Quality",0.00023
+"Fort Mackay",2013,"9","Low Quality",0.00024
+"Wood Buffalo",2013,"9","Low Quality",0.00012
+"Bruderheim",2013,"9","Low Quality",0.00035
+"Red Deer",2014,"1","High Quality",0.12925
+"Fort Saskatchewan",2014,"1","High Quality",0.11276
+"Edmonton",2014,"1","High Quality",0.04784
+"Lethbridge",2014,"1","High Quality",0.06701
+"Caroline",2014,"1","High Quality",0.15615
+"Medicine Hat",2014,"1","High Quality",0.093
+"Calgary",2014,"1","High Quality",0.05903
+"Grande Prairie",2014,"1","High Quality",0.08518
+"Parkland County",2014,"1","High Quality",0.18283
+"Fort Mackay",2014,"1","High Quality",0.31129
+"Grande Prairie County No. 1",2014,"1","High Quality",0.14717
+"Cold Lake",2014,"1","High Quality",0.21324
+"St. Paul County No. 19",2014,"1","High Quality",0.10854
+"Wood Buffalo",2014,"1","High Quality",0.25083
+"Bruderheim",2014,"1","High Quality",0.10124
+"Improvement District No. 13 Elk Island",2014,"1","High Quality",0.09662
+"Leduc County",2014,"1","High Quality",0.38414
+"Beaverlodge",2014,"1","High Quality",0.14503
+"Lamont County",2014,"1","High Quality",0.09855
+"Yellowhead County",2014,"1","High Quality",0.18171
+"Fort Saskatchewan",2014,"10+","Very Low Quality",0.00012
+"Grande Prairie",2014,"10+","Very Low Quality",7e-04
+"Fort Mackay",2014,"10+","Very Low Quality",0.0013
+"Grande Prairie County No. 1",2014,"10+","Very Low Quality",0.00047
+"Wood Buffalo",2014,"10+","Very Low Quality",0.00128
+"Yellowhead County",2014,"10+","Very Low Quality",0.00069
+"Red Deer",2014,"2","High Quality",0.57677
+"Fort Saskatchewan",2014,"2","High Quality",0.54647
+"Edmonton",2014,"2","High Quality",0.39137
+"Lethbridge",2014,"2","High Quality",0.52597
+"Caroline",2014,"2","High Quality",0.62132
+"Medicine Hat",2014,"2","High Quality",0.64268
+"Calgary",2014,"2","High Quality",0.46569
+"Grande Prairie",2014,"2","High Quality",0.51132
+"Parkland County",2014,"2","High Quality",0.59026
+"Fort Mackay",2014,"2","High Quality",0.50159
+"Grande Prairie County No. 1",2014,"2","High Quality",0.50492
+"Cold Lake",2014,"2","High Quality",0.59504
+"St. Paul County No. 19",2014,"2","High Quality",0.62681
+"Wood Buffalo",2014,"2","High Quality",0.58687
+"Bruderheim",2014,"2","High Quality",0.57348
+"Improvement District No. 13 Elk Island",2014,"2","High Quality",0.54422
+"Leduc County",2014,"2","High Quality",0.53369
+"Beaverlodge",2014,"2","High Quality",0.46451
+"Lamont County",2014,"2","High Quality",0.61795
+"Yellowhead County",2014,"2","High Quality",0.50253
+"Red Deer",2014,"3","High Quality",0.23526
+"Fort Saskatchewan",2014,"3","High Quality",0.27562
+"Edmonton",2014,"3","High Quality",0.4263
+"Lethbridge",2014,"3","High Quality",0.36784
+"Caroline",2014,"3","High Quality",0.20874
+"Medicine Hat",2014,"3","High Quality",0.25243
+"Calgary",2014,"3","High Quality",0.36614
+"Grande Prairie",2014,"3","High Quality",0.27983
+"Parkland County",2014,"3","High Quality",0.21963
+"Fort Mackay",2014,"3","High Quality",0.16121
+"Grande Prairie County No. 1",2014,"3","High Quality",0.24625
+"Cold Lake",2014,"3","High Quality",0.17208
+"St. Paul County No. 19",2014,"3","High Quality",0.22441
+"Wood Buffalo",2014,"3","High Quality",0.13493
+"Bruderheim",2014,"3","High Quality",0.27981
+"Improvement District No. 13 Elk Island",2014,"3","High Quality",0.30006
+"Leduc County",2014,"3","High Quality",0.07835
+"Beaverlodge",2014,"3","High Quality",0.36063
+"Lamont County",2014,"3","High Quality",0.25149
+"Yellowhead County",2014,"3","High Quality",0.28307
+"Red Deer",2014,"4","Moderate Quality",0.05009
+"Fort Saskatchewan",2014,"4","Moderate Quality",0.05011
+"Edmonton",2014,"4","Moderate Quality",0.11657
+"Lethbridge",2014,"4","Moderate Quality",0.0365
+"Caroline",2014,"4","Moderate Quality",0.01099
+"Medicine Hat",2014,"4","Moderate Quality",0.00994
+"Calgary",2014,"4","Moderate Quality",0.08974
+"Grande Prairie",2014,"4","Moderate Quality",0.09375
+"Parkland County",2014,"4","Moderate Quality",0.00683
+"Fort Mackay",2014,"4","Moderate Quality",0.01673
+"Grande Prairie County No. 1",2014,"4","Moderate Quality",0.07745
+"Cold Lake",2014,"4","Moderate Quality",0.01489
+"St. Paul County No. 19",2014,"4","Moderate Quality",0.03325
+"Wood Buffalo",2014,"4","Moderate Quality",0.0183
+"Bruderheim",2014,"4","Moderate Quality",0.03955
+"Improvement District No. 13 Elk Island",2014,"4","Moderate Quality",0.0499
+"Leduc County",2014,"4","Moderate Quality",0.00347
+"Beaverlodge",2014,"4","Moderate Quality",0.02184
+"Lamont County",2014,"4","Moderate Quality",0.02833
+"Yellowhead County",2014,"4","Moderate Quality",0.0271
+"Red Deer",2014,"5","Moderate Quality",0.00677
+"Fort Saskatchewan",2014,"5","Moderate Quality",0.01169
+"Edmonton",2014,"5","Moderate Quality",0.01667
+"Lethbridge",2014,"5","Moderate Quality",0.00268
+"Caroline",2014,"5","Moderate Quality",0.0021
+"Medicine Hat",2014,"5","Moderate Quality",0.00116
+"Calgary",2014,"5","Moderate Quality",0.01644
+"Grande Prairie",2014,"5","Moderate Quality",0.02241
+"Parkland County",2014,"5","Moderate Quality",0.00046
+"Fort Mackay",2014,"5","Moderate Quality",0.00289
+"Grande Prairie County No. 1",2014,"5","Moderate Quality",0.01788
+"Cold Lake",2014,"5","Moderate Quality",0.00257
+"St. Paul County No. 19",2014,"5","Moderate Quality",0.00487
+"Wood Buffalo",2014,"5","Moderate Quality",0.0031
+"Bruderheim",2014,"5","Moderate Quality",0.00426
+"Improvement District No. 13 Elk Island",2014,"5","Moderate Quality",0.00702
+"Leduc County",2014,"5","Moderate Quality",0.00035
+"Beaverlodge",2014,"5","Moderate Quality",0.00333
+"Lamont County",2014,"5","Moderate Quality",0.00214
+"Yellowhead County",2014,"5","Moderate Quality",0.00285
+"Red Deer",2014,"6","Moderate Quality",0.00163
+"Fort Saskatchewan",2014,"6","Moderate Quality",0.00203
+"Edmonton",2014,"6","Moderate Quality",0.00114
+"Caroline",2014,"6","Moderate Quality",0.00035
+"Medicine Hat",2014,"6","Moderate Quality",0.00069
+"Calgary",2014,"6","Moderate Quality",0.00217
+"Grande Prairie",2014,"6","Moderate Quality",0.00364
+"Fort Mackay",2014,"6","Moderate Quality",0.00165
+"Grande Prairie County No. 1",2014,"6","Moderate Quality",0.00273
+"Cold Lake",2014,"6","Moderate Quality",0.00041
+"St. Paul County No. 19",2014,"6","Moderate Quality",0.00082
+"Wood Buffalo",2014,"6","Moderate Quality",0.00105
+"Bruderheim",2014,"6","Moderate Quality",0.00118
+"Improvement District No. 13 Elk Island",2014,"6","Moderate Quality",0.00115
+"Beaverlodge",2014,"6","Moderate Quality",0.00133
+"Lamont County",2014,"6","Moderate Quality",6e-04
+"Yellowhead County",2014,"6","Moderate Quality",0.00031
+"Red Deer",2014,"7","Low Quality",0.00023
+"Fort Saskatchewan",2014,"7","Low Quality",0.00072
+"Edmonton",2014,"7","Low Quality",0.00011
+"Caroline",2014,"7","Low Quality",0.00035
+"Medicine Hat",2014,"7","Low Quality",0.00012
+"Calgary",2014,"7","Low Quality",0.00057
+"Grande Prairie",2014,"7","Low Quality",0.00211
+"Fort Mackay",2014,"7","Low Quality",0.00106
+"Grande Prairie County No. 1",2014,"7","Low Quality",0.00242
+"Cold Lake",2014,"7","Low Quality",0.00149
+"St. Paul County No. 19",2014,"7","Low Quality",0.0011
+"Wood Buffalo",2014,"7","Low Quality",0.00248
+"Bruderheim",2014,"7","Low Quality",0.00047
+"Improvement District No. 13 Elk Island",2014,"7","Low Quality",0.00077
+"Beaverlodge",2014,"7","Low Quality",0.0028
+"Lamont County",2014,"7","Low Quality",0.00083
+"Yellowhead County",2014,"7","Low Quality",0.00089
+"Fort Saskatchewan",2014,"8","Low Quality",0.00024
+"Calgary",2014,"8","Low Quality",0.00023
+"Grande Prairie",2014,"8","Low Quality",0.00059
+"Fort Mackay",2014,"8","Low Quality",0.00188
+"Grande Prairie County No. 1",2014,"8","Low Quality",0.00039
+"Cold Lake",2014,"8","Low Quality",0.00027
+"St. Paul County No. 19",2014,"8","Low Quality",0.00021
+"Wood Buffalo",2014,"8","Low Quality",0.00062
+"Improvement District No. 13 Elk Island",2014,"8","Low Quality",0.00026
+"Beaverlodge",2014,"8","Low Quality",0.00053
+"Lamont County",2014,"8","Low Quality",0.00012
+"Yellowhead County",2014,"8","Low Quality",0.00054
+"Fort Saskatchewan",2014,"9","Low Quality",0.00024
+"Grande Prairie",2014,"9","Low Quality",0.00047
+"Fort Mackay",2014,"9","Low Quality",0.00041
+"Grande Prairie County No. 1",2014,"9","Low Quality",0.00031
+"Wood Buffalo",2014,"9","Low Quality",0.00054
+"Yellowhead County",2014,"9","Low Quality",0.00031
+"Red Deer",2015,"1","High Quality",0.09625
+"Fort Saskatchewan",2015,"1","High Quality",0.16234
+"Edmonton",2015,"1","High Quality",0.04213
+"Lethbridge",2015,"1","High Quality",0.02858
+"Caroline",2015,"1","High Quality",0.12466
+"Medicine Hat",2015,"1","High Quality",0.07799
+"Calgary",2015,"1","High Quality",0.05731
+"Grande Prairie",2015,"1","High Quality",0.09316
+"Parkland County",2015,"1","High Quality",0.15799
+"Strathcona County",2015,"1","High Quality",0.11077
+"Fort Mackay",2015,"1","High Quality",0.33114
+"Grande Prairie County No. 1",2015,"1","High Quality",0.13034
+"Cold Lake",2015,"1","High Quality",0.2408
+"St. Paul County No. 19",2015,"1","High Quality",0.18277
+"Wood Buffalo",2015,"1","High Quality",0.24809
+"Bruderheim",2015,"1","High Quality",0.15941
+"Improvement District No. 13 Elk Island",2015,"1","High Quality",0.23096
+"Leduc County",2015,"1","High Quality",0.45581
+"Beaverlodge",2015,"1","High Quality",0.14815
+"Lamont County",2015,"1","High Quality",0.1003
+"Yellowhead County",2015,"1","High Quality",0.21046
+"Fort Saskatchewan",2015,"10+","Very Low Quality",0.00154
+"Edmonton",2015,"10+","Very Low Quality",8e-04
+"Medicine Hat",2015,"10+","Very Low Quality",0.00245
+"Calgary",2015,"10+","Very Low Quality",0.00183
+"Parkland County",2015,"10+","Very Low Quality",0.00092
+"Strathcona County",2015,"10+","Very Low Quality",0.00102
+"Fort Mackay",2015,"10+","Very Low Quality",0.00433
+"Cold Lake",2015,"10+","Very Low Quality",0.00534
+"St. Paul County No. 19",2015,"10+","Very Low Quality",0.00222
+"Wood Buffalo",2015,"10+","Very Low Quality",0.00428
+"Bruderheim",2015,"10+","Very Low Quality",0.00117
+"Improvement District No. 13 Elk Island",2015,"10+","Very Low Quality",0.00117
+"Leduc County",2015,"10+","Very Low Quality",0.00058
+"Lamont County",2015,"10+","Very Low Quality",0.00179
+"Yellowhead County",2015,"10+","Very Low Quality",0.00031
+"Red Deer",2015,"2","High Quality",0.5942
+"Fort Saskatchewan",2015,"2","High Quality",0.48304
+"Edmonton",2015,"2","High Quality",0.4013
+"Lethbridge",2015,"2","High Quality",0.54458
+"Caroline",2015,"2","High Quality",0.69031
+"Medicine Hat",2015,"2","High Quality",0.64793
+"Calgary",2015,"2","High Quality",0.55052
+"Grande Prairie",2015,"2","High Quality",0.59287
+"Parkland County",2015,"2","High Quality",0.66382
+"Strathcona County",2015,"2","High Quality",0.5617
+"Fort Mackay",2015,"2","High Quality",0.50806
+"Grande Prairie County No. 1",2015,"2","High Quality",0.59069
+"Cold Lake",2015,"2","High Quality",0.57365
+"St. Paul County No. 19",2015,"2","High Quality",0.57321
+"Wood Buffalo",2015,"2","High Quality",0.6242
+"Bruderheim",2015,"2","High Quality",0.5616
+"Improvement District No. 13 Elk Island",2015,"2","High Quality",0.59108
+"Leduc County",2015,"2","High Quality",0.4705
+"Beaverlodge",2015,"2","High Quality",0.69595
+"Lamont County",2015,"2","High Quality",0.50208
+"Yellowhead County",2015,"2","High Quality",0.53283
+"Red Deer",2015,"3","High Quality",0.27506
+"Fort Saskatchewan",2015,"3","High Quality",0.27423
+"Edmonton",2015,"3","High Quality",0.42596
+"Lethbridge",2015,"3","High Quality",0.36754
+"Caroline",2015,"3","High Quality",0.16518
+"Medicine Hat",2015,"3","High Quality",0.22354
+"Calgary",2015,"3","High Quality",0.33109
+"Grande Prairie",2015,"3","High Quality",0.24256
+"Parkland County",2015,"3","High Quality",0.15995
+"Strathcona County",2015,"3","High Quality",0.27223
+"Fort Mackay",2015,"3","High Quality",0.12624
+"Grande Prairie County No. 1",2015,"3","High Quality",0.22229
+"Cold Lake",2015,"3","High Quality",0.15556
+"St. Paul County No. 19",2015,"3","High Quality",0.21297
+"Wood Buffalo",2015,"3","High Quality",0.10343
+"Bruderheim",2015,"3","High Quality",0.22656
+"Improvement District No. 13 Elk Island",2015,"3","High Quality",0.15491
+"Leduc County",2015,"3","High Quality",0.06143
+"Beaverlodge",2015,"3","High Quality",0.13909
+"Lamont County",2015,"3","High Quality",0.33258
+"Yellowhead County",2015,"3","High Quality",0.21956
+"Red Deer",2015,"4","Moderate Quality",0.02809
+"Fort Saskatchewan",2015,"4","Moderate Quality",0.06196
+"Edmonton",2015,"4","Moderate Quality",0.10835
+"Lethbridge",2015,"4","Moderate Quality",0.04216
+"Caroline",2015,"4","Moderate Quality",0.01687
+"Medicine Hat",2015,"4","Moderate Quality",0.03017
+"Calgary",2015,"4","Moderate Quality",0.04818
+"Grande Prairie",2015,"4","Moderate Quality",0.05624
+"Parkland County",2015,"4","Moderate Quality",0.01444
+"Strathcona County",2015,"4","Moderate Quality",0.04165
+"Fort Mackay",2015,"4","Moderate Quality",0.01891
+"Grande Prairie County No. 1",2015,"4","Moderate Quality",0.04554
+"Cold Lake",2015,"4","Moderate Quality",0.01566
+"St. Paul County No. 19",2015,"4","Moderate Quality",0.02126
+"Wood Buffalo",2015,"4","Moderate Quality",0.00891
+"Bruderheim",2015,"4","Moderate Quality",0.04052
+"Improvement District No. 13 Elk Island",2015,"4","Moderate Quality",0.01732
+"Leduc County",2015,"4","Moderate Quality",0.00787
+"Beaverlodge",2015,"4","Moderate Quality",0.01442
+"Lamont County",2015,"4","Moderate Quality",0.04705
+"Yellowhead County",2015,"4","Moderate Quality",0.02766
+"Red Deer",2015,"5","Moderate Quality",0.00263
+"Fort Saskatchewan",2015,"5","Moderate Quality",0.01203
+"Edmonton",2015,"5","Moderate Quality",0.01667
+"Lethbridge",2015,"5","Moderate Quality",0.00584
+"Caroline",2015,"5","Moderate Quality",0.00214
+"Medicine Hat",2015,"5","Moderate Quality",0.00683
+"Calgary",2015,"5","Moderate Quality",0.00651
+"Grande Prairie",2015,"5","Moderate Quality",0.01204
+"Parkland County",2015,"5","Moderate Quality",0.00127
+"Strathcona County",2015,"5","Moderate Quality",0.00666
+"Fort Mackay",2015,"5","Moderate Quality",0.00338
+"Grande Prairie County No. 1",2015,"5","Moderate Quality",0.00855
+"Cold Lake",2015,"5","Moderate Quality",0.00376
+"St. Paul County No. 19",2015,"5","Moderate Quality",0.00228
+"Wood Buffalo",2015,"5","Moderate Quality",0.00265
+"Bruderheim",2015,"5","Moderate Quality",0.00654
+"Improvement District No. 13 Elk Island",2015,"5","Moderate Quality",0.00304
+"Leduc County",2015,"5","Moderate Quality",0.00058
+"Beaverlodge",2015,"5","Moderate Quality",0.00203
+"Lamont County",2015,"5","Moderate Quality",0.0112
+"Yellowhead County",2015,"5","Moderate Quality",0.00659
+"Red Deer",2015,"6","Moderate Quality",0.00034
+"Fort Saskatchewan",2015,"6","Moderate Quality",0.00269
+"Edmonton",2015,"6","Moderate Quality",8e-04
+"Lethbridge",2015,"6","Moderate Quality",0.00292
+"Caroline",2015,"6","Moderate Quality",0.00036
+"Medicine Hat",2015,"6","Moderate Quality",0.00387
+"Calgary",2015,"6","Moderate Quality",8e-04
+"Grande Prairie",2015,"6","Moderate Quality",0.00185
+"Parkland County",2015,"6","Moderate Quality",0.00012
+"Strathcona County",2015,"6","Moderate Quality",0.00085
+"Fort Mackay",2015,"6","Moderate Quality",0.00101
+"Grande Prairie County No. 1",2015,"6","Moderate Quality",0.00159
+"Cold Lake",2015,"6","Moderate Quality",0.00097
+"St. Paul County No. 19",2015,"6","Moderate Quality",0.00129
+"Wood Buffalo",2015,"6","Moderate Quality",0.00109
+"Bruderheim",2015,"6","Moderate Quality",0.00152
+"Improvement District No. 13 Elk Island",2015,"6","Moderate Quality",0.00035
+"Leduc County",2015,"6","Moderate Quality",0.00046
+"Lamont County",2015,"6","Moderate Quality",0.00226
+"Yellowhead County",2015,"6","Moderate Quality",0.00089
+"Red Deer",2015,"7","Low Quality",0.00274
+"Fort Saskatchewan",2015,"7","Low Quality",0.00154
+"Edmonton",2015,"7","Low Quality",0.00194
+"Lethbridge",2015,"7","Low Quality",0.00394
+"Caroline",2015,"7","Low Quality",0.00036
+"Medicine Hat",2015,"7","Low Quality",0.00541
+"Calgary",2015,"7","Low Quality",0.00228
+"Grande Prairie",2015,"7","Low Quality",0.00081
+"Parkland County",2015,"7","Low Quality",0.00069
+"Strathcona County",2015,"7","Low Quality",0.00358
+"Fort Mackay",2015,"7","Low Quality",0.00202
+"Grande Prairie County No. 1",2015,"7","Low Quality",0.00066
+"Cold Lake",2015,"7","Low Quality",0.00134
+"St. Paul County No. 19",2015,"7","Low Quality",0.00203
+"Wood Buffalo",2015,"7","Low Quality",0.0035
+"Bruderheim",2015,"7","Low Quality",0.00152
+"Improvement District No. 13 Elk Island",2015,"7","Low Quality",0.00047
+"Leduc County",2015,"7","Low Quality",0.00116
+"Beaverlodge",2015,"7","Low Quality",0.00036
+"Lamont County",2015,"7","Low Quality",0.00155
+"Yellowhead County",2015,"7","Low Quality",0.0012
+"Red Deer",2015,"8","Low Quality",0.00046
+"Fort Saskatchewan",2015,"8","Low Quality",0.00038
+"Edmonton",2015,"8","Low Quality",0.00126
+"Lethbridge",2015,"8","Low Quality",0.00318
+"Caroline",2015,"8","Low Quality",0.00012
+"Medicine Hat",2015,"8","Low Quality",0.00103
+"Calgary",2015,"8","Low Quality",0.00103
+"Grande Prairie",2015,"8","Low Quality",0.00023
+"Parkland County",2015,"8","Low Quality",0.00058
+"Strathcona County",2015,"8","Low Quality",0.00068
+"Fort Mackay",2015,"8","Low Quality",0.00356
+"Grande Prairie County No. 1",2015,"8","Low Quality",2e-04
+"Cold Lake",2015,"8","Low Quality",0.00158
+"St. Paul County No. 19",2015,"8","Low Quality",0.00123
+"Wood Buffalo",2015,"8","Low Quality",0.00198
+"Bruderheim",2015,"8","Low Quality",0.00058
+"Improvement District No. 13 Elk Island",2015,"8","Low Quality",0.00035
+"Leduc County",2015,"8","Low Quality",0.00104
+"Lamont County",2015,"8","Low Quality",0.00107
+"Yellowhead County",2015,"8","Low Quality",0.00015
+"Red Deer",2015,"9","Low Quality",0.00023
+"Fort Saskatchewan",2015,"9","Low Quality",0.00026
+"Edmonton",2015,"9","Low Quality",8e-04
+"Lethbridge",2015,"9","Low Quality",0.00127
+"Medicine Hat",2015,"9","Low Quality",0.00077
+"Calgary",2015,"9","Low Quality",0.00046
+"Grande Prairie",2015,"9","Low Quality",0.00023
+"Parkland County",2015,"9","Low Quality",0.00023
+"Strathcona County",2015,"9","Low Quality",0.00085
+"Fort Mackay",2015,"9","Low Quality",0.00136
+"Grande Prairie County No. 1",2015,"9","Low Quality",0.00013
+"Cold Lake",2015,"9","Low Quality",0.00134
+"St. Paul County No. 19",2015,"9","Low Quality",0.00074
+"Wood Buffalo",2015,"9","Low Quality",0.00187
+"Bruderheim",2015,"9","Low Quality",0.00058
+"Improvement District No. 13 Elk Island",2015,"9","Low Quality",0.00035
+"Leduc County",2015,"9","Low Quality",0.00058
+"Lamont County",2015,"9","Low Quality",0.00012
+"Yellowhead County",2015,"9","Low Quality",0.00035
+"Red Deer",2016,"1","High Quality",0.27628
+"Fort Saskatchewan",2016,"1","High Quality",0.17925
+"Edmonton",2016,"1","High Quality",0.06558
+"Lethbridge",2016,"1","High Quality",0.09376
+"Caroline",2016,"1","High Quality",0.21962
+"Medicine Hat",2016,"1","High Quality",0.13899
+"Calgary",2016,"1","High Quality",0.1126
+"Spirit River No. 133",2016,"1","High Quality",0.45633
+"Grande Prairie",2016,"1","High Quality",0.19889
+"Parkland County",2016,"1","High Quality",0.25789
+"Strathcona County",2016,"1","High Quality",0.17454
+"Sturgeon County",2016,"1","High Quality",0.24368
+"St. Albert",2016,"1","High Quality",0.19367
+"Fort Mackay",2016,"1","High Quality",0.32991
+"Grande Prairie County No. 1",2016,"1","High Quality",0.19889
+"Cold Lake",2016,"1","High Quality",0.33688
+"Bonnyville No. 87",2016,"1","High Quality",0.33431
+"St. Paul County No. 19",2016,"1","High Quality",0.22549
+"Wood Buffalo",2016,"1","High Quality",0.24046
+"Bruderheim",2016,"1","High Quality",0.37811
+"Improvement District No. 13 Elk Island",2016,"1","High Quality",0.29749
+"Leduc County",2016,"1","High Quality",0.61105
+"Beaverlodge",2016,"1","High Quality",0.26676
+"Lamont County",2016,"1","High Quality",0.18541
+"Yellowhead County",2016,"1","High Quality",0.30345
+"Fort Saskatchewan",2016,"10+","Very Low Quality",0.00038
+"Edmonton",2016,"10+","Very Low Quality",0.00057
+"Sturgeon County",2016,"10+","Very Low Quality",0.00026
+"St. Albert",2016,"10+","Very Low Quality",0.00049
+"Fort Mackay",2016,"10+","Very Low Quality",0.00572
+"Cold Lake",2016,"10+","Very Low Quality",6e-04
+"Wood Buffalo",2016,"10+","Very Low Quality",0.00735
+"Yellowhead County",2016,"10+","Very Low Quality",4e-05
+"Red Deer",2016,"2","High Quality",0.56134
+"Fort Saskatchewan",2016,"2","High Quality",0.54389
+"Edmonton",2016,"2","High Quality",0.49471
+"Lethbridge",2016,"2","High Quality",0.66675
+"Caroline",2016,"2","High Quality",0.63469
+"Medicine Hat",2016,"2","High Quality",0.67962
+"Calgary",2016,"2","High Quality",0.47205
+"Spirit River No. 133",2016,"2","High Quality",0.48325
+"Grande Prairie",2016,"2","High Quality",0.55787
+"Parkland County",2016,"2","High Quality",0.6188
+"Strathcona County",2016,"2","High Quality",0.54446
+"Sturgeon County",2016,"2","High Quality",0.58479
+"St. Albert",2016,"2","High Quality",0.53859
+"Fort Mackay",2016,"2","High Quality",0.50684
+"Grande Prairie County No. 1",2016,"2","High Quality",0.55787
+"Cold Lake",2016,"2","High Quality",0.51227
+"Bonnyville No. 87",2016,"2","High Quality",0.5934
+"St. Paul County No. 19",2016,"2","High Quality",0.64897
+"Wood Buffalo",2016,"2","High Quality",0.62676
+"Bruderheim",2016,"2","High Quality",0.50593
+"Improvement District No. 13 Elk Island",2016,"2","High Quality",0.55671
+"Leduc County",2016,"2","High Quality",0.3447
+"Beaverlodge",2016,"2","High Quality",0.62834
+"Lamont County",2016,"2","High Quality",0.59111
+"Yellowhead County",2016,"2","High Quality",0.53049
+"Red Deer",2016,"3","High Quality",0.14938
+"Fort Saskatchewan",2016,"3","High Quality",0.21643
+"Edmonton",2016,"3","High Quality",0.34476
+"Lethbridge",2016,"3","High Quality",0.22726
+"Caroline",2016,"3","High Quality",0.13367
+"Medicine Hat",2016,"3","High Quality",0.17633
+"Calgary",2016,"3","High Quality",0.35204
+"Spirit River No. 133",2016,"3","High Quality",0.05524
+"Grande Prairie",2016,"3","High Quality",0.20269
+"Parkland County",2016,"3","High Quality",0.11128
+"Strathcona County",2016,"3","High Quality",0.25732
+"Sturgeon County",2016,"3","High Quality",0.15468
+"St. Albert",2016,"3","High Quality",0.2157
+"Fort Mackay",2016,"3","High Quality",0.13895
+"Grande Prairie County No. 1",2016,"3","High Quality",0.20269
+"Cold Lake",2016,"3","High Quality",0.13636
+"Bonnyville No. 87",2016,"3","High Quality",0.06895
+"St. Paul County No. 19",2016,"3","High Quality",0.11473
+"Wood Buffalo",2016,"3","High Quality",0.10654
+"Bruderheim",2016,"3","High Quality",0.10004
+"Improvement District No. 13 Elk Island",2016,"3","High Quality",0.13226
+"Leduc County",2016,"3","High Quality",0.03966
+"Beaverlodge",2016,"3","High Quality",0.10033
+"Lamont County",2016,"3","High Quality",0.18965
+"Yellowhead County",2016,"3","High Quality",0.15197
+"Red Deer",2016,"4","Moderate Quality",0.01255
+"Fort Saskatchewan",2016,"4","Moderate Quality",0.05392
+"Edmonton",2016,"4","Moderate Quality",0.08425
+"Lethbridge",2016,"4","Moderate Quality",0.01211
+"Caroline",2016,"4","Moderate Quality",0.01034
+"Medicine Hat",2016,"4","Moderate Quality",0.00506
+"Calgary",2016,"4","Moderate Quality",0.05488
+"Spirit River No. 133",2016,"4","Moderate Quality",0.00365
+"Grande Prairie",2016,"4","Moderate Quality",0.03478
+"Parkland County",2016,"4","Moderate Quality",0.01178
+"Strathcona County",2016,"4","Moderate Quality",0.02163
+"Sturgeon County",2016,"4","Moderate Quality",0.01412
+"St. Albert",2016,"4","Moderate Quality",0.04536
+"Fort Mackay",2016,"4","Moderate Quality",0.01091
+"Grande Prairie County No. 1",2016,"4","Moderate Quality",0.03478
+"Cold Lake",2016,"4","Moderate Quality",0.00934
+"Bonnyville No. 87",2016,"4","Moderate Quality",0.00293
+"St. Paul County No. 19",2016,"4","Moderate Quality",0.01038
+"Wood Buffalo",2016,"4","Moderate Quality",0.00959
+"Bruderheim",2016,"4","Moderate Quality",0.01147
+"Improvement District No. 13 Elk Island",2016,"4","Moderate Quality",0.01354
+"Leduc County",2016,"4","Moderate Quality",0.00459
+"Beaverlodge",2016,"4","Moderate Quality",0.00422
+"Lamont County",2016,"4","Moderate Quality",0.02735
+"Yellowhead County",2016,"4","Moderate Quality",0.01196
+"Red Deer",2016,"5","Moderate Quality",0.00023
+"Fort Saskatchewan",2016,"5","Moderate Quality",0.00537
+"Edmonton",2016,"5","Moderate Quality",0.00854
+"Lethbridge",2016,"5","Moderate Quality",0.00012
+"Caroline",2016,"5","Moderate Quality",0.00144
+"Calgary",2016,"5","Moderate Quality",0.00706
+"Spirit River No. 133",2016,"5","Moderate Quality",0.00084
+"Grande Prairie",2016,"5","Moderate Quality",0.00484
+"Parkland County",2016,"5","Moderate Quality",0.00025
+"Strathcona County",2016,"5","Moderate Quality",0.00137
+"Sturgeon County",2016,"5","Moderate Quality",0.0022
+"St. Albert",2016,"5","Moderate Quality",0.00538
+"Fort Mackay",2016,"5","Moderate Quality",0.00307
+"Grande Prairie County No. 1",2016,"5","Moderate Quality",0.00484
+"Cold Lake",2016,"5","Moderate Quality",0.0018
+"Bonnyville No. 87",2016,"5","Moderate Quality",0.00021
+"St. Paul County No. 19",2016,"5","Moderate Quality",0.00043
+"Wood Buffalo",2016,"5","Moderate Quality",0.00204
+"Bruderheim",2016,"5","Moderate Quality",0.00255
+"Lamont County",2016,"5","Moderate Quality",0.00377
+"Yellowhead County",2016,"5","Moderate Quality",0.00117
+"Fort Saskatchewan",2016,"6","Moderate Quality",0.00038
+"Edmonton",2016,"6","Moderate Quality",0.00011
+"Caroline",2016,"6","Moderate Quality",0.00012
+"Calgary",2016,"6","Moderate Quality",0.00046
+"Grande Prairie",2016,"6","Moderate Quality",0.00081
+"Strathcona County",2016,"6","Moderate Quality",0.00011
+"St. Albert",2016,"6","Moderate Quality",0.00065
+"Fort Mackay",2016,"6","Moderate Quality",0.00088
+"Grande Prairie County No. 1",2016,"6","Moderate Quality",0.00081
+"Cold Lake",2016,"6","Moderate Quality",0.00048
+"Wood Buffalo",2016,"6","Moderate Quality",0.00106
+"Bruderheim",2016,"6","Moderate Quality",0.00115
+"Beaverlodge",2016,"6","Moderate Quality",0.00012
+"Lamont County",2016,"6","Moderate Quality",0.00071
+"Yellowhead County",2016,"6","Moderate Quality",3e-04
+"Red Deer",2016,"7","Low Quality",0.00023
+"Fort Saskatchewan",2016,"7","Low Quality",0.00038
+"Edmonton",2016,"7","Low Quality",0.00102
+"Caroline",2016,"7","Low Quality",0.00012
+"Calgary",2016,"7","Low Quality",8e-04
+"Spirit River No. 133",2016,"7","Low Quality",0.00056
+"Grande Prairie",2016,"7","Low Quality",0.00012
+"Strathcona County",2016,"7","Low Quality",0.00046
+"Sturgeon County",2016,"7","Low Quality",0.00013
+"Fort Mackay",2016,"7","Low Quality",0.00177
+"Grande Prairie County No. 1",2016,"7","Low Quality",0.00012
+"Cold Lake",2016,"7","Low Quality",0.00156
+"Bonnyville No. 87",2016,"7","Low Quality",0.00021
+"Wood Buffalo",2016,"7","Low Quality",0.00325
+"Bruderheim",2016,"7","Low Quality",0.00051
+"Beaverlodge",2016,"7","Low Quality",0.00012
+"Lamont County",2016,"7","Low Quality",0.00189
+"Yellowhead County",2016,"7","Low Quality",0.00048
+"Edmonton",2016,"8","Low Quality",0.00034
+"Calgary",2016,"8","Low Quality",0.00011
+"Spirit River No. 133",2016,"8","Low Quality",0.00014
+"Strathcona County",2016,"8","Low Quality",0.00011
+"St. Albert",2016,"8","Low Quality",0.00016
+"Fort Mackay",2016,"8","Low Quality",0.00106
+"Cold Lake",2016,"8","Low Quality",0.00012
+"Wood Buffalo",2016,"8","Low Quality",0.00171
+"Bruderheim",2016,"8","Low Quality",0.00025
+"Lamont County",2016,"8","Low Quality",0.00012
+"Yellowhead County",2016,"8","Low Quality",0.00013
+"Edmonton",2016,"9","Low Quality",0.00011
+"Sturgeon County",2016,"9","Low Quality",0.00013
+"Fort Mackay",2016,"9","Low Quality",0.00088
+"Cold Lake",2016,"9","Low Quality",6e-04
+"Wood Buffalo",2016,"9","Low Quality",0.00123
+"Beaverlodge",2016,"9","Low Quality",0.00012
+"Red Deer",2017,"1","High Quality",0.08319
+"Fort Saskatchewan",2017,"1","High Quality",0.0918
+"Edmonton",2017,"1","High Quality",0.03128
+"Lethbridge",2017,"1","High Quality",0.03548
+"Caroline",2017,"1","High Quality",0.05654
+"Airdrie",2017,"1","High Quality",0.09214
+"Medicine Hat",2017,"1","High Quality",0.05412
+"Calgary",2017,"1","High Quality",0.0145
+"Spirit River No. 133",2017,"1","High Quality",0.2119
+"Grande Prairie",2017,"1","High Quality",0.07503
+"Parkland County",2017,"1","High Quality",0.18031
+"Strathcona County",2017,"1","High Quality",0.07176
+"Sturgeon County",2017,"1","High Quality",0.10916
+"St. Albert",2017,"1","High Quality",0.08525
+"Fort Mackay",2017,"1","High Quality",0.3064
+"Grande Prairie County No. 1",2017,"1","High Quality",0.07503
+"Cold Lake",2017,"1","High Quality",0.22618
+"Bonnyville No. 87",2017,"1","High Quality",0.0667
+"St. Paul County No. 19",2017,"1","High Quality",0.18302
+"Wood Buffalo",2017,"1","High Quality",0.1823
+"Bruderheim",2017,"1","High Quality",0.21117
+"Improvement District No. 13 Elk Island",2017,"1","High Quality",0.16016
+"Leduc County",2017,"1","High Quality",0.43541
+"Beaverlodge",2017,"1","High Quality",0.14027
+"Lamont County",2017,"1","High Quality",0.1085
+"Yellowhead County",2017,"1","High Quality",0.21374
+"Red Deer",2017,"10+","Very Low Quality",8e-04
+"Edmonton",2017,"10+","Very Low Quality",0.00034
+"Lethbridge",2017,"10+","Very Low Quality",0.00176
+"Airdrie",2017,"10+","Very Low Quality",0.00064
+"Medicine Hat",2017,"10+","Very Low Quality",0.00012
+"Calgary",2017,"10+","Very Low Quality",0.00034
+"Spirit River No. 133",2017,"10+","Very Low Quality",0.00056
+"Grande Prairie",2017,"10+","Very Low Quality",0.00116
+"Parkland County",2017,"10+","Very Low Quality",0.00058
+"Strathcona County",2017,"10+","Very Low Quality",0.00034
+"Sturgeon County",2017,"10+","Very Low Quality",0.00071
+"St. Albert",2017,"10+","Very Low Quality",0.00012
+"Fort Mackay",2017,"10+","Very Low Quality",0.00372
+"Grande Prairie County No. 1",2017,"10+","Very Low Quality",0.00116
+"Cold Lake",2017,"10+","Very Low Quality",6e-04
+"Wood Buffalo",2017,"10+","Very Low Quality",6e-05
+"Improvement District No. 13 Elk Island",2017,"10+","Very Low Quality",6e-04
+"Leduc County",2017,"10+","Very Low Quality",0.00046
+"Beaverlodge",2017,"10+","Very Low Quality",0.00128
+"Yellowhead County",2017,"10+","Very Low Quality",0.00067
+"Red Deer",2017,"2","High Quality",0.61936
+"Fort Saskatchewan",2017,"2","High Quality",0.53709
+"Edmonton",2017,"2","High Quality",0.40438
+"Lethbridge",2017,"2","High Quality",0.58255
+"Caroline",2017,"2","High Quality",0.67712
+"Airdrie",2017,"2","High Quality",0.57748
+"Medicine Hat",2017,"2","High Quality",0.56268
+"Calgary",2017,"2","High Quality",0.34661
+"Spirit River No. 133",2017,"2","High Quality",0.72344
+"Grande Prairie",2017,"2","High Quality",0.56162
+"Parkland County",2017,"2","High Quality",0.64675
+"Strathcona County",2017,"2","High Quality",0.53154
+"Sturgeon County",2017,"2","High Quality",0.57731
+"St. Albert",2017,"2","High Quality",0.53604
+"Fort Mackay",2017,"2","High Quality",0.50097
+"Grande Prairie County No. 1",2017,"2","High Quality",0.56162
+"Cold Lake",2017,"2","High Quality",0.67605
+"Bonnyville No. 87",2017,"2","High Quality",0.70966
+"St. Paul County No. 19",2017,"2","High Quality",0.69148
+"Wood Buffalo",2017,"2","High Quality",0.65299
+"Bruderheim",2017,"2","High Quality",0.62469
+"Improvement District No. 13 Elk Island",2017,"2","High Quality",0.59681
+"Leduc County",2017,"2","High Quality",0.46437
+"Beaverlodge",2017,"2","High Quality",0.67849
+"Lamont County",2017,"2","High Quality",0.64094
+"Yellowhead County",2017,"2","High Quality",0.55565
+"Red Deer",2017,"3","High Quality",0.2626
+"Fort Saskatchewan",2017,"3","High Quality",0.30113
+"Edmonton",2017,"3","High Quality",0.43829
+"Lethbridge",2017,"3","High Quality",0.31979
+"Caroline",2017,"3","High Quality",0.22559
+"Airdrie",2017,"3","High Quality",0.26095
+"Medicine Hat",2017,"3","High Quality",0.32908
+"Calgary",2017,"3","High Quality",0.51707
+"Spirit River No. 133",2017,"3","High Quality",0.05892
+"Grande Prairie",2017,"3","High Quality",0.29329
+"Parkland County",2017,"3","High Quality",0.15774
+"Strathcona County",2017,"3","High Quality",0.35089
+"Sturgeon County",2017,"3","High Quality",0.26533
+"St. Albert",2017,"3","High Quality",0.29591
+"Fort Mackay",2017,"3","High Quality",0.16618
+"Grande Prairie County No. 1",2017,"3","High Quality",0.29329
+"Cold Lake",2017,"3","High Quality",0.09169
+"Bonnyville No. 87",2017,"3","High Quality",0.21824
+"St. Paul County No. 19",2017,"3","High Quality",0.11571
+"Wood Buffalo",2017,"3","High Quality",0.15626
+"Bruderheim",2017,"3","High Quality",0.13721
+"Improvement District No. 13 Elk Island",2017,"3","High Quality",0.22255
+"Leduc County",2017,"3","High Quality",0.08458
+"Beaverlodge",2017,"3","High Quality",0.16093
+"Lamont County",2017,"3","High Quality",0.23167
+"Yellowhead County",2017,"3","High Quality",0.1958
+"Red Deer",2017,"4","Moderate Quality",0.02788
+"Fort Saskatchewan",2017,"4","Moderate Quality",0.06251
+"Edmonton",2017,"4","Moderate Quality",0.1104
+"Lethbridge",2017,"4","Moderate Quality",0.03876
+"Caroline",2017,"4","Moderate Quality",0.02681
+"Airdrie",2017,"4","Moderate Quality",0.04655
+"Medicine Hat",2017,"4","Moderate Quality",0.04301
+"Calgary",2017,"4","Moderate Quality",0.09202
+"Spirit River No. 133",2017,"4","Moderate Quality",0.0021
+"Grande Prairie",2017,"4","Moderate Quality",0.05538
+"Parkland County",2017,"4","Moderate Quality",0.0091
+"Strathcona County",2017,"4","Moderate Quality",0.03873
+"Sturgeon County",2017,"4","Moderate Quality",0.04085
+"St. Albert",2017,"4","Moderate Quality",0.06754
+"Fort Mackay",2017,"4","Moderate Quality",0.0157
+"Grande Prairie County No. 1",2017,"4","Moderate Quality",0.05538
+"Cold Lake",2017,"4","Moderate Quality",0.00441
+"Bonnyville No. 87",2017,"4","Moderate Quality",0.00539
+"St. Paul County No. 19",2017,"4","Moderate Quality",0.0086
+"Wood Buffalo",2017,"4","Moderate Quality",0.0071
+"Bruderheim",2017,"4","Moderate Quality",0.02022
+"Improvement District No. 13 Elk Island",2017,"4","Moderate Quality",0.01667
+"Leduc County",2017,"4","Moderate Quality",0.00996
+"Beaverlodge",2017,"4","Moderate Quality",0.01412
+"Lamont County",2017,"4","Moderate Quality",0.01408
+"Yellowhead County",2017,"4","Moderate Quality",0.02224
+"Red Deer",2017,"5","Moderate Quality",0.00457
+"Fort Saskatchewan",2017,"5","Moderate Quality",0.00685
+"Edmonton",2017,"5","Moderate Quality",0.0105
+"Lethbridge",2017,"5","Moderate Quality",0.01054
+"Caroline",2017,"5","Moderate Quality",0.00866
+"Airdrie",2017,"5","Moderate Quality",0.01321
+"Medicine Hat",2017,"5","Moderate Quality",0.00567
+"Calgary",2017,"5","Moderate Quality",0.02124
+"Spirit River No. 133",2017,"5","Moderate Quality",0.00154
+"Grande Prairie",2017,"5","Moderate Quality",0.01017
+"Parkland County",2017,"5","Moderate Quality",0.00334
+"Strathcona County",2017,"5","Moderate Quality",0.00468
+"Sturgeon County",2017,"5","Moderate Quality",0.00509
+"St. Albert",2017,"5","Moderate Quality",0.01223
+"Fort Mackay",2017,"5","Moderate Quality",0.00313
+"Grande Prairie County No. 1",2017,"5","Moderate Quality",0.01017
+"Cold Lake",2017,"5","Moderate Quality",0.00024
+"St. Paul County No. 19",2017,"5","Moderate Quality",4e-04
+"Wood Buffalo",2017,"5","Moderate Quality",0.00065
+"Bruderheim",2017,"5","Moderate Quality",0.0047
+"Improvement District No. 13 Elk Island",2017,"5","Moderate Quality",0.00238
+"Leduc County",2017,"5","Moderate Quality",0.00278
+"Beaverlodge",2017,"5","Moderate Quality",0.0028
+"Lamont County",2017,"5","Moderate Quality",0.00317
+"Yellowhead County",2017,"5","Moderate Quality",0.00514
+"Red Deer",2017,"6","Moderate Quality",0.00057
+"Fort Saskatchewan",2017,"6","Moderate Quality",0.00038
+"Edmonton",2017,"6","Moderate Quality",0.00343
+"Lethbridge",2017,"6","Moderate Quality",0.00433
+"Caroline",2017,"6","Moderate Quality",0.00246
+"Airdrie",2017,"6","Moderate Quality",0.00499
+"Medicine Hat",2017,"6","Moderate Quality",0.00201
+"Calgary",2017,"6","Moderate Quality",0.00468
+"Spirit River No. 133",2017,"6","Moderate Quality",0.00028
+"Grande Prairie",2017,"6","Moderate Quality",0.00185
+"Parkland County",2017,"6","Moderate Quality",0.00173
+"Strathcona County",2017,"6","Moderate Quality",0.00103
+"Sturgeon County",2017,"6","Moderate Quality",0.00024
+"St. Albert",2017,"6","Moderate Quality",0.0021
+"Fort Mackay",2017,"6","Moderate Quality",0.001
+"Grande Prairie County No. 1",2017,"6","Moderate Quality",0.00185
+"Cold Lake",2017,"6","Moderate Quality",0.00024
+"Wood Buffalo",2017,"6","Moderate Quality",4e-05
+"Bruderheim",2017,"6","Moderate Quality",0.00047
+"Leduc County",2017,"6","Moderate Quality",0.00058
+"Beaverlodge",2017,"6","Moderate Quality",0.00047
+"Lamont County",2017,"6","Moderate Quality",0.00012
+"Yellowhead County",2017,"6","Moderate Quality",0.00186
+"Red Deer",2017,"7","Low Quality",0.00091
+"Fort Saskatchewan",2017,"7","Low Quality",0.00025
+"Edmonton",2017,"7","Low Quality",0.00091
+"Lethbridge",2017,"7","Low Quality",0.0041
+"Caroline",2017,"7","Low Quality",0.00164
+"Airdrie",2017,"7","Low Quality",0.0029
+"Medicine Hat",2017,"7","Low Quality",0.00177
+"Calgary",2017,"7","Low Quality",0.00228
+"Spirit River No. 133",2017,"7","Low Quality",7e-04
+"Grande Prairie",2017,"7","Low Quality",0.00139
+"Parkland County",2017,"7","Low Quality",0.00035
+"Strathcona County",2017,"7","Low Quality",0.00069
+"Sturgeon County",2017,"7","Low Quality",0.00107
+"St. Albert",2017,"7","Low Quality",0.00058
+"Fort Mackay",2017,"7","Low Quality",0.00148
+"Grande Prairie County No. 1",2017,"7","Low Quality",0.00139
+"Cold Lake",2017,"7","Low Quality",0.00036
+"St. Paul County No. 19",2017,"7","Low Quality",0.00066
+"Wood Buffalo",2017,"7","Low Quality",0.00043
+"Bruderheim",2017,"7","Low Quality",0.00071
+"Improvement District No. 13 Elk Island",2017,"7","Low Quality",0.00036
+"Leduc County",2017,"7","Low Quality",0.00174
+"Beaverlodge",2017,"7","Low Quality",0.00163
+"Lamont County",2017,"7","Low Quality",7e-04
+"Yellowhead County",2017,"7","Low Quality",0.00427
+"Red Deer",2017,"8","Low Quality",0.00011
+"Edmonton",2017,"8","Low Quality",0.00034
+"Lethbridge",2017,"8","Low Quality",0.00222
+"Caroline",2017,"8","Low Quality",0.00047
+"Airdrie",2017,"8","Low Quality",0.00081
+"Medicine Hat",2017,"8","Low Quality",0.0013
+"Calgary",2017,"8","Low Quality",8e-04
+"Spirit River No. 133",2017,"8","Low Quality",0.00056
+"Grande Prairie",2017,"8","Low Quality",0.00012
+"Parkland County",2017,"8","Low Quality",0.00012
+"Strathcona County",2017,"8","Low Quality",0.00023
+"Sturgeon County",2017,"8","Low Quality",0.00012
+"St. Albert",2017,"8","Low Quality",0.00023
+"Fort Mackay",2017,"8","Low Quality",0.00077
+"Grande Prairie County No. 1",2017,"8","Low Quality",0.00012
+"Cold Lake",2017,"8","Low Quality",0.00024
+"St. Paul County No. 19",2017,"8","Low Quality",0.00013
+"Wood Buffalo",2017,"8","Low Quality",0.00016
+"Improvement District No. 13 Elk Island",2017,"8","Low Quality",0.00036
+"Leduc County",2017,"8","Low Quality",0.00012
+"Lamont County",2017,"8","Low Quality",0.00035
+"Yellowhead County",2017,"8","Low Quality",0.00036
+"Edmonton",2017,"9","Low Quality",0.00011
+"Lethbridge",2017,"9","Low Quality",0.00047
+"Caroline",2017,"9","Low Quality",7e-04
+"Airdrie",2017,"9","Low Quality",0.00032
+"Medicine Hat",2017,"9","Low Quality",0.00024
+"Calgary",2017,"9","Low Quality",0.00046
+"Strathcona County",2017,"9","Low Quality",0.00011
+"Sturgeon County",2017,"9","Low Quality",0.00012
+"Fort Mackay",2017,"9","Low Quality",0.00065
+"Wood Buffalo",2017,"9","Low Quality",2e-05
+"Bruderheim",2017,"9","Low Quality",0.00082
+"Improvement District No. 13 Elk Island",2017,"9","Low Quality",0.00012
+"Lamont County",2017,"9","Low Quality",0.00047
+"Yellowhead County",2017,"9","Low Quality",0.00028
+"Red Deer",2018,"1","High Quality",0.08074
+"Fort Saskatchewan",2018,"1","High Quality",0.09754
+"Edmonton",2018,"1","High Quality",0.05172
+"Lethbridge",2018,"1","High Quality",0.0559
+"Caroline",2018,"1","High Quality",0.14372
+"Airdrie",2018,"1","High Quality",0.0823
+"Medicine Hat",2018,"1","High Quality",0.07027
+"Calgary",2018,"1","High Quality",0.0459
+"Spirit River No. 133",2018,"1","High Quality",0.20736
+"Grande Prairie",2018,"1","High Quality",0.12407
+"Parkland County",2018,"1","High Quality",0.15352
+"Strathcona County",2018,"1","High Quality",0.09069
+"Sturgeon County",2018,"1","High Quality",0.11192
+"St. Albert",2018,"1","High Quality",0.08445
+"Fort Mackay",2018,"1","High Quality",0.21907
+"Grande Prairie County No. 1",2018,"1","High Quality",0.13883
+"Cold Lake",2018,"1","High Quality",0.22198
+"Bonnyville No. 87",2018,"1","High Quality",0.19134
+"St. Paul County No. 19",2018,"1","High Quality",0.1646
+"Wood Buffalo",2018,"1","High Quality",0.18507
+"Bruderheim",2018,"1","High Quality",0.13043
+"Improvement District No. 13 Elk Island",2018,"1","High Quality",0.14566
+"Leduc County",2018,"1","High Quality",0.22585
+"Beaverlodge",2018,"1","High Quality",0.1566
+"Lamont County",2018,"1","High Quality",0.10614
+"Yellowhead County",2018,"1","High Quality",0.14269
+"Red Deer",2018,"10+","Very Low Quality",0.00354
+"Fort Saskatchewan",2018,"10+","Very Low Quality",0.00203
+"Edmonton",2018,"10+","Very Low Quality",0.0032
+"Lethbridge",2018,"10+","Very Low Quality",0.00025
+"Caroline",2018,"10+","Very Low Quality",0.00342
+"Airdrie",2018,"10+","Very Low Quality",0.00454
+"Calgary",2018,"10+","Very Low Quality",0.00445
+"Spirit River No. 133",2018,"10+","Very Low Quality",0.00213
+"Grande Prairie",2018,"10+","Very Low Quality",0.00572
+"Parkland County",2018,"10+","Very Low Quality",0.00304
+"Strathcona County",2018,"10+","Very Low Quality",0.00241
+"Sturgeon County",2018,"10+","Very Low Quality",0.00225
+"St. Albert",2018,"10+","Very Low Quality",0.00282
+"Fort Mackay",2018,"10+","Very Low Quality",0.00132
+"Grande Prairie County No. 1",2018,"10+","Very Low Quality",0.00495
+"Cold Lake",2018,"10+","Very Low Quality",8e-04
+"St. Paul County No. 19",2018,"10+","Very Low Quality",6e-04
+"Wood Buffalo",2018,"10+","Very Low Quality",0.00101
+"Bruderheim",2018,"10+","Very Low Quality",0.00281
+"Improvement District No. 13 Elk Island",2018,"10+","Very Low Quality",0.00368
+"Leduc County",2018,"10+","Very Low Quality",0.00568
+"Beaverlodge",2018,"10+","Very Low Quality",0.00664
+"Lamont County",2018,"10+","Very Low Quality",0.00094
+"Yellowhead County",2018,"10+","Very Low Quality",0.00507
+"Red Deer",2018,"2","High Quality",0.40978
+"Fort Saskatchewan",2018,"2","High Quality",0.38214
+"Edmonton",2018,"2","High Quality",0.32275
+"Lethbridge",2018,"2","High Quality",0.4898
+"Caroline",2018,"2","High Quality",0.53139
+"Airdrie",2018,"2","High Quality",0.45891
+"Medicine Hat",2018,"2","High Quality",0.48697
+"Calgary",2018,"2","High Quality",0.2917
+"Spirit River No. 133",2018,"2","High Quality",0.55586
+"Grande Prairie",2018,"2","High Quality",0.42629
+"Parkland County",2018,"2","High Quality",0.56233
+"Strathcona County",2018,"2","High Quality",0.41736
+"Sturgeon County",2018,"2","High Quality",0.43053
+"St. Albert",2018,"2","High Quality",0.37656
+"Fort Mackay",2018,"2","High Quality",0.52922
+"Grande Prairie County No. 1",2018,"2","High Quality",0.46593
+"Cold Lake",2018,"2","High Quality",0.59973
+"Bonnyville No. 87",2018,"2","High Quality",0.73863
+"St. Paul County No. 19",2018,"2","High Quality",0.5894
+"Wood Buffalo",2018,"2","High Quality",0.59161
+"Bruderheim",2018,"2","High Quality",0.51765
+"Improvement District No. 13 Elk Island",2018,"2","High Quality",0.51068
+"Leduc County",2018,"2","High Quality",0.5632
+"Beaverlodge",2018,"2","High Quality",0.58168
+"Lamont County",2018,"2","High Quality",0.48276
+"Yellowhead County",2018,"2","High Quality",0.50294
+"Red Deer",2018,"3","High Quality",0.36626
+"Fort Saskatchewan",2018,"3","High Quality",0.35776
+"Edmonton",2018,"3","High Quality",0.42779
+"Lethbridge",2018,"3","High Quality",0.32961
+"Caroline",2018,"3","High Quality",0.25951
+"Airdrie",2018,"3","High Quality",0.31812
+"Medicine Hat",2018,"3","High Quality",0.33504
+"Calgary",2018,"3","High Quality",0.43521
+"Spirit River No. 133",2018,"3","High Quality",0.18889
+"Grande Prairie",2018,"3","High Quality",0.30923
+"Parkland County",2018,"3","High Quality",0.2165
+"Strathcona County",2018,"3","High Quality",0.37977
+"Sturgeon County",2018,"3","High Quality",0.31919
+"St. Albert",2018,"3","High Quality",0.36798
+"Fort Mackay",2018,"3","High Quality",0.20593
+"Grande Prairie County No. 1",2018,"3","High Quality",0.27321
+"Cold Lake",2018,"3","High Quality",0.14249
+"Bonnyville No. 87",2018,"3","High Quality",0.07004
+"St. Paul County No. 19",2018,"3","High Quality",0.20124
+"Wood Buffalo",2018,"3","High Quality",0.18826
+"Bruderheim",2018,"3","High Quality",0.23796
+"Improvement District No. 13 Elk Island",2018,"3","High Quality",0.25914
+"Leduc County",2018,"3","High Quality",0.15277
+"Beaverlodge",2018,"3","High Quality",0.21473
+"Lamont County",2018,"3","High Quality",0.31689
+"Yellowhead County",2018,"3","High Quality",0.30188
+"Red Deer",2018,"4","Moderate Quality",0.09868
+"Fort Saskatchewan",2018,"4","Moderate Quality",0.11463
+"Edmonton",2018,"4","Moderate Quality",0.14408
+"Lethbridge",2018,"4","Moderate Quality",0.08182
+"Caroline",2018,"4","Moderate Quality",0.03675
+"Airdrie",2018,"4","Moderate Quality",0.09403
+"Medicine Hat",2018,"4","Moderate Quality",0.07876
+"Calgary",2018,"4","Moderate Quality",0.15287
+"Spirit River No. 133",2018,"4","Moderate Quality",0.028
+"Grande Prairie",2018,"4","Moderate Quality",0.09568
+"Parkland County",2018,"4","Moderate Quality",0.04323
+"Strathcona County",2018,"4","Moderate Quality",0.08575
+"Sturgeon County",2018,"4","Moderate Quality",0.08801
+"St. Albert",2018,"4","Moderate Quality",0.11945
+"Fort Mackay",2018,"4","Moderate Quality",0.0276
+"Grande Prairie County No. 1",2018,"4","Moderate Quality",0.08332
+"Cold Lake",2018,"4","Moderate Quality",0.0193
+"St. Paul County No. 19",2018,"4","Moderate Quality",0.03426
+"Wood Buffalo",2018,"4","Moderate Quality",0.02145
+"Bruderheim",2018,"4","Moderate Quality",0.06896
+"Improvement District No. 13 Elk Island",2018,"4","Moderate Quality",0.05995
+"Leduc County",2018,"4","Moderate Quality",0.03098
+"Beaverlodge",2018,"4","Moderate Quality",0.0242
+"Lamont County",2018,"4","Moderate Quality",0.06674
+"Yellowhead County",2018,"4","Moderate Quality",0.03201
+"Red Deer",2018,"5","Moderate Quality",0.02718
+"Fort Saskatchewan",2018,"5","Moderate Quality",0.02773
+"Edmonton",2018,"5","Moderate Quality",0.02729
+"Lethbridge",2018,"5","Moderate Quality",0.02199
+"Caroline",2018,"5","Moderate Quality",0.01437
+"Airdrie",2018,"5","Moderate Quality",0.02659
+"Medicine Hat",2018,"5","Moderate Quality",0.01896
+"Calgary",2018,"5","Moderate Quality",0.04418
+"Spirit River No. 133",2018,"5","Moderate Quality",0.00767
+"Grande Prairie",2018,"5","Moderate Quality",0.02453
+"Parkland County",2018,"5","Moderate Quality",0.0083
+"Strathcona County",2018,"5","Moderate Quality",0.01264
+"Sturgeon County",2018,"5","Moderate Quality",0.02369
+"St. Albert",2018,"5","Moderate Quality",0.02807
+"Fort Mackay",2018,"5","Moderate Quality",0.0069
+"Grande Prairie County No. 1",2018,"5","Moderate Quality",0.02123
+"Cold Lake",2018,"5","Moderate Quality",0.00469
+"St. Paul County No. 19",2018,"5","Moderate Quality",0.00286
+"Wood Buffalo",2018,"5","Moderate Quality",0.00529
+"Bruderheim",2018,"5","Moderate Quality",0.02069
+"Improvement District No. 13 Elk Island",2018,"5","Moderate Quality",0.00867
+"Leduc County",2018,"5","Moderate Quality",0.0052
+"Beaverlodge",2018,"5","Moderate Quality",0.00593
+"Lamont County",2018,"5","Moderate Quality",0.01262
+"Yellowhead County",2018,"5","Moderate Quality",0.00502
+"Red Deer",2018,"6","Moderate Quality",0.00548
+"Fort Saskatchewan",2018,"6","Moderate Quality",0.00586
+"Edmonton",2018,"6","Moderate Quality",0.00891
+"Lethbridge",2018,"6","Moderate Quality",0.00971
+"Caroline",2018,"6","Moderate Quality",0.00306
+"Airdrie",2018,"6","Moderate Quality",0.00744
+"Medicine Hat",2018,"6","Moderate Quality",0.00617
+"Calgary",2018,"6","Moderate Quality",0.0153
+"Spirit River No. 133",2018,"6","Moderate Quality",0.00171
+"Grande Prairie",2018,"6","Moderate Quality",0.00643
+"Parkland County",2018,"6","Moderate Quality",0.00245
+"Strathcona County",2018,"6","Moderate Quality",0.00333
+"Sturgeon County",2018,"6","Moderate Quality",0.00869
+"St. Albert",2018,"6","Moderate Quality",0.00916
+"Fort Mackay",2018,"6","Moderate Quality",0.00138
+"Grande Prairie County No. 1",2018,"6","Moderate Quality",0.00556
+"Cold Lake",2018,"6","Moderate Quality",8e-04
+"St. Paul County No. 19",2018,"6","Moderate Quality",0.00119
+"Wood Buffalo",2018,"6","Moderate Quality",0.00137
+"Bruderheim",2018,"6","Moderate Quality",0.00748
+"Improvement District No. 13 Elk Island",2018,"6","Moderate Quality",0.00332
+"Leduc County",2018,"6","Moderate Quality",0.00284
+"Beaverlodge",2018,"6","Moderate Quality",0.00119
+"Lamont County",2018,"6","Moderate Quality",0.00257
+"Yellowhead County",2018,"6","Moderate Quality",0.00121
+"Red Deer",2018,"7","Low Quality",0.00308
+"Fort Saskatchewan",2018,"7","Low Quality",0.00861
+"Edmonton",2018,"7","Low Quality",0.0105
+"Lethbridge",2018,"7","Low Quality",0.00639
+"Caroline",2018,"7","Low Quality",0.00247
+"Airdrie",2018,"7","Low Quality",0.00315
+"Medicine Hat",2018,"7","Low Quality",0.00302
+"Calgary",2018,"7","Low Quality",0.00582
+"Spirit River No. 133",2018,"7","Low Quality",0.00441
+"Grande Prairie",2018,"7","Low Quality",0.00479
+"Parkland County",2018,"7","Low Quality",0.00689
+"Strathcona County",2018,"7","Low Quality",0.00517
+"Sturgeon County",2018,"7","Low Quality",0.01158
+"St. Albert",2018,"7","Low Quality",0.00822
+"Fort Mackay",2018,"7","Low Quality",0.00702
+"Grande Prairie County No. 1",2018,"7","Low Quality",0.00415
+"Cold Lake",2018,"7","Low Quality",0.00684
+"St. Paul County No. 19",2018,"7","Low Quality",0.00466
+"Wood Buffalo",2018,"7","Low Quality",0.00373
+"Bruderheim",2018,"7","Low Quality",0.0083
+"Improvement District No. 13 Elk Island",2018,"7","Low Quality",0.00605
+"Leduc County",2018,"7","Low Quality",0.00828
+"Beaverlodge",2018,"7","Low Quality",0.00629
+"Lamont County",2018,"7","Low Quality",0.0083
+"Yellowhead County",2018,"7","Low Quality",0.00569
+"Red Deer",2018,"8","Low Quality",0.00194
+"Fort Saskatchewan",2018,"8","Low Quality",0.00239
+"Edmonton",2018,"8","Low Quality",0.00285
+"Lethbridge",2018,"8","Low Quality",0.00295
+"Caroline",2018,"8","Low Quality",0.00212
+"Airdrie",2018,"8","Low Quality",0.00239
+"Medicine Hat",2018,"8","Low Quality",0.00081
+"Calgary",2018,"8","Low Quality",0.00285
+"Spirit River No. 133",2018,"8","Low Quality",0.00227
+"Grande Prairie",2018,"8","Low Quality",0.0021
+"Parkland County",2018,"8","Low Quality",0.00257
+"Strathcona County",2018,"8","Low Quality",0.00184
+"Sturgeon County",2018,"8","Low Quality",0.00302
+"St. Albert",2018,"8","Low Quality",0.00223
+"Fort Mackay",2018,"8","Low Quality",0.00114
+"Grande Prairie County No. 1",2018,"8","Low Quality",0.00182
+"Cold Lake",2018,"8","Low Quality",0.00282
+"St. Paul County No. 19",2018,"8","Low Quality",0.00095
+"Wood Buffalo",2018,"8","Low Quality",0.00145
+"Bruderheim",2018,"8","Low Quality",0.00479
+"Improvement District No. 13 Elk Island",2018,"8","Low Quality",0.0019
+"Leduc County",2018,"8","Low Quality",0.00355
+"Beaverlodge",2018,"8","Low Quality",0.00142
+"Lamont County",2018,"8","Low Quality",0.00164
+"Yellowhead County",2018,"8","Low Quality",0.00215
+"Red Deer",2018,"9","Low Quality",0.00331
+"Fort Saskatchewan",2018,"9","Low Quality",0.00131
+"Edmonton",2018,"9","Low Quality",0.00091
+"Lethbridge",2018,"9","Low Quality",0.0016
+"Caroline",2018,"9","Low Quality",0.00318
+"Airdrie",2018,"9","Low Quality",0.00252
+"Calgary",2018,"9","Low Quality",0.00171
+"Spirit River No. 133",2018,"9","Low Quality",0.00171
+"Grande Prairie",2018,"9","Low Quality",0.00117
+"Parkland County",2018,"9","Low Quality",0.00117
+"Strathcona County",2018,"9","Low Quality",0.00103
+"Sturgeon County",2018,"9","Low Quality",0.00113
+"St. Albert",2018,"9","Low Quality",0.00106
+"Fort Mackay",2018,"9","Low Quality",0.00042
+"Grande Prairie County No. 1",2018,"9","Low Quality",0.00101
+"Cold Lake",2018,"9","Low Quality",0.00054
+"St. Paul County No. 19",2018,"9","Low Quality",0.00024
+"Wood Buffalo",2018,"9","Low Quality",0.00075
+"Bruderheim",2018,"9","Low Quality",0.00094
+"Improvement District No. 13 Elk Island",2018,"9","Low Quality",0.00095
+"Leduc County",2018,"9","Low Quality",0.00166
+"Beaverlodge",2018,"9","Low Quality",0.00131
+"Lamont County",2018,"9","Low Quality",0.0014
+"Yellowhead County",2018,"9","Low Quality",0.00134
+"Red Deer",2019,"1","High Quality",0.10511
+"Fort Saskatchewan",2019,"1","High Quality",0.14402
+"Edmonton",2019,"1","High Quality",0.07706
+"Lethbridge",2019,"1","High Quality",0.07873
+"Caroline",2019,"1","High Quality",0.18145
+"Airdrie",2019,"1","High Quality",0.10214
+"Medicine Hat",2019,"1","High Quality",0.05938
+"Foothills No. 31",2019,"1","High Quality",0.08203
+"Calgary",2019,"1","High Quality",0.03551
+"Northern Sunrise County",2019,"1","High Quality",0.51349
+"Grande Prairie",2019,"1","High Quality",0.15095
+"Brazeau County",2019,"1","High Quality",0.17658
+"Parkland County",2019,"1","High Quality",0.21608
+"Strathcona County",2019,"1","High Quality",0.10767
+"Sturgeon County",2019,"1","High Quality",0.15328
+"St. Albert",2019,"1","High Quality",0.11548
+"Fort Mackay",2019,"1","High Quality",0.25868
+"Canmore",2019,"1","High Quality",0.03798
+"Grande Prairie County No. 1",2019,"1","High Quality",0.21039
+"Cold Lake",2019,"1","High Quality",0.31748
+"Bonnyville No. 87",2019,"1","High Quality",0.16247
+"St. Paul County No. 19",2019,"1","High Quality",0.15033
+"Wood Buffalo",2019,"1","High Quality",0.17979
+"Bruderheim",2019,"1","High Quality",0.11897
+"Improvement District No. 13 Elk Island",2019,"1","High Quality",0.23091
+"Leduc County",2019,"1","High Quality",0.13825
+"Beaverlodge",2019,"1","High Quality",0.18222
+"Lamont County",2019,"1","High Quality",0.213
+"Yellowhead County",2019,"1","High Quality",0.2262
+"Red Deer",2019,"10+","Very Low Quality",0.00354
+"Fort Saskatchewan",2019,"10+","Very Low Quality",0.00052
+"Edmonton",2019,"10+","Very Low Quality",0.00114
+"Caroline",2019,"10+","Very Low Quality",0.00163
+"Airdrie",2019,"10+","Very Low Quality",0.00201
+"Calgary",2019,"10+","Very Low Quality",0.00228
+"Grande Prairie",2019,"10+","Very Low Quality",0.0035
+"Brazeau County",2019,"10+","Very Low Quality",0.0013
+"Parkland County",2019,"10+","Very Low Quality",0.00069
+"Strathcona County",2019,"10+","Very Low Quality",0.00114
+"Sturgeon County",2019,"10+","Very Low Quality",0.00076
+"St. Albert",2019,"10+","Very Low Quality",0.00047
+"Fort Mackay",2019,"10+","Very Low Quality",0.00099
+"Grande Prairie County No. 1",2019,"10+","Very Low Quality",0.00316
+"Wood Buffalo",2019,"10+","Very Low Quality",0.00066
+"Bruderheim",2019,"10+","Very Low Quality",0.00059
+"Improvement District No. 13 Elk Island",2019,"10+","Very Low Quality",7e-04
+"Leduc County",2019,"10+","Very Low Quality",0.00023
+"Beaverlodge",2019,"10+","Very Low Quality",0.00245
+"Lamont County",2019,"10+","Very Low Quality",0.00044
+"Yellowhead County",2019,"10+","Very Low Quality",0.00086
+"Red Deer",2019,"2","High Quality",0.55227
+"Fort Saskatchewan",2019,"2","High Quality",0.51359
+"Edmonton",2019,"2","High Quality",0.42471
+"Lethbridge",2019,"2","High Quality",0.64638
+"Caroline",2019,"2","High Quality",0.64419
+"Airdrie",2019,"2","High Quality",0.62493
+"Medicine Hat",2019,"2","High Quality",0.59431
+"Foothills No. 31",2019,"2","High Quality",0.75
+"Calgary",2019,"2","High Quality",0.41626
+"Northern Sunrise County",2019,"2","High Quality",0.48366
+"Grande Prairie",2019,"2","High Quality",0.49784
+"Brazeau County",2019,"2","High Quality",0.64392
+"Parkland County",2019,"2","High Quality",0.58927
+"Strathcona County",2019,"2","High Quality",0.52421
+"Sturgeon County",2019,"2","High Quality",0.51308
+"St. Albert",2019,"2","High Quality",0.48428
+"Fort Mackay",2019,"2","High Quality",0.52925
+"Canmore",2019,"2","High Quality",0.86115
+"Grande Prairie County No. 1",2019,"2","High Quality",0.53626
+"Cold Lake",2019,"2","High Quality",0.56072
+"Bonnyville No. 87",2019,"2","High Quality",0.65384
+"St. Paul County No. 19",2019,"2","High Quality",0.65008
+"Wood Buffalo",2019,"2","High Quality",0.61344
+"Bruderheim",2019,"2","High Quality",0.55972
+"Improvement District No. 13 Elk Island",2019,"2","High Quality",0.54474
+"Leduc County",2019,"2","High Quality",0.68605
+"Beaverlodge",2019,"2","High Quality",0.60631
+"Lamont County",2019,"2","High Quality",0.60237
+"Yellowhead County",2019,"2","High Quality",0.55075
+"Red Deer",2019,"3","High Quality",0.28379
+"Fort Saskatchewan",2019,"3","High Quality",0.25091
+"Edmonton",2019,"3","High Quality",0.38292
+"Lethbridge",2019,"3","High Quality",0.24578
+"Caroline",2019,"3","High Quality",0.15622
+"Airdrie",2019,"3","High Quality",0.22121
+"Medicine Hat",2019,"3","High Quality",0.31103
+"Foothills No. 31",2019,"3","High Quality",0.16797
+"Calgary",2019,"3","High Quality",0.43373
+"Northern Sunrise County",2019,"3","High Quality",0.00284
+"Grande Prairie",2019,"3","High Quality",0.24583
+"Brazeau County",2019,"3","High Quality",0.15573
+"Parkland County",2019,"3","High Quality",0.16609
+"Strathcona County",2019,"3","High Quality",0.30818
+"Sturgeon County",2019,"3","High Quality",0.25888
+"St. Albert",2019,"3","High Quality",0.30163
+"Fort Mackay",2019,"3","High Quality",0.18077
+"Canmore",2019,"3","High Quality",0.09838
+"Grande Prairie County No. 1",2019,"3","High Quality",0.19128
+"Cold Lake",2019,"3","High Quality",0.11003
+"Bonnyville No. 87",2019,"3","High Quality",0.16068
+"St. Paul County No. 19",2019,"3","High Quality",0.17157
+"Wood Buffalo",2019,"3","High Quality",0.18497
+"Bruderheim",2019,"3","High Quality",0.26099
+"Improvement District No. 13 Elk Island",2019,"3","High Quality",0.18271
+"Leduc County",2019,"3","High Quality",0.14935
+"Beaverlodge",2019,"3","High Quality",0.18467
+"Lamont County",2019,"3","High Quality",0.15553
+"Yellowhead County",2019,"3","High Quality",0.19942
+"Red Deer",2019,"4","Moderate Quality",0.04855
+"Fort Saskatchewan",2019,"4","Moderate Quality",0.06263
+"Edmonton",2019,"4","Moderate Quality",0.08391
+"Lethbridge",2019,"4","Moderate Quality",0.02157
+"Caroline",2019,"4","Moderate Quality",0.01313
+"Airdrie",2019,"4","Moderate Quality",0.04
+"Medicine Hat",2019,"4","Moderate Quality",0.02728
+"Calgary",2019,"4","Moderate Quality",0.09407
+"Grande Prairie",2019,"4","Moderate Quality",0.07845
+"Brazeau County",2019,"4","Moderate Quality",0.01417
+"Parkland County",2019,"4","Moderate Quality",0.01797
+"Strathcona County",2019,"4","Moderate Quality",0.04579
+"Sturgeon County",2019,"4","Moderate Quality",0.05062
+"St. Albert",2019,"4","Moderate Quality",0.06356
+"Fort Mackay",2019,"4","Moderate Quality",0.02168
+"Canmore",2019,"4","Moderate Quality",0.00249
+"Grande Prairie County No. 1",2019,"4","Moderate Quality",0.04611
+"Cold Lake",2019,"4","Moderate Quality",0.01007
+"Bonnyville No. 87",2019,"4","Moderate Quality",0.0202
+"St. Paul County No. 19",2019,"4","Moderate Quality",0.02239
+"Wood Buffalo",2019,"4","Moderate Quality",0.01292
+"Bruderheim",2019,"4","Moderate Quality",0.04126
+"Improvement District No. 13 Elk Island",2019,"4","Moderate Quality",0.02908
+"Leduc County",2019,"4","Moderate Quality",0.01826
+"Beaverlodge",2019,"4","Moderate Quality",0.02039
+"Lamont County",2019,"4","Moderate Quality",0.01938
+"Yellowhead County",2019,"4","Moderate Quality",0.01826
+"Red Deer",2019,"5","Moderate Quality",0.00457
+"Fort Saskatchewan",2019,"5","Moderate Quality",0.01721
+"Edmonton",2019,"5","Moderate Quality",0.01929
+"Lethbridge",2019,"5","Moderate Quality",0.00635
+"Caroline",2019,"5","Moderate Quality",0.00151
+"Airdrie",2019,"5","Moderate Quality",0.00544
+"Medicine Hat",2019,"5","Moderate Quality",0.00541
+"Calgary",2019,"5","Moderate Quality",0.01302
+"Grande Prairie",2019,"5","Moderate Quality",0.0176
+"Brazeau County",2019,"5","Moderate Quality",0.00424
+"Parkland County",2019,"5","Moderate Quality",0.00668
+"Strathcona County",2019,"5","Moderate Quality",0.00868
+"Sturgeon County",2019,"5","Moderate Quality",0.0162
+"St. Albert",2019,"5","Moderate Quality",0.01863
+"Fort Mackay",2019,"5","Moderate Quality",0.00379
+"Grande Prairie County No. 1",2019,"5","Moderate Quality",0.00929
+"Cold Lake",2019,"5","Moderate Quality",0.00158
+"Bonnyville No. 87",2019,"5","Moderate Quality",0.00243
+"St. Paul County No. 19",2019,"5","Moderate Quality",0.00435
+"Wood Buffalo",2019,"5","Moderate Quality",0.00406
+"Bruderheim",2019,"5","Moderate Quality",0.01164
+"Improvement District No. 13 Elk Island",2019,"5","Moderate Quality",0.00856
+"Leduc County",2019,"5","Moderate Quality",0.00451
+"Beaverlodge",2019,"5","Moderate Quality",0.0028
+"Lamont County",2019,"5","Moderate Quality",0.00556
+"Yellowhead County",2019,"5","Moderate Quality",0.00191
+"Red Deer",2019,"6","Moderate Quality",0.00057
+"Fort Saskatchewan",2019,"6","Moderate Quality",0.00841
+"Edmonton",2019,"6","Moderate Quality",0.00731
+"Lethbridge",2019,"6","Moderate Quality",0.00024
+"Caroline",2019,"6","Moderate Quality",0.00035
+"Airdrie",2019,"6","Moderate Quality",0.0026
+"Medicine Hat",2019,"6","Moderate Quality",0.00071
+"Calgary",2019,"6","Moderate Quality",0.004
+"Grande Prairie",2019,"6","Moderate Quality",0.00455
+"Brazeau County",2019,"6","Moderate Quality",0.00163
+"Parkland County",2019,"6","Moderate Quality",0.00104
+"Strathcona County",2019,"6","Moderate Quality",0.00183
+"Sturgeon County",2019,"6","Moderate Quality",0.00381
+"St. Albert",2019,"6","Moderate Quality",0.01059
+"Fort Mackay",2019,"6","Moderate Quality",0.00099
+"Grande Prairie County No. 1",2019,"6","Moderate Quality",0.00245
+"Cold Lake",2019,"6","Moderate Quality",0.00012
+"Bonnyville No. 87",2019,"6","Moderate Quality",0.00038
+"St. Paul County No. 19",2019,"6","Moderate Quality",0.00115
+"Wood Buffalo",2019,"6","Moderate Quality",0.00135
+"Bruderheim",2019,"6","Moderate Quality",0.00282
+"Improvement District No. 13 Elk Island",2019,"6","Moderate Quality",0.00188
+"Leduc County",2019,"6","Moderate Quality",0.00116
+"Beaverlodge",2019,"6","Moderate Quality",7e-04
+"Lamont County",2019,"6","Moderate Quality",0.00322
+"Yellowhead County",2019,"6","Moderate Quality",0.00062
+"Red Deer",2019,"7","Low Quality",8e-04
+"Fort Saskatchewan",2019,"7","Low Quality",0.00259
+"Edmonton",2019,"7","Low Quality",0.00331
+"Lethbridge",2019,"7","Low Quality",0.00048
+"Caroline",2019,"7","Low Quality",0.00023
+"Airdrie",2019,"7","Low Quality",0.00071
+"Medicine Hat",2019,"7","Low Quality",0.00153
+"Calgary",2019,"7","Low Quality",0.00023
+"Grande Prairie",2019,"7","Low Quality",0.00058
+"Brazeau County",2019,"7","Low Quality",0.00098
+"Parkland County",2019,"7","Low Quality",0.00104
+"Strathcona County",2019,"7","Low Quality",0.00251
+"Sturgeon County",2019,"7","Low Quality",0.00223
+"St. Albert",2019,"7","Low Quality",0.00407
+"Fort Mackay",2019,"7","Low Quality",0.00233
+"Grande Prairie County No. 1",2019,"7","Low Quality",0.00053
+"St. Paul County No. 19",2019,"7","Low Quality",0.00013
+"Wood Buffalo",2019,"7","Low Quality",0.00168
+"Bruderheim",2019,"7","Low Quality",0.00294
+"Improvement District No. 13 Elk Island",2019,"7","Low Quality",0.00129
+"Leduc County",2019,"7","Low Quality",0.00185
+"Beaverlodge",2019,"7","Low Quality",0.00023
+"Lamont County",2019,"7","Low Quality",0.00044
+"Yellowhead County",2019,"7","Low Quality",0.00101
+"Red Deer",2019,"8","Low Quality",0.00023
+"Fort Saskatchewan",2019,"8","Low Quality",0.00013
+"Edmonton",2019,"8","Low Quality",0.00034
+"Lethbridge",2019,"8","Low Quality",0.00048
+"Caroline",2019,"8","Low Quality",0.00105
+"Airdrie",2019,"8","Low Quality",0.00059
+"Medicine Hat",2019,"8","Low Quality",0.00035
+"Calgary",2019,"8","Low Quality",0.00046
+"Grande Prairie",2019,"8","Low Quality",0.00047
+"Brazeau County",2019,"8","Low Quality",0.00147
+"Parkland County",2019,"8","Low Quality",0.00023
+"Sturgeon County",2019,"8","Low Quality",0.00065
+"St. Albert",2019,"8","Low Quality",0.00128
+"Fort Mackay",2019,"8","Low Quality",0.00099
+"Grande Prairie County No. 1",2019,"8","Low Quality",0.00035
+"Wood Buffalo",2019,"8","Low Quality",0.00078
+"Bruderheim",2019,"8","Low Quality",0.00106
+"Leduc County",2019,"8","Low Quality",0.00012
+"Beaverlodge",2019,"8","Low Quality",0.00012
+"Lamont County",2019,"8","Low Quality",7e-05
+"Yellowhead County",2019,"8","Low Quality",0.00051
+"Red Deer",2019,"9","Low Quality",0.00057
+"Caroline",2019,"9","Low Quality",0.00023
+"Airdrie",2019,"9","Low Quality",0.00036
+"Calgary",2019,"9","Low Quality",0.00046
+"Grande Prairie",2019,"9","Low Quality",0.00023
+"Parkland County",2019,"9","Low Quality",0.00092
+"Sturgeon County",2019,"9","Low Quality",0.00049
+"Fort Mackay",2019,"9","Low Quality",0.00052
+"Grande Prairie County No. 1",2019,"9","Low Quality",0.00018
+"Wood Buffalo",2019,"9","Low Quality",0.00033
+"Improvement District No. 13 Elk Island",2019,"9","Low Quality",0.00012
+"Leduc County",2019,"9","Low Quality",0.00023
+"Beaverlodge",2019,"9","Low Quality",0.00012
+"Yellowhead County",2019,"9","Low Quality",0.00047
+"Red Deer",2020,"1","High Quality",0.12073
+"Fort Saskatchewan",2020,"1","High Quality",0.18103
+"Edmonton",2020,"1","High Quality",0.09678
+"Lethbridge",2020,"1","High Quality",0.03902
+"Caroline",2020,"1","High Quality",0.19682
+"Airdrie",2020,"1","High Quality",0.09888
+"Medicine Hat",2020,"1","High Quality",0.04639
+"Calgary",2020,"1","High Quality",0.09802
+"Northern Sunrise County",2020,"1","High Quality",0.47601
+"Grande Prairie",2020,"1","High Quality",0.17628
+"Brazeau County",2020,"1","High Quality",0.11009
+"Parkland County",2020,"1","High Quality",0.24083
+"Strathcona County",2020,"1","High Quality",0.11848
+"Sturgeon County",2020,"1","High Quality",0.22703
+"St. Albert",2020,"1","High Quality",0.13429
+"Fort Mackay",2020,"1","High Quality",0.31306
+"Canmore",2020,"1","High Quality",0.00799
+"Grande Prairie County No. 1",2020,"1","High Quality",0.23916
+"Cold Lake",2020,"1","High Quality",0.26336
+"Bonnyville No. 87",2020,"1","High Quality",0.21428
+"St. Paul County No. 19",2020,"1","High Quality",0.20338
+"Wood Buffalo",2020,"1","High Quality",0.21742
+"Bruderheim",2020,"1","High Quality",0.1186
+"Improvement District No. 13 Elk Island",2020,"1","High Quality",0.28344
+"Leduc County",2020,"1","High Quality",0.13271
+"Beaverlodge",2020,"1","High Quality",0.23216
+"Lamont County",2020,"1","High Quality",0.12518
+"Yellowhead County",2020,"1","High Quality",0.21961
+"Lethbridge",2020,"10+","Very Low Quality",0.00012
+"Sturgeon County",2020,"10+","Very Low Quality",5e-05
+"Wood Buffalo",2020,"10+","Very Low Quality",4e-05
+"Red Deer",2020,"2","High Quality",0.5539
+"Fort Saskatchewan",2020,"2","High Quality",0.52089
+"Edmonton",2020,"2","High Quality",0.48116
+"Lethbridge",2020,"2","High Quality",0.70907
+"Caroline",2020,"2","High Quality",0.66529
+"Airdrie",2020,"2","High Quality",0.65845
+"Medicine Hat",2020,"2","High Quality",0.66678
+"Calgary",2020,"2","High Quality",0.50213
+"Northern Sunrise County",2020,"2","High Quality",0.4781
+"Grande Prairie",2020,"2","High Quality",0.52519
+"Brazeau County",2020,"2","High Quality",0.53988
+"Parkland County",2020,"2","High Quality",0.61507
+"Strathcona County",2020,"2","High Quality",0.53759
+"Sturgeon County",2020,"2","High Quality",0.54833
+"St. Albert",2020,"2","High Quality",0.50659
+"Fort Mackay",2020,"2","High Quality",0.54733
+"Canmore",2020,"2","High Quality",0.6433
+"Grande Prairie County No. 1",2020,"2","High Quality",0.55853
+"Cold Lake",2020,"2","High Quality",0.62332
+"Bonnyville No. 87",2020,"2","High Quality",0.63933
+"St. Paul County No. 19",2020,"2","High Quality",0.63762
+"Wood Buffalo",2020,"2","High Quality",0.65155
+"Bruderheim",2020,"2","High Quality",0.52372
+"Improvement District No. 13 Elk Island",2020,"2","High Quality",0.56479
+"Leduc County",2020,"2","High Quality",0.63554
+"Beaverlodge",2020,"2","High Quality",0.61078
+"Lamont County",2020,"2","High Quality",0.6239
+"Yellowhead County",2020,"2","High Quality",0.57191
+"Red Deer",2020,"3","High Quality",0.30033
+"Fort Saskatchewan",2020,"3","High Quality",0.23981
+"Edmonton",2020,"3","High Quality",0.33736
+"Lethbridge",2020,"3","High Quality",0.2354
+"Caroline",2020,"3","High Quality",0.13012
+"Airdrie",2020,"3","High Quality",0.22441
+"Medicine Hat",2020,"3","High Quality",0.27261
+"Calgary",2020,"3","High Quality",0.32594
+"Northern Sunrise County",2020,"3","High Quality",0.04287
+"Grande Prairie",2020,"3","High Quality",0.23965
+"Brazeau County",2020,"3","High Quality",0.31556
+"Parkland County",2020,"3","High Quality",0.14112
+"Strathcona County",2020,"3","High Quality",0.31294
+"Sturgeon County",2020,"3","High Quality",0.18593
+"St. Albert",2020,"3","High Quality",0.26991
+"Fort Mackay",2020,"3","High Quality",0.12927
+"Canmore",2020,"3","High Quality",0.31633
+"Grande Prairie County No. 1",2020,"3","High Quality",0.17221
+"Cold Lake",2020,"3","High Quality",0.11063
+"Bonnyville No. 87",2020,"3","High Quality",0.14161
+"St. Paul County No. 19",2020,"3","High Quality",0.15274
+"Wood Buffalo",2020,"3","High Quality",0.12732
+"Bruderheim",2020,"3","High Quality",0.30477
+"Improvement District No. 13 Elk Island",2020,"3","High Quality",0.1434
+"Leduc County",2020,"3","High Quality",0.22345
+"Beaverlodge",2020,"3","High Quality",0.14987
+"Lamont County",2020,"3","High Quality",0.23252
+"Yellowhead County",2020,"3","High Quality",0.19525
+"Red Deer",2020,"4","Moderate Quality",0.02252
+"Fort Saskatchewan",2020,"4","Moderate Quality",0.04763
+"Edmonton",2020,"4","Moderate Quality",0.07025
+"Lethbridge",2020,"4","Moderate Quality",0.01466
+"Caroline",2020,"4","Moderate Quality",0.00576
+"Airdrie",2020,"4","Moderate Quality",0.01675
+"Medicine Hat",2020,"4","Moderate Quality",0.01374
+"Calgary",2020,"4","Moderate Quality",0.06243
+"Northern Sunrise County",2020,"4","Moderate Quality",0.00221
+"Grande Prairie",2020,"4","Moderate Quality",0.0505
+"Brazeau County",2020,"4","Moderate Quality",0.03172
+"Parkland County",2020,"4","Moderate Quality",0.00299
+"Strathcona County",2020,"4","Moderate Quality",0.02483
+"Sturgeon County",2020,"4","Moderate Quality",0.03136
+"St. Albert",2020,"4","Moderate Quality",0.07385
+"Fort Mackay",2020,"4","Moderate Quality",0.00791
+"Canmore",2020,"4","Moderate Quality",0.03239
+"Grande Prairie County No. 1",2020,"4","Moderate Quality",0.02593
+"Cold Lake",2020,"4","Moderate Quality",0.00246
+"Bonnyville No. 87",2020,"4","Moderate Quality",0.00479
+"St. Paul County No. 19",2020,"4","Moderate Quality",0.00626
+"Wood Buffalo",2020,"4","Moderate Quality",0.00289
+"Bruderheim",2020,"4","Moderate Quality",0.04593
+"Improvement District No. 13 Elk Island",2020,"4","Moderate Quality",0.0079
+"Leduc County",2020,"4","Moderate Quality",0.00761
+"Beaverlodge",2020,"4","Moderate Quality",0.00612
+"Lamont County",2020,"4","Moderate Quality",0.01742
+"Yellowhead County",2020,"4","Moderate Quality",0.00963
+"Red Deer",2020,"5","Moderate Quality",0.0024
+"Fort Saskatchewan",2020,"5","Moderate Quality",0.00753
+"Edmonton",2020,"5","Moderate Quality",0.0107
+"Lethbridge",2020,"5","Moderate Quality",0.00162
+"Caroline",2020,"5","Moderate Quality",0.00035
+"Airdrie",2020,"5","Moderate Quality",0.00151
+"Medicine Hat",2020,"5","Moderate Quality",0.00047
+"Calgary",2020,"5","Moderate Quality",0.01047
+"Northern Sunrise County",2020,"5","Moderate Quality",0.00035
+"Grande Prairie",2020,"5","Moderate Quality",0.00732
+"Brazeau County",2020,"5","Moderate Quality",0.00264
+"Strathcona County",2020,"5","Moderate Quality",0.00478
+"Sturgeon County",2020,"5","Moderate Quality",0.00627
+"St. Albert",2020,"5","Moderate Quality",0.01305
+"Fort Mackay",2020,"5","Moderate Quality",0.00173
+"Grande Prairie County No. 1",2020,"5","Moderate Quality",0.00364
+"Cold Lake",2020,"5","Moderate Quality",0.00012
+"Wood Buffalo",2020,"5","Moderate Quality",0.00041
+"Bruderheim",2020,"5","Moderate Quality",0.00558
+"Improvement District No. 13 Elk Island",2020,"5","Moderate Quality",0.00046
+"Leduc County",2020,"5","Moderate Quality",0.00058
+"Beaverlodge",2020,"5","Moderate Quality",0.00106
+"Lamont County",2020,"5","Moderate Quality",0.00099
+"Yellowhead County",2020,"5","Moderate Quality",0.00106
+"Fort Saskatchewan",2020,"6","Moderate Quality",0.00221
+"Edmonton",2020,"6","Moderate Quality",0.00319
+"Caroline",2020,"6","Moderate Quality",0.00024
+"Calgary",2020,"6","Moderate Quality",0.00101
+"Grande Prairie",2020,"6","Moderate Quality",0.00071
+"Strathcona County",2020,"6","Moderate Quality",0.00103
+"Sturgeon County",2020,"6","Moderate Quality",8e-04
+"St. Albert",2020,"6","Moderate Quality",0.00205
+"Fort Mackay",2020,"6","Moderate Quality",0.00058
+"Grande Prairie County No. 1",2020,"6","Moderate Quality",0.00035
+"Wood Buffalo",2020,"6","Moderate Quality",4e-05
+"Bruderheim",2020,"6","Moderate Quality",0.00116
+"Red Deer",2020,"7","Low Quality",0.00011
+"Fort Saskatchewan",2020,"7","Low Quality",0.00091
+"Edmonton",2020,"7","Low Quality",0.00057
+"Lethbridge",2020,"7","Low Quality",0.00012
+"Caroline",2020,"7","Low Quality",0.00094
+"Northern Sunrise County",2020,"7","Low Quality",0.00035
+"Grande Prairie",2020,"7","Low Quality",0.00012
+"Brazeau County",2020,"7","Low Quality",0.00011
+"Strathcona County",2020,"7","Low Quality",0.00034
+"Sturgeon County",2020,"7","Low Quality",0.00023
+"St. Albert",2020,"7","Low Quality",0.00024
+"Fort Mackay",2020,"7","Low Quality",0.00012
+"Grande Prairie County No. 1",2020,"7","Low Quality",6e-05
+"Cold Lake",2020,"7","Low Quality",0.00012
+"Wood Buffalo",2020,"7","Low Quality",0.00024
+"Bruderheim",2020,"7","Low Quality",0.00023
+"Leduc County",2020,"7","Low Quality",0.00012
+"Yellowhead County",2020,"7","Low Quality",0.00255
+"Caroline",2020,"8","Low Quality",0.00012
+"Northern Sunrise County",2020,"8","Low Quality",0.00012
+"Grande Prairie",2020,"8","Low Quality",0.00024
+"Grande Prairie County No. 1",2020,"8","Low Quality",0.00012
+"Wood Buffalo",2020,"8","Low Quality",8e-05
+"Caroline",2020,"9","Low Quality",0.00035
+"Red Deer",2021,"1","High Quality",0.05232
+"Fort Saskatchewan",2021,"1","High Quality",0.0501
+"Edmonton",2021,"1","High Quality",0.02774
+"Lethbridge",2021,"1","High Quality",0.02343
+"Newell County",2021,"1","High Quality",0.22366
+"Caroline",2021,"1","High Quality",0.09719
+"Airdrie",2021,"1","High Quality",0.05337
+"Medicine Hat",2021,"1","High Quality",0.03055
+"Taber, M.D.",2021,"1","High Quality",0.08679
+"Foothills No. 31",2021,"1","High Quality",0.04552
+"Calgary",2021,"1","High Quality",0.01416
+"Northern Sunrise County",2021,"1","High Quality",0.36222
+"Grande Prairie",2021,"1","High Quality",0.09614
+"Brazeau County",2021,"1","High Quality",0.042
+"Parkland County",2021,"1","High Quality",0.11656
+"Strathcona County",2021,"1","High Quality",0.06417
+"Sturgeon County",2021,"1","High Quality",0.08829
+"St. Albert",2021,"1","High Quality",0.04613
+"Fort Mackay",2021,"1","High Quality",0.22659
+"Canmore",2021,"1","High Quality",0.05269
+"Grande Prairie County No. 1",2021,"1","High Quality",0.14788
+"Cold Lake",2021,"1","High Quality",0.17305
+"Bonnyville No. 87",2021,"1","High Quality",0.17489
+"St. Paul County No. 19",2021,"1","High Quality",0.11728
+"Wood Buffalo",2021,"1","High Quality",0.20784
+"Bruderheim",2021,"1","High Quality",0.06683
+"Improvement District No. 13 Elk Island",2021,"1","High Quality",0.20091
+"Leduc County",2021,"1","High Quality",0.07641
+"Beaverlodge",2021,"1","High Quality",0.11682
+"Lamont County",2021,"1","High Quality",0.10183
+"Yellowhead County",2021,"1","High Quality",0.1471
+"Red Deer",2021,"10+","Very Low Quality",0.00011
+"Fort Saskatchewan",2021,"10+","Very Low Quality",0.00242
+"Edmonton",2021,"10+","Very Low Quality",0.00171
+"Lethbridge",2021,"10+","Very Low Quality",0.00072
+"Newell County",2021,"10+","Very Low Quality",0.00121
+"Caroline",2021,"10+","Very Low Quality",0.00012
+"Airdrie",2021,"10+","Very Low Quality",0.00012
+"Taber, M.D.",2021,"10+","Very Low Quality",0.00121
+"Calgary",2021,"10+","Very Low Quality",0.00126
+"Brazeau County",2021,"10+","Very Low Quality",0.00012
+"Parkland County",2021,"10+","Very Low Quality",0.00196
+"Strathcona County",2021,"10+","Very Low Quality",0.0016
+"Sturgeon County",2021,"10+","Very Low Quality",0.00133
+"Fort Mackay",2021,"10+","Very Low Quality",0.00041
+"Canmore",2021,"10+","Very Low Quality",0.00943
+"Cold Lake",2021,"10+","Very Low Quality",0.00201
+"Bonnyville No. 87",2021,"10+","Very Low Quality",0.0033
+"St. Paul County No. 19",2021,"10+","Very Low Quality",0.00096
+"Wood Buffalo",2021,"10+","Very Low Quality",4e-05
+"Bruderheim",2021,"10+","Very Low Quality",0.002
+"Improvement District No. 13 Elk Island",2021,"10+","Very Low Quality",0.00222
+"Lamont County",2021,"10+","Very Low Quality",0.00124
+"Yellowhead County",2021,"10+","Very Low Quality",4e-05
+"Red Deer",2021,"2","High Quality",0.59904
+"Fort Saskatchewan",2021,"2","High Quality",0.54617
+"Edmonton",2021,"2","High Quality",0.43384
+"Lethbridge",2021,"2","High Quality",0.64491
+"Newell County",2021,"2","High Quality",0.55672
+"Caroline",2021,"2","High Quality",0.70737
+"Airdrie",2021,"2","High Quality",0.64411
+"Medicine Hat",2021,"2","High Quality",0.62208
+"Taber, M.D.",2021,"2","High Quality",0.57516
+"Foothills No. 31",2021,"2","High Quality",0.76238
+"Calgary",2021,"2","High Quality",0.41295
+"Northern Sunrise County",2021,"2","High Quality",0.54538
+"Grande Prairie",2021,"2","High Quality",0.55486
+"Brazeau County",2021,"2","High Quality",0.54627
+"Parkland County",2021,"2","High Quality",0.67334
+"Strathcona County",2021,"2","High Quality",0.57593
+"Sturgeon County",2021,"2","High Quality",0.62895
+"St. Albert",2021,"2","High Quality",0.46703
+"Fort Mackay",2021,"2","High Quality",0.54828
+"Canmore",2021,"2","High Quality",0.52052
+"Grande Prairie County No. 1",2021,"2","High Quality",0.60874
+"Cold Lake",2021,"2","High Quality",0.62966
+"Bonnyville No. 87",2021,"2","High Quality",0.65964
+"St. Paul County No. 19",2021,"2","High Quality",0.663
+"Peace No. 135",2021,"2","High Quality",0.82868
+"Wood Buffalo",2021,"2","High Quality",0.64488
+"Bruderheim",2021,"2","High Quality",0.52326
+"Improvement District No. 13 Elk Island",2021,"2","High Quality",0.66165
+"Leduc County",2021,"2","High Quality",0.69923
+"Beaverlodge",2021,"2","High Quality",0.71545
+"Lamont County",2021,"2","High Quality",0.66652
+"Yellowhead County",2021,"2","High Quality",0.62131
+"Red Deer",2021,"3","High Quality",0.30695
+"Fort Saskatchewan",2021,"3","High Quality",0.33184
+"Edmonton",2021,"3","High Quality",0.42608
+"Lethbridge",2021,"3","High Quality",0.25347
+"Newell County",2021,"3","High Quality",0.15119
+"Caroline",2021,"3","High Quality",0.1481
+"Airdrie",2021,"3","High Quality",0.23828
+"Medicine Hat",2021,"3","High Quality",0.26458
+"Taber, M.D.",2021,"3","High Quality",0.23063
+"Foothills No. 31",2021,"3","High Quality",0.1916
+"Calgary",2021,"3","High Quality",0.44297
+"Northern Sunrise County",2021,"3","High Quality",0.07586
+"Grande Prairie",2021,"3","High Quality",0.28109
+"Brazeau County",2021,"3","High Quality",0.34549
+"Parkland County",2021,"3","High Quality",0.16764
+"Strathcona County",2021,"3","High Quality",0.32656
+"Sturgeon County",2021,"3","High Quality",0.23339
+"St. Albert",2021,"3","High Quality",0.37963
+"Fort Mackay",2021,"3","High Quality",0.19632
+"Canmore",2021,"3","High Quality",0.2457
+"Grande Prairie County No. 1",2021,"3","High Quality",0.20366
+"Cold Lake",2021,"3","High Quality",0.16903
+"Bonnyville No. 87",2021,"3","High Quality",0.13746
+"St. Paul County No. 19",2021,"3","High Quality",0.20333
+"Peace No. 135",2021,"3","High Quality",0.15642
+"Wood Buffalo",2021,"3","High Quality",0.13103
+"Bruderheim",2021,"3","High Quality",0.34625
+"Improvement District No. 13 Elk Island",2021,"3","High Quality",0.10606
+"Leduc County",2021,"3","High Quality",0.19086
+"Beaverlodge",2021,"3","High Quality",0.15367
+"Lamont County",2021,"3","High Quality",0.20295
+"Yellowhead County",2021,"3","High Quality",0.20648
+"Red Deer",2021,"4","Moderate Quality",0.0289
+"Fort Saskatchewan",2021,"4","Moderate Quality",0.05458
+"Edmonton",2021,"4","Moderate Quality",0.09179
+"Lethbridge",2021,"4","Moderate Quality",0.04818
+"Newell County",2021,"4","Moderate Quality",0.04098
+"Caroline",2021,"4","Moderate Quality",0.02907
+"Airdrie",2021,"4","Moderate Quality",0.04015
+"Medicine Hat",2021,"4","Moderate Quality",0.05492
+"Taber, M.D.",2021,"4","Moderate Quality",0.06211
+"Foothills No. 31",2021,"4","Moderate Quality",5e-04
+"Calgary",2021,"4","Moderate Quality",0.09533
+"Northern Sunrise County",2021,"4","Moderate Quality",0.0123
+"Grande Prairie",2021,"4","Moderate Quality",0.05197
+"Brazeau County",2021,"4","Moderate Quality",0.05135
+"Parkland County",2021,"4","Moderate Quality",0.02382
+"Strathcona County",2021,"4","Moderate Quality",0.02352
+"Sturgeon County",2021,"4","Moderate Quality",0.03854
+"St. Albert",2021,"4","Moderate Quality",0.08788
+"Fort Mackay",2021,"4","Moderate Quality",0.01956
+"Canmore",2021,"4","Moderate Quality",0.07072
+"Grande Prairie County No. 1",2021,"4","Moderate Quality",0.02978
+"Cold Lake",2021,"4","Moderate Quality",0.01683
+"Bonnyville No. 87",2021,"4","Moderate Quality",0.01754
+"St. Paul County No. 19",2021,"4","Moderate Quality",0.01101
+"Peace No. 135",2021,"4","Moderate Quality",0.0149
+"Wood Buffalo",2021,"4","Moderate Quality",0.01068
+"Bruderheim",2021,"4","Moderate Quality",0.04639
+"Improvement District No. 13 Elk Island",2021,"4","Moderate Quality",0.01878
+"Leduc County",2021,"4","Moderate Quality",0.02373
+"Beaverlodge",2021,"4","Moderate Quality",0.01134
+"Lamont County",2021,"4","Moderate Quality",0.01925
+"Yellowhead County",2021,"4","Moderate Quality",0.01893
+"Red Deer",2021,"5","Moderate Quality",0.00514
+"Fort Saskatchewan",2021,"5","Moderate Quality",0.00617
+"Edmonton",2021,"5","Moderate Quality",0.00776
+"Lethbridge",2021,"5","Moderate Quality",0.0208
+"Newell County",2021,"5","Moderate Quality",0.01736
+"Caroline",2021,"5","Moderate Quality",0.00641
+"Airdrie",2021,"5","Moderate Quality",0.01145
+"Medicine Hat",2021,"5","Moderate Quality",0.01691
+"Taber, M.D.",2021,"5","Moderate Quality",0.02529
+"Calgary",2021,"5","Moderate Quality",0.02009
+"Northern Sunrise County",2021,"5","Moderate Quality",0.00164
+"Grande Prairie",2021,"5","Moderate Quality",0.01028
+"Brazeau County",2021,"5","Moderate Quality",0.00923
+"Parkland County",2021,"5","Moderate Quality",0.0084
+"Strathcona County",2021,"5","Moderate Quality",0.00377
+"Sturgeon County",2021,"5","Moderate Quality",0.00393
+"St. Albert",2021,"5","Moderate Quality",0.01601
+"Fort Mackay",2021,"5","Moderate Quality",0.00545
+"Canmore",2021,"5","Moderate Quality",0.05297
+"Grande Prairie County No. 1",2021,"5","Moderate Quality",0.00571
+"Cold Lake",2021,"5","Moderate Quality",0.00239
+"Bonnyville No. 87",2021,"5","Moderate Quality",0.002
+"St. Paul County No. 19",2021,"5","Moderate Quality",0.00215
+"Wood Buffalo",2021,"5","Moderate Quality",0.00203
+"Bruderheim",2021,"5","Moderate Quality",0.00904
+"Improvement District No. 13 Elk Island",2021,"5","Moderate Quality",0.00303
+"Leduc County",2021,"5","Moderate Quality",0.005
+"Beaverlodge",2021,"5","Moderate Quality",0.00201
+"Lamont County",2021,"5","Moderate Quality",0.00389
+"Yellowhead County",2021,"5","Moderate Quality",0.00417
+"Red Deer",2021,"6","Moderate Quality",0.00091
+"Fort Saskatchewan",2021,"6","Moderate Quality",0.00194
+"Edmonton",2021,"6","Moderate Quality",0.00148
+"Lethbridge",2021,"6","Moderate Quality",0.00359
+"Newell County",2021,"6","Moderate Quality",0.00565
+"Caroline",2021,"6","Moderate Quality",0.00214
+"Airdrie",2021,"6","Moderate Quality",0.00472
+"Medicine Hat",2021,"6","Moderate Quality",0.00618
+"Taber, M.D.",2021,"6","Moderate Quality",0.00688
+"Calgary",2021,"6","Moderate Quality",0.00502
+"Northern Sunrise County",2021,"6","Moderate Quality",0.00027
+"Grande Prairie",2021,"6","Moderate Quality",0.0026
+"Brazeau County",2021,"6","Moderate Quality",0.00046
+"Parkland County",2021,"6","Moderate Quality",0.00069
+"Strathcona County",2021,"6","Moderate Quality",0.00091
+"Sturgeon County",2021,"6","Moderate Quality",0.00058
+"St. Albert",2021,"6","Moderate Quality",0.00036
+"Fort Mackay",2021,"6","Moderate Quality",7e-04
+"Canmore",2021,"6","Moderate Quality",0.01969
+"Grande Prairie County No. 1",2021,"6","Moderate Quality",0.00165
+"Cold Lake",2021,"6","Moderate Quality",0.00025
+"Bonnyville No. 87",2021,"6","Moderate Quality",0.00071
+"Wood Buffalo",2021,"6","Moderate Quality",0.00035
+"Bruderheim",2021,"6","Moderate Quality",0.00176
+"Improvement District No. 13 Elk Island",2021,"6","Moderate Quality",0.00128
+"Leduc County",2021,"6","Moderate Quality",0.00105
+"Beaverlodge",2021,"6","Moderate Quality",0.00012
+"Lamont County",2021,"6","Moderate Quality",0.00097
+"Yellowhead County",2021,"6","Moderate Quality",0.00106
+"Red Deer",2021,"7","Low Quality",0.00377
+"Fort Saskatchewan",2021,"7","Low Quality",0.0052
+"Edmonton",2021,"7","Low Quality",0.00765
+"Lethbridge",2021,"7","Low Quality",0.00335
+"Newell County",2021,"7","Low Quality",0.00222
+"Caroline",2021,"7","Low Quality",0.0057
+"Airdrie",2021,"7","Low Quality",0.00531
+"Medicine Hat",2021,"7","Low Quality",0.00396
+"Taber, M.D.",2021,"7","Low Quality",0.01052
+"Calgary",2021,"7","Low Quality",0.00559
+"Northern Sunrise County",2021,"7","Low Quality",0.00164
+"Grande Prairie",2021,"7","Low Quality",0.00236
+"Brazeau County",2021,"7","Low Quality",0.00358
+"Parkland County",2021,"7","Low Quality",0.00414
+"Strathcona County",2021,"7","Low Quality",0.0032
+"Sturgeon County",2021,"7","Low Quality",0.00383
+"St. Albert",2021,"7","Low Quality",0.00142
+"Fort Mackay",2021,"7","Low Quality",0.00141
+"Canmore",2021,"7","Low Quality",0.01803
+"Grande Prairie County No. 1",2021,"7","Low Quality",0.00206
+"Cold Lake",2021,"7","Low Quality",0.0049
+"Bonnyville No. 87",2021,"7","Low Quality",0.00318
+"St. Paul County No. 19",2021,"7","Low Quality",0.00203
+"Wood Buffalo",2021,"7","Low Quality",0.00193
+"Bruderheim",2021,"7","Low Quality",0.00399
+"Improvement District No. 13 Elk Island",2021,"7","Low Quality",0.00525
+"Leduc County",2021,"7","Low Quality",0.00279
+"Beaverlodge",2021,"7","Low Quality",0.00035
+"Lamont County",2021,"7","Low Quality",0.00247
+"Yellowhead County",2021,"7","Low Quality",0.00061
+"Red Deer",2021,"8","Low Quality",0.0016
+"Fort Saskatchewan",2021,"8","Low Quality",0.00109
+"Edmonton",2021,"8","Low Quality",0.0016
+"Lethbridge",2021,"8","Low Quality",0.00132
+"Newell County",2021,"8","Low Quality",0.00081
+"Caroline",2021,"8","Low Quality",0.00285
+"Airdrie",2021,"8","Low Quality",0.00213
+"Medicine Hat",2021,"8","Low Quality",7e-04
+"Taber, M.D.",2021,"8","Low Quality",0.00142
+"Calgary",2021,"8","Low Quality",0.00137
+"Northern Sunrise County",2021,"8","Low Quality",0.00041
+"Grande Prairie",2021,"8","Low Quality",0.00071
+"Brazeau County",2021,"8","Low Quality",0.00115
+"Parkland County",2021,"8","Low Quality",0.00242
+"Strathcona County",2021,"8","Low Quality",0.00011
+"Sturgeon County",2021,"8","Low Quality",0.00085
+"St. Albert",2021,"8","Low Quality",0.00119
+"Fort Mackay",2021,"8","Low Quality",7e-04
+"Canmore",2021,"8","Low Quality",0.00527
+"Grande Prairie County No. 1",2021,"8","Low Quality",0.00047
+"Cold Lake",2021,"8","Low Quality",0.00151
+"Bonnyville No. 87",2021,"8","Low Quality",0.00082
+"St. Paul County No. 19",2021,"8","Low Quality",0.00024
+"Wood Buffalo",2021,"8","Low Quality",0.00091
+"Bruderheim",2021,"8","Low Quality",0.00023
+"Improvement District No. 13 Elk Island",2021,"8","Low Quality",0.00047
+"Leduc County",2021,"8","Low Quality",0.00058
+"Beaverlodge",2021,"8","Low Quality",0.00024
+"Lamont County",2021,"8","Low Quality",0.00035
+"Yellowhead County",2021,"8","Low Quality",0.00016
+"Red Deer",2021,"9","Low Quality",0.00126
+"Fort Saskatchewan",2021,"9","Low Quality",0.00048
+"Edmonton",2021,"9","Low Quality",0.00034
+"Lethbridge",2021,"9","Low Quality",0.00024
+"Newell County",2021,"9","Low Quality",2e-04
+"Caroline",2021,"9","Low Quality",0.00107
+"Airdrie",2021,"9","Low Quality",0.00035
+"Medicine Hat",2021,"9","Low Quality",0.00012
+"Calgary",2021,"9","Low Quality",0.00126
+"Northern Sunrise County",2021,"9","Low Quality",0.00027
+"Brazeau County",2021,"9","Low Quality",0.00035
+"Parkland County",2021,"9","Low Quality",0.00104
+"Strathcona County",2021,"9","Low Quality",0.00023
+"Sturgeon County",2021,"9","Low Quality",0.00032
+"St. Albert",2021,"9","Low Quality",0.00036
+"Fort Mackay",2021,"9","Low Quality",0.00059
+"Canmore",2021,"9","Low Quality",0.00499
+"Grande Prairie County No. 1",2021,"9","Low Quality",6e-05
+"Cold Lake",2021,"9","Low Quality",0.00038
+"Bonnyville No. 87",2021,"9","Low Quality",0.00047
+"Wood Buffalo",2021,"9","Low Quality",0.00032
+"Bruderheim",2021,"9","Low Quality",0.00023
+"Improvement District No. 13 Elk Island",2021,"9","Low Quality",0.00035
+"Leduc County",2021,"9","Low Quality",0.00035
+"Lamont County",2021,"9","Low Quality",0.00053
+"Yellowhead County",2021,"9","Low Quality",0.00012
+"Red Deer",2022,"1","High Quality",0.0555
+"Fort Saskatchewan",2022,"1","High Quality",0.01868
+"Edmonton",2022,"1","High Quality",0.02021
+"Lethbridge",2022,"1","High Quality",0.02992
+"Newell County",2022,"1","High Quality",0.15492
+"Caroline",2022,"1","High Quality",0.12416
+"Airdrie",2022,"1","High Quality",0.05552
+"Medicine Hat",2022,"1","High Quality",0.04458
+"Taber, M.D.",2022,"1","High Quality",0.07414
+"Calgary",2022,"1","High Quality",0.00731
+"Grande Prairie",2022,"1","High Quality",0.07411
+"Brazeau County",2022,"1","High Quality",0.03031
+"Parkland County",2022,"1","High Quality",0.14722
+"Strathcona County",2022,"1","High Quality",0.06435
+"Sturgeon County",2022,"1","High Quality",0.09954
+"St. Albert",2022,"1","High Quality",0.06604
+"Fort Mackay",2022,"1","High Quality",0.21529
+"Grande Prairie County No. 1",2022,"1","High Quality",0.12112
+"Cold Lake",2022,"1","High Quality",0.17746
+"Bonnyville No. 87",2022,"1","High Quality",0.18974
+"St. Paul County No. 19",2022,"1","High Quality",0.12373
+"Peace No. 135",2022,"1","High Quality",0.10904
+"Wood Buffalo",2022,"1","High Quality",0.20276
+"Bruderheim",2022,"1","High Quality",0.04948
+"Improvement District No. 13 Elk Island",2022,"1","High Quality",0.16696
+"Beaverlodge",2022,"1","High Quality",0.09544
+"Lamont County",2022,"1","High Quality",0.09928
+"Yellowhead County",2022,"1","High Quality",0.14085
+"Caroline",2022,"10+","Very Low Quality",0.00012
+"Strathcona County",2022,"10+","Very Low Quality",0.00011
+"Sturgeon County",2022,"10+","Very Low Quality",0.00107
+"Peace No. 135",2022,"10+","Very Low Quality",0.00047
+"Wood Buffalo",2022,"10+","Very Low Quality",2e-04
+"Improvement District No. 13 Elk Island",2022,"10+","Very Low Quality",0.00139
+"Yellowhead County",2022,"10+","Very Low Quality",0.00031
+"Red Deer",2022,"2","High Quality",0.57089
+"Fort Saskatchewan",2022,"2","High Quality",0.51565
+"Edmonton",2022,"2","High Quality",0.42368
+"Lethbridge",2022,"2","High Quality",0.68093
+"Newell County",2022,"2","High Quality",0.65971
+"Caroline",2022,"2","High Quality",0.70911
+"Airdrie",2022,"2","High Quality",0.65345
+"Medicine Hat",2022,"2","High Quality",0.64684
+"Taber, M.D.",2022,"2","High Quality",0.6753
+"Foothills No. 31",2022,"2","High Quality",0.40019
+"Calgary",2022,"2","High Quality",0.3773
+"Grande Prairie",2022,"2","High Quality",0.53264
+"Brazeau County",2022,"2","High Quality",0.54483
+"Parkland County",2022,"2","High Quality",0.64097
+"Strathcona County",2022,"2","High Quality",0.58021
+"Sturgeon County",2022,"2","High Quality",0.58633
+"St. Albert",2022,"2","High Quality",0.50124
+"Fort Mackay",2022,"2","High Quality",0.57611
+"Grande Prairie County No. 1",2022,"2","High Quality",0.60089
+"Cold Lake",2022,"2","High Quality",0.61771
+"Bonnyville No. 87",2022,"2","High Quality",0.66269
+"St. Paul County No. 19",2022,"2","High Quality",0.67662
+"Peace No. 135",2022,"2","High Quality",0.70528
+"Wood Buffalo",2022,"2","High Quality",0.68732
+"Bruderheim",2022,"2","High Quality",0.55313
+"Improvement District No. 13 Elk Island",2022,"2","High Quality",0.68594
+"Beaverlodge",2022,"2","High Quality",0.68981
+"Lamont County",2022,"2","High Quality",0.61739
+"Yellowhead County",2022,"2","High Quality",0.63642
+"Red Deer",2022,"3","High Quality",0.3402
+"Fort Saskatchewan",2022,"3","High Quality",0.36099
+"Edmonton",2022,"3","High Quality",0.43841
+"Lethbridge",2022,"3","High Quality",0.26076
+"Newell County",2022,"3","High Quality",0.17315
+"Caroline",2022,"3","High Quality",0.15552
+"Airdrie",2022,"3","High Quality",0.25012
+"Medicine Hat",2022,"3","High Quality",0.2923
+"Taber, M.D.",2022,"3","High Quality",0.22241
+"Foothills No. 31",2022,"3","High Quality",0.57357
+"Calgary",2022,"3","High Quality",0.52084
+"Grande Prairie",2022,"3","High Quality",0.29313
+"Brazeau County",2022,"3","High Quality",0.37712
+"Parkland County",2022,"3","High Quality",0.20256
+"Strathcona County",2022,"3","High Quality",0.32188
+"Sturgeon County",2022,"3","High Quality",0.25853
+"St. Albert",2022,"3","High Quality",0.33267
+"Fort Mackay",2022,"3","High Quality",0.19054
+"Grande Prairie County No. 1",2022,"3","High Quality",0.22363
+"Cold Lake",2022,"3","High Quality",0.19598
+"Bonnyville No. 87",2022,"3","High Quality",0.13693
+"St. Paul County No. 19",2022,"3","High Quality",0.18624
+"Peace No. 135",2022,"3","High Quality",0.16474
+"Wood Buffalo",2022,"3","High Quality",0.09989
+"Bruderheim",2022,"3","High Quality",0.34083
+"Improvement District No. 13 Elk Island",2022,"3","High Quality",0.12713
+"Beaverlodge",2022,"3","High Quality",0.19943
+"Lamont County",2022,"3","High Quality",0.24511
+"Yellowhead County",2022,"3","High Quality",0.20925
+"Red Deer",2022,"4","Moderate Quality",0.03067
+"Fort Saskatchewan",2022,"4","Moderate Quality",0.08285
+"Edmonton",2022,"4","Moderate Quality",0.0975
+"Lethbridge",2022,"4","Moderate Quality",0.02419
+"Newell County",2022,"4","Moderate Quality",0.01073
+"Caroline",2022,"4","Moderate Quality",0.00873
+"Airdrie",2022,"4","Moderate Quality",0.03025
+"Medicine Hat",2022,"4","Moderate Quality",0.0142
+"Taber, M.D.",2022,"4","Moderate Quality",0.02235
+"Foothills No. 31",2022,"4","Moderate Quality",0.02437
+"Calgary",2022,"4","Moderate Quality",0.07765
+"Grande Prairie",2022,"4","Moderate Quality",0.08
+"Brazeau County",2022,"4","Moderate Quality",0.04135
+"Parkland County",2022,"4","Moderate Quality",0.00848
+"Strathcona County",2022,"4","Moderate Quality",0.02714
+"Sturgeon County",2022,"4","Moderate Quality",0.0408
+"St. Albert",2022,"4","Moderate Quality",0.08299
+"Fort Mackay",2022,"4","Moderate Quality",0.01516
+"Grande Prairie County No. 1",2022,"4","Moderate Quality",0.04388
+"Cold Lake",2022,"4","Moderate Quality",0.00621
+"Bonnyville No. 87",2022,"4","Moderate Quality",0.00853
+"St. Paul County No. 19",2022,"4","Moderate Quality",0.01085
+"Peace No. 135",2022,"4","Moderate Quality",0.01498
+"Wood Buffalo",2022,"4","Moderate Quality",0.00679
+"Bruderheim",2022,"4","Moderate Quality",0.04347
+"Improvement District No. 13 Elk Island",2022,"4","Moderate Quality",0.01242
+"Beaverlodge",2022,"4","Moderate Quality",0.0114
+"Lamont County",2022,"4","Moderate Quality",0.02816
+"Yellowhead County",2022,"4","Moderate Quality",0.00955
+"Red Deer",2022,"5","Moderate Quality",0.0016
+"Fort Saskatchewan",2022,"5","Moderate Quality",0.01431
+"Edmonton",2022,"5","Moderate Quality",0.01644
+"Lethbridge",2022,"5","Moderate Quality",0.0028
+"Newell County",2022,"5","Moderate Quality",0.00115
+"Caroline",2022,"5","Moderate Quality",0.00094
+"Airdrie",2022,"5","Moderate Quality",0.00823
+"Medicine Hat",2022,"5","Moderate Quality",0.00173
+"Taber, M.D.",2022,"5","Moderate Quality",0.00424
+"Foothills No. 31",2022,"5","Moderate Quality",0.00094
+"Calgary",2022,"5","Moderate Quality",0.01176
+"Grande Prairie",2022,"5","Moderate Quality",0.01546
+"Brazeau County",2022,"5","Moderate Quality",0.00616
+"Parkland County",2022,"5","Moderate Quality",0.00077
+"Strathcona County",2022,"5","Moderate Quality",0.00527
+"Sturgeon County",2022,"5","Moderate Quality",0.00876
+"St. Albert",2022,"5","Moderate Quality",0.01483
+"Fort Mackay",2022,"5","Moderate Quality",0.00225
+"Grande Prairie County No. 1",2022,"5","Moderate Quality",0.00801
+"Cold Lake",2022,"5","Moderate Quality",0.00167
+"Bonnyville No. 87",2022,"5","Moderate Quality",0.00152
+"St. Paul County No. 19",2022,"5","Moderate Quality",0.00257
+"Peace No. 135",2022,"5","Moderate Quality",0.00199
+"Wood Buffalo",2022,"5","Moderate Quality",0.00104
+"Bruderheim",2022,"5","Moderate Quality",0.00895
+"Improvement District No. 13 Elk Island",2022,"5","Moderate Quality",0.00174
+"Beaverlodge",2022,"5","Moderate Quality",0.0019
+"Lamont County",2022,"5","Moderate Quality",0.0069
+"Yellowhead County",2022,"5","Moderate Quality",0.0015
+"Red Deer",2022,"6","Moderate Quality",0.00103
+"Fort Saskatchewan",2022,"6","Moderate Quality",0.00412
+"Edmonton",2022,"6","Moderate Quality",0.00171
+"Lethbridge",2022,"6","Moderate Quality",0.00102
+"Newell County",2022,"6","Moderate Quality",0.00012
+"Caroline",2022,"6","Moderate Quality",0.00024
+"Airdrie",2022,"6","Moderate Quality",0.0022
+"Medicine Hat",2022,"6","Moderate Quality",0.00035
+"Taber, M.D.",2022,"6","Moderate Quality",0.00057
+"Foothills No. 31",2022,"6","Moderate Quality",0.00047
+"Calgary",2022,"6","Moderate Quality",0.00297
+"Grande Prairie",2022,"6","Moderate Quality",0.00245
+"Brazeau County",2022,"6","Moderate Quality",0.00012
+"Strathcona County",2022,"6","Moderate Quality",0.00057
+"Sturgeon County",2022,"6","Moderate Quality",0.00201
+"St. Albert",2022,"6","Moderate Quality",0.00212
+"Fort Mackay",2022,"6","Moderate Quality",6e-05
+"Grande Prairie County No. 1",2022,"6","Moderate Quality",0.0012
+"Cold Lake",2022,"6","Moderate Quality",0.00012
+"Bonnyville No. 87",2022,"6","Moderate Quality",0.00012
+"Peace No. 135",2022,"6","Moderate Quality",0.00094
+"Wood Buffalo",2022,"6","Moderate Quality",2e-04
+"Bruderheim",2022,"6","Moderate Quality",0.00295
+"Improvement District No. 13 Elk Island",2022,"6","Moderate Quality",0.00244
+"Beaverlodge",2022,"6","Moderate Quality",0.00095
+"Lamont County",2022,"6","Moderate Quality",0.00244
+"Yellowhead County",2022,"6","Moderate Quality",0.00058
+"Red Deer",2022,"7","Low Quality",0.00011
+"Fort Saskatchewan",2022,"7","Low Quality",0.00303
+"Edmonton",2022,"7","Low Quality",0.00194
+"Lethbridge",2022,"7","Low Quality",0.00025
+"Newell County",2022,"7","Low Quality",0.00023
+"Caroline",2022,"7","Low Quality",0.00083
+"Airdrie",2022,"7","Low Quality",0.00023
+"Taber, M.D.",2022,"7","Low Quality",0.00085
+"Foothills No. 31",2022,"7","Low Quality",0.00047
+"Calgary",2022,"7","Low Quality",0.00114
+"Grande Prairie",2022,"7","Low Quality",0.00172
+"Strathcona County",2022,"7","Low Quality",0.00046
+"Sturgeon County",2022,"7","Low Quality",0.00189
+"St. Albert",2022,"7","Low Quality",0.00012
+"Fort Mackay",2022,"7","Low Quality",3e-04
+"Grande Prairie County No. 1",2022,"7","Low Quality",0.00102
+"Cold Lake",2022,"7","Low Quality",0.00084
+"Bonnyville No. 87",2022,"7","Low Quality",0.00035
+"Peace No. 135",2022,"7","Low Quality",0.00199
+"Wood Buffalo",2022,"7","Low Quality",0.00146
+"Bruderheim",2022,"7","Low Quality",0.00118
+"Improvement District No. 13 Elk Island",2022,"7","Low Quality",0.00186
+"Beaverlodge",2022,"7","Low Quality",0.00083
+"Lamont County",2022,"7","Low Quality",0.00072
+"Yellowhead County",2022,"7","Low Quality",0.00108
+"Fort Saskatchewan",2022,"8","Low Quality",0.00036
+"Edmonton",2022,"8","Low Quality",0.00011
+"Lethbridge",2022,"8","Low Quality",0.00013
+"Caroline",2022,"8","Low Quality",0.00024
+"Taber, M.D.",2022,"8","Low Quality",0.00014
+"Calgary",2022,"8","Low Quality",0.00091
+"Grande Prairie",2022,"8","Low Quality",0.00049
+"Brazeau County",2022,"8","Low Quality",0.00012
+"Sturgeon County",2022,"8","Low Quality",0.00059
+"Fort Mackay",2022,"8","Low Quality",3e-04
+"Grande Prairie County No. 1",2022,"8","Low Quality",0.00024
+"Peace No. 135",2022,"8","Low Quality",0.00047
+"Wood Buffalo",2022,"8","Low Quality",0.00024
+"Improvement District No. 13 Elk Island",2022,"8","Low Quality",0.00012
+"Beaverlodge",2022,"8","Low Quality",0.00024
+"Yellowhead County",2022,"8","Low Quality",0.00035
+"Caroline",2022,"9","Low Quality",0.00012
+"Calgary",2022,"9","Low Quality",0.00011
+"Sturgeon County",2022,"9","Low Quality",0.00047
+"Bonnyville No. 87",2022,"9","Low Quality",0.00012
+"Peace No. 135",2022,"9","Low Quality",0.00012
+"Wood Buffalo",2022,"9","Low Quality",0.00012
+"Yellowhead County",2022,"9","Low Quality",0.00012
