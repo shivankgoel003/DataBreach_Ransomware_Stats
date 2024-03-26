@@ -1,62 +1,54 @@
 #### Preamble ####
-# Purpose: Cleans the two data sets for the years 2018 to 2021
-# Author: Navya Hooda, Shivank Goel, Vanshika Vanshika
-# Date: 07 March 2024 
+# Purpose: Simulates the cyberattack dataset for analysis on breaches from 2010 to 2020
+# Author:  Shivank Goel
+# Date: 27 March 2024 
 # Contact: shivankg.goel@mail.utoronto.ca
 # License: MIT
 
 # Load the tidyverse package for data manipulation
 library(tidyverse)
 library(MASS)
-
 # Set seed for reproducibility
 set.seed(2024)
 
-#### Simulate death data ####
+#### Simulate cyberattack data ####
 
-# Since we have 4 diseases and 12 years, each disease should appear exactly 12 times to match the number of years
-death_data <- tibble(
-  year = rep(2011:2022, times = 4),  # Replicate each year 4 times to match the number of diseases
-  disease = rep(c("Other chronic obstructive pulmonary disease", 
-                  "All other forms of chronic ischemic heart disease", 
-                  "Acute myocardial infarction", 
-                  "Malignant neoplasms of trachea, bronchus and lung"), each = 12),  # Each disease repeated 12 times
-  deaths = rnbinom(n = 48, size = 100, prob = 0.02)  # We now need 48 random numbers to match the expanded dataset
-)
+# Simulating the number of organizations affected by cyberattacks for 5 years
+# We'll assume the number of affected organizations follows a negative binomial distribution
 
-#### Simulate air quality data ####
+# Defining variables
+years <- 2016:2020
+organization_sizes <- c("Small", "Medium", "Large", "NA")
+levels_of_digital_intensity <- c("Low", "Medium", "High", "NA")
+sectors <- c("Healthcare", "Finance", "Education", "Retail", "NA")
 
-# Assuming the PM2.5 data is the same for both locations, we replicate the PM2.5 data twice for each year
-pm25_data <- tibble(
-  year = rep(2011:2022, times = 2),  # Each year appears twice
-  pm25 = rnbinom(n = 24, size = 50, prob = 0.05)  # We now need 24 random numbers to match the number of years times two
-)
+# Simulating the data
+cyberattack_data <- expand.grid(year = years,
+                                organization_size = organization_sizes,
+                                level_of_digital_intensity = levels_of_digital_intensity,
+                                sector = sectors) %>%
+  mutate(number_of_attacks = rnbinom(n = nrow(.), size = 1, mu = 10)) # average number of attacks is 10
 
-#### Combine both datasets for modeling ####
+#### Examine the simulated data ####
 
-# Join datasets by 'year'
-combined_data <- left_join(death_data, pm25_data, by = "year")
+head(cyberattack_data)
 
-head(combined_data)
+#### Statistical analysis ####
 
-# Fit a Negative Binomial Model
-model <- glm.nb(deaths ~ pm25 + factor(year) + factor(disease), data = combined_data)
+# Fit a Negative Binomial Model to predict the number of attacks
+# based on organization size, level of digital intensity, and sector
+model <- glm.nb(number_of_attacks ~ organization_size + level_of_digital_intensity + sector,
+                data = cyberattack_data)
 
-# Model Diagnostics
-par(mfrow=c(2,2))
-plot(model)
+# Model summary
+summary(model)
 
-# Plotting Observed vs. Predicted Deaths
-combined_data$predicted_deaths <- predict(model, type = "response")
-ggplot(combined_data, aes(x = deaths, y = predicted_deaths)) +
-  geom_point() +
-  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red") +
-  labs(x = "Observed Deaths", y = "Predicted Deaths") +
-  theme_minimal()
+#### Visualization ####
 
-# Effect of PM2.5 on Predicted Deaths
-ggplot(combined_data, aes(x = pm25, y = predicted_deaths, color = factor(year))) +
-  geom_point() +
-  labs(x = "PM2.5 Concentration", y = "Predicted Deaths") +
+# Plotting Number of Attacks by Sector
+ggplot(cyberattack_data, aes(x = sector, y = number_of_attacks, fill = organization_size)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  labs(title = "Number of Cyberattacks by Sector and Organization Size",
+       x = "Sector", y = "Number of Attacks") +
   theme_minimal() +
-  facet_wrap(~disease)
+  scale_fill_brewer(palette = "Set3")
