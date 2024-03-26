@@ -24,12 +24,7 @@ library(tidyverse)
 library(readxl)
 library(here)
 
-deaths_data <- read.csv(here("data/analysis_data/cleaned_file.csv"))
-air_quality_data <- read.csv(here("data/analysis_data/cleaned_air_data.csv"))
-data <- read.csv(here("data/analysis_data/cleaned_chart_data.csv"))
-data_peak <- read.csv(here("data/analysis_data/cleaned_peak_data.csv"))
-data_lung <- read.csv(here("data/analysis_data/merged_data.csv"))
-data_heart <- read.csv(here("data/analysis_data/merged_heart_data.csv"))
+breach_data <- read.csv(here("data/analysis_data/breach_data.csv"))
 ```
 
 
@@ -97,432 +92,228 @@ Overall, our methodology ensured the creation of comprehensive datasets that all
 #| echo: false
 #| warning: false
 
-# Plot the regression graph
-ggplot(data, aes(x = provincial_average, y = total_deaths)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE) +  # Add linear regression line without confidence interval
-  labs(x = "Provincial Average PM2.5", y = "Total Deaths") +
-  theme_minimal()
-
+breach_data %>%
+  count(year) %>%
+  ggplot(aes(x = year, y = n)) +
+  geom_line() +
+  labs(title = "Cyberattacks Over Time", x = "Year", y = "Number of Attacks")
 
 ``` 
-
 ```{r}
-#| label: fig-lung
-#| fig-cap: Lung Related Causes Mortality Rates vs Average PM2.5 Quantity 
-#| echo: false
-#| warning: false
-
-# Plot the regression graph for all lungs causes
-ggplot(data_lung, aes(x = provincial_average, y = total_deaths)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE) +  # Add linear regression line without confidence interval
-  labs(x = "Provincial Average", y = "Total Deaths") +
-  theme_minimal()
+breach_data %>%
+  count(sector) %>%
+  ggplot(aes(x = reorder(sector, n), y = n)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Cyberattacks by Sector", x = "Sector", y = "Number of Attacks")
 ```
 
 ```{r}
-#| label: fig-heart
-#| fig-cap: Heart Related Causes Mortality Rates vs Average PM2.5 Quantity 
-#| echo: false
-#| warning: false
-# Plot the regression graph for all heart causes
-ggplot(data, aes(x = provincial_average, y = total_deaths)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE) +  # Add linear regression line without confidence interval
-  labs(x = "Provincial Average", y = "Total Deaths") +
-  theme_minimal()
-
+breach_data %>%
+  count(country) %>%
+  ggplot(aes(x = reorder(country, n), y = n)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Cyberattacks by Country", x = "Country", y = "Number of Attacks")
 
 ```
 
+```{r}
+breach_data %>%
+  count(country) %>%
+  ggplot(aes(x = reorder(country, n), y = n, fill = country)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Cyberattacks by Country", x = "Country", y = "Number of Attacks") +
+  theme_minimal() +
+  theme(legend.position = "none") # Hides the legend
+
+```
+
+
+
+```{r}
+breach_data %>%
+  count(attack_type) %>%
+  ggplot(aes(x = "", y = n, fill = attack_type)) +
+  geom_bar(width = 1, stat = "identity") +
+  coord_polar("y") +
+  labs(title = "Distribution of Attack Types")
+
+```
 Talk more about it.
+
 
 And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
 
-```{r}
-#| label: fig-annual
-#| fig-cap: Annual Trends of PM2.5 Concentrations in Alberta
-#| echo: false
-#| warning: false
-#| message: false
 
-# Assuming your data frame is named 'cleaned_avg_PM25_conc' and is already filtered and renamed.
-# Convert factors to character to avoid issues in ggplot
-data[] <- lapply(data, function(x) if(is.factor(x)) as.character(x) else x)
-# Creating the plot with ggplot
-p <- ggplot(data, aes(x = year)) +
-  geom_line(aes(y = provincial_average, colour = "Provincial Average")) +
-  geom_line(aes(y = x10th_percentile, colour = "10th Percentile")) +
-  geom_line(aes(y = x90th_percentile, colour = "90th Percentile")) +
-  labs(x = "Years", y = "PM2.5 Concentration (μg/m³)") +
-  scale_colour_manual(values = c("Provincial Average" = "blue", "10th Percentile" = "green", "90th Percentile" = "red")) +
+```{r}
+breach_data %>%
+  ggplot(aes(x = as.factor(year), y = impact_on_data)) +
+  geom_boxplot() +
+  labs(title = "Impact on Data by Year", x = "Year", y = "Impact on Data")
+
+```
+```{r}
+breach_data %>%
+  count(year, attack_type) %>%
+  ggplot(aes(x = year, y = n, fill = attack_type)) +
+  geom_area(position = 'stack') +
+  labs(title = "Attack Types Over Years", x = "Year", y = "Count")
+
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+# Assuming 'overall_nature_of_attack' is your categorical variable indicating the nature/type of attack
+# and 'number_of_users_affected' is a numeric variable indicating the number of users impacted
+
+# First, let's calculate summary statistics for each nature of attack
+
+breach_data %>%
+  count(year, sector) %>%
+  ggplot(aes(x = year, y = sector, fill = n)) +
+  geom_tile() +
+  scale_fill_gradient(low = "lightblue", high = "red") +
+  labs(title = "Heatmap of Cyberattacks per Year and Sector",
+       x = "Year",
+       y = "Sector")
+
+```
+```{r}
+breach_data %>%
+  count(year, overall_nature_of_attack) %>%
+  ggplot(aes(x = as.factor(year), y = n, fill = overall_nature_of_attack)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Stacked Bar Chart of Attack Types by Year",
+       x = "Year",
+       y = "Number of Attacks")
+
+
+```
+```{r}
+library(ggplot2)
+
+ggplot(breach_data, aes(x = as.factor(year), y = number_of_users_affected)) +
+  geom_boxplot() +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(title = "Boxplot of Number of Users Affected Across Years",
+       x = "Year",
+       y = "Number of Users Affected")
+```
+
+
+```{r}
+
+breach_data %>%
+  filter(year == 2013) %>%
+  arrange(desc(number_of_users_affected)) %>%
+  head()  # This shows the top entries for 2013
+
+breach_data %>%
+  filter(year == 2014) %>%
+  arrange(desc(number_of_users_affected)) %>%
+  head()  # This shows the top entries for 2013
+
+# Install and load the scales package
+if (!requireNamespace("scales", quietly = TRUE)) {
+  install.packages("scales")
+}
+library(scales)
+
+
+
+```
+
+
+
+```{r}
+breach_data %>%
+  count(country) %>%
+  mutate(percentage = n / sum(n) * 100) %>%
+  ggplot(aes(x = reorder(country, percentage), y = percentage)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Percentage of Total Cyberattacks by Country",
+       x = "Country",
+       y = "Percentage of Attacks")
+
+
+
+```
+
+```{r}
+
+
+breach_data %>%
+  mutate(impact_score = case_when(
+    impact_on_data == "Low" ~ 1,
+    impact_on_data == "Medium" ~ 2,
+    impact_on_data == "High" ~ 3,
+    TRUE ~ NA_real_
+  )) %>%
+  group_by(organisation_size) %>%
+  summarize(average_impact = mean(impact_score, na.rm = TRUE)) %>%
+  ggplot(aes(x = organisation_size, y = average_impact, fill = organisation_size)) +
+  geom_col() +
+  labs(title = "Average Impact Severity by Organization Size",
+       x = "Organisation Size",
+       y = "Average Impact Score") +
   theme_minimal()
 
-# Display the plot
-p
 ```
 
 ```{r}
-#| label: fig-four
-#| fig-cap: Mortality Rates vs. Air Quality Health Index
-#| echo: false
-#| warning: false
-#| message: false
+ggplot(breach_data, aes(x = number_of_users_affected)) +
+  geom_density(fill = "blue", alpha = 0.5) +
+  labs(title = "Density Plot of Number of Users Affected by Cyberattacks",
+       x = "Number of Users Affected",
+       y = "Density")
 
-
-library(MASS)
-
-air_quality_data <- air_quality_data[air_quality_data$air_quality_health_index != "10+",]
-air_quality_data$air_quality_health_index <- as.numeric(air_quality_data$air_quality_health_index)
-
-# Calculate the average Air Quality Health Index per year
-average_aqi_by_year <- air_quality_data %>%
-  group_by(year) %>%
-  summarize(average_aqi = mean(air_quality_health_index))
-
-combined_data <- merge(deaths_data, average_aqi_by_year, by = "year")
-
-# Plot scatter plot of mortality rates vs. air quality health index
-ggplot(combined_data, aes(x = average_aqi, y = total_deaths)) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  facet_wrap(~cause) +
-  labs(
-       x = "Average Air Quality Health Index",
-       y = "Total Deaths")
 ```
 
 
-
 ```{r}
-#| label: fig-cause
-#| fig-cap: Total Deaths by Year for Each Cause
-#| echo: false
-#| warning: false
-#| message: false
+ggplot(breach_data, aes(x = organisation_size, fill = organisation_size)) +
+  geom_bar() +
+  labs(title = "Number of Cyberattacks by Organization Size",
+       x = "Organization Size",
+       y = "Number of Cyberattacks") +
+  theme_minimal()
 
-# Summarize total deaths for each disease by year
-total_deaths_by_year <- deaths_data %>%
-  group_by(year, cause) %>%
-  summarize(total_deaths = sum(total_deaths))
 
-# Plot for mortality data
-ggplot(total_deaths_by_year, aes(x = as.factor(year), y = total_deaths, group = cause, color = cause)) +
-  geom_line() +
-  labs(
-       x = "Year",
-       y = "Total Deaths") +
-  theme(legend.position = "top") +
-  theme(legend.text = element_text(size = 5)) +
-  guides(color = guide_legend(direction = "vertical"))
 ```
-
 ```{r}
-#| label: fig-average_air
-#| fig-cap: Average Air Quality Health Index by Year
-#| echo: false
-#| warning: false
-#| message: false
-# Ensure the 'year' column is in numeric format for proper line plotting
-average_aqi_by_year$year <- as.numeric(as.character(average_aqi_by_year$year))
-
-# Plotting with ggplot2
-ggplot(average_aqi_by_year, aes(x = year, y = average_aqi)) +
-  geom_line() +  # for lines
-  geom_point() + # for points
-  labs(
-       x = "Year",
-       y = "Average Air Quality Index") +
-  scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) # Optional: Adjust x-axis breaks
-```
-Talk way more about it. 
-
-
-
-# Model
-
-The goal of our modelling strategy is twofold. Firstly,...
-
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
-
-## Model set-up
-
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
-
-\begin{align}
-y_i | \mu_i, \phi &\sim \text{NegBin}(\mu_i, \phi) \\
-\mu_i &= \exp(\alpha + \beta x_i) \\
-\alpha &\sim \text{Normal}(0, 2.5) \\
-\beta &\sim \text{Normal}(0, 2.5) \\
-\phi &\sim \text{Exponential}(1)
-\end{align}
-
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
-
-
-### Model justification
-
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
-
-
-# Results
-
-
-
-
-Our results are summarized in @tbl-modelresults.
-
-```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| message: false
-
-library(rstanarm)
-library(here)
-library(ggplot2)
 library(modelsummary)
 
-# Assuming you've already read your models as before
-neg_binom_model <- readRDS(file = here::here("models/neg_binom_model.rds"))
-stan_neg_binom_model <- readRDS(file = here::here("models/stan_neg_binom_model.rds"))
-stan_poisson_model <-readRDS(file = here::here("models/stan_poisson_model.rds"))
+logistic_model <- readRDS(file = here::here("models/restructuring_model.rds"))
 
-heart_model <- readRDS(file = here::here("models/heart_model.rds"))
-lung_model <-readRDS(file = here::here("models/lung_model.rds"))
-
-
-first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
-
-poisson_model <-
-  readRDS(file = here::here("models/poisson_model.rds"))
-
-
-# # Make predictions for heart and lung models
-# heart_predictions <- predict(heart_model, newdata = data.frame(provincial_average = heart$provincial_average), se.fit = TRUE)
-# lung_predictions <- predict(lung_model, newdata = data.frame(provincial_average = lung$provincial_average), se.fit = TRUE)
-# # Create trend graphs
-# # For example, let's plot predicted values against provincial average for heart data
-# heart_pred_df <- data.frame(provincial_average = heart$provincial_average,
-#                             total_deaths_pred = heart_predictions$fit,
-#                             total_deaths_pred_upper = heart_predictions$fit + 1.96 * heart_predictions$se.fit,
-#                             total_deaths_pred_lower = heart_predictions$fit - 1.96 * heart_predictions$se.fit)
-# 
-# # Plot
-# ggplot(heart_pred_df, aes(x = provincial_average, y = total_deaths_pred)) +
-#   geom_line() +
-#   geom_ribbon(aes(ymin = total_deaths_pred_lower, ymax = total_deaths_pred_upper), alpha = 0.2) +
-#   labs(x = "Provincial Average", y = "Predicted Total Deaths", title = "Predicted Total Deaths vs. Provincial Average (Heart Data)") +
-#   theme_minimal()
-
-
-
-# class(heart_model$provincial_average)
-# class(lung_model$provincial_average)
-# 
-# # Create a range of values for the predictor variable
-# provincial_average_range <- seq(min(heart$provincial_average, lung$provincial_average),
-#                                 max(heart$provincial_average, lung$provincial_average),
-#                                 length.out = 100)
-# 
-# # Make predictions for heart and lung models
-# heart_predictions <- predict(heart_model, newdata = data.frame(provincial_average = provincial_average_range), se.fit = TRUE)
-# lung_predictions <- predict(lung_model, newdata = data.frame(provincial_average = provincial_average_range), se.fit = TRUE)
-# 
-# # Create data frames for plotting
-# heart_pred_df <- data.frame(provincial_average = provincial_average_range,
-#                             total_deaths_pred = heart_predictions$fit,
-#                             total_deaths_pred_upper = heart_predictions$fit + 1.96 * heart_predictions$se.fit,
-#                             total_deaths_pred_lower = heart_predictions$fit - 1.96 * heart_predictions$se.fit)
-# 
-# lung_pred_df <- data.frame(provincial_average = provincial_average_range,
-#                            total_deaths_pred = lung_predictions$fit,
-#                            total_deaths_pred_upper = lung_predictions$fit + 1.96 * lung_predictions$se.fit,
-#                            total_deaths_pred_lower = lung_predictions$fit - 1.96 * lung_predictions$se.fit)
-# 
-# # Plot predicted deaths for heart and lung models
-# ggplot() +
-#   geom_line(data = heart_pred_df, aes(x = provincial_average, y = total_deaths_pred, color = "Heart Data")) +
-#   geom_ribbon(data = heart_pred_df, aes(x = provincial_average, ymin = total_deaths_pred_lower, ymax = total_deaths_pred_upper, fill = "Heart Data"), alpha = 0.2) +
-#   geom_line(data = lung_pred_df, aes(x = provincial_average, y = total_deaths_pred, color = "Lung Data")) +
-#   geom_ribbon(data = lung_pred_df, aes(x = provincial_average, ymin = total_deaths_pred_lower, ymax = total_deaths_pred_upper, fill = "Lung Data"), alpha = 0.2) +
-#   labs(x = "Provincial Average", y = "Predicted Total Deaths", title = "Predicted Total Deaths due to Air Pollution") +
-#   scale_color_manual(values = c("Heart Data" = "blue", "Lung Data" = "red")) +
-#   scale_fill_manual(values = c("Heart Data" = "blue", "Lung Data" = "red"), guide = FALSE) +
-#   theme_minimal()
+modelsummary(list("Logistic Regression" = logistic_model))
 
 ```
-
 ```{r}
-#| echo: false
-#| eval: true
-#| label: tbl-modelcauses
-#| tbl-cap: "Different causes of mortality and their death counts"
-#| warning: false
-library(modelsummary)
+breach_data <- breach_data %>% mutate(row_id = row_number())
 
-if (!requireNamespace("modelsummary", quietly = TRUE)) {
-  install.packages("modelsummary")
-}
-library(modelsummary)
+# Adjust factors in your data to match the model's training data
+breach_data <- breach_data %>%
+  mutate(country = factor(country, levels = levels(logistic_model$model$country)))
 
-if (!requireNamespace("broom.mixed", quietly = TRUE)) {
-  install.packages("broom.mixed")
-}
+# Generate predictions
+breach_predictions <- predict(logistic_model, newdata = breach_data, type = "response")
 
-library(broom.mixed)
+# Combine the predictions with the original data
+breach_data <- breach_data %>% mutate(predicted_prob = breach_predictions)
 
-coef_short_names <- 
-  c("causeAll other forms of chronic ischemic heart disease" = "Ischemic Heart Disease",
-    "causeMalignant neoplasms of trachea, bronchus and lung" = "Trachea/Bronchus/Lung Cancer",
-    "Acute myocardial infarction" = "Heart Attack",
-    "causeOther chronic obstructive pulmonary disease" = "COPD"
-  )
-
-# Summarize the models
-modelsummary(
-  list(
-    "Poisson" = poisson_model,
-    "Negative binomial" = first_model
-  ),
-  coef_map = coef_short_names,
-  estimate_function = function(model) {
-    broom.mixed::tidy(model, parameters = "all", conf.int = TRUE)
-  }
-)
+# Scatter plot with jitter
+ggplot(breach_data, aes(x = organisation_size, y = predicted_prob)) +
+  geom_jitter(alpha = 0.3) +
+  labs(x = "Organisation Size", y = "Predicted Probability of Restructuring")
 
 ```
 
-```{r}
-#| echo: false
-#| eval: true
-#| label: tbl-modelheart
-#| tbl-cap: "Heart related causes death count and the air quality"
-#| warning: false
-
-modelsummary::modelsummary(
-  list(
-    "heart causes model" = heart_model
-  ),
-  #statistic = "mad",
-  fmt = 2
-)
-
-```
-
-```{r}
-#| echo: false
-#| eval: true
-#| label: tbl-modellung
-#| tbl-cap: "Lung related causes death count and the air quality"
-#| warning: false
-modelsummary::modelsummary(
-  list(
-    "Lung Causes model" = lung_model
-  ),
-  #statistic = "mad",
-  fmt = 2
-)
-
-
-```
-# Discussion
-
-## First discussion point {#sec-first-point}
-
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
-
-## Second discussion point
-
-## Third discussion point
-
-## Weaknesses and next steps
-
-Weaknesses and next steps should also be included.
-
-\newpage
-
-\appendix
-
-# Appendix {-}
-
-
-# Additional data details
-
-# Model details {#sec-model-details}
-
-## Posterior predictive check
-
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
-
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
-
-```{r}
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-ppcheckfirst
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
-
-pp_check(first_model) +
-  theme(legend.position = "bottom")
-
-
-
-pp_check(poisson_model) +
-  theme(legend.position = "bottom")
-```
-
-```{r}
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-ppcheckheartlung
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
-
-
-pp_check(heart_model) +
-  theme(legend.position = "bottom")
-
-pp_check(lung_model) +
-  theme(legend.position = "bottom")
-
-```
-
-## Diagnostics
-
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
-
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
-
-```{r}
-#| echo: false
-#| eval: true
-#| message: false
-#| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
-
-plot(first_model, "trace")
-
-plot(first_model, "rhat")
-
-plot(stan_neg_binom_model, "trace")
-
-plot(stan_neg_binom_model, "rhat")
-```
 
 
 
