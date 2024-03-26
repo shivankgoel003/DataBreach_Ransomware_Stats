@@ -1,7 +1,9 @@
 # Respiratory - Related Mortality Rates Show A Positive Correlation With Increasing Air pollution
 
 ## Overview
-This repository contains the data analysis for our research conducted on the impact of air pollution on respiratory and cardiac related mortality rates in Alberta. Our study investigates the relationship between Air Quality Health Index (AQHI), particulate matter (PM2.5) concentrations, and the occurrence of diseases such as Chronic Obstructive Pulmonary Disease, Ischemic Heart Disease, Acute Myocardial Infarction, and Lung Cancer. We provide a detailed examination of the potential correlations between air quality and mortality through modeling  during the study period from 2012 to 2022.
+
+This repository is part of a statistical analysis project that investigates data breaches and ransomware attacks. The project explores various datasets to identify trends, patterns, and insights related to cybersecurity incidents.The focus of this project is to conduct a thorough analysis of historical data breaches and ransomware incidents, utilizing statistical methods and data visualization techniques to enhance the understanding of these events' frequency, severity, and impact.
+
 
 
 ## Data and Methodology
