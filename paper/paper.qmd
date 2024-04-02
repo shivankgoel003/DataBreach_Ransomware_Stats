@@ -1,12 +1,10 @@
 
 ---
-title: "Respiratory-Related Mortality Rates Show A Positive Correlation With Increasing Air pollution"
-subtitle: "Based on Data Collected From The Province Of Alberta"
+title: "TODO"
+subtitle: "TODO"
 author: 
-  - Vanshika Vanshika
   - Shivank Goel
-  - Navya Hooda
-thanks: "Code and data are available at: https://github.com/shivankgoel003/Mortality-in-Alberta."
+thanks: "Code and data are available at: https://github.com/shivankgoel003/DataBreach_Ransomware_Stats"
 date: today
 date-format: long
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
@@ -30,28 +28,22 @@ breach_data <- read.csv(here("data/analysis_data/breach_data.csv"))
 
 # Introduction
 
-The impact of air pollution on human health has increasingly become a global concern, with respiratory illnesses being a significant consequence of poor air quality. The National Library of Medicine reports that approximately 4 million people die prematurely each year from chronic respiratory diseases linked to air pollution @ncbi. 
-The World Health Organization also suggests that air pollution poses a risk for all-cause mortality and specific diseases, especially the exposure to air pollution is strongly linked with outcomes such as stroke, ischemic heart disease, chronic obstructive pulmonary disease, lung cancer, pneumonia, and cataracts @who. 
 
-The pollutants most significantly concerning for public health, are particulate matter (PM), carbon monoxide (CO), ozone (O3), nitrogen dioxide (NO2), and sulfur dioxide (SO2). Of these, fine particulate matter is particularly worrisome due to its ability to penetrate the lungs deeply, enter the bloodstream, and reach organs, leading to systemic damage to tissues and cells. 
+*TODO* today's world, where everything is connected online, cybersecurity is super important. It's all about keeping our digital stuff safe from bad guys who try to steal or mess with it. Cyber threats, like hackers breaking into computer systems or stealing personal information, are becoming more common and tricky to deal with.
 
-Specifically, PM2.5 is of greater concern due to its harmful properties and dangers. PM2.5 is airborne particulate matter (PM2.5) and is not a single pollutant but rather a mixture of many chemical species and aerosols. PM2.5 is associated with the greatest proportion of adverse health effects related to air pollution, both in the United States and worldwide. Long-term (months to years) exposure to PM2.5 has been linked to premature death, particularly in people who have chronic heart or lung diseases, and reduced lung function growth in children @pm. 
+This paper is all about diving into the world of cybersecurity to learn about the problems we face, the trends we're seeing, and how we can protect ourselves better. We'll start by looking at some big cyber incidents that have happened recently. By understanding what happened in these incidents, we can figure out how to stop similar attacks in the future.
 
+Then, we'll talk about the new kinds of cyber threats that are popping up all the time. From sneaky tricks like ransomware to people tricking us into giving away our info, we'll explore the different ways bad guys try to break into our digital stuff.
 
-In this paper, we analyze data from Alberta, Canada, and aim to explore the estimand of the number of deaths that can be correlated to the Air Quality Health Index (AQHI) and PM2.5 quantities. Specifically, we assess how AQHI relates to the prevalence of respiratory and cardiac illnesses in this specific region, focusing on four major types: Chronic Obstructive Pulmonary Disease, Ischemic Heart Disease, Acute Myocardial Infarction, and Lung Cancer. We use the mortality rate in Alberta data to select respiratory-related illnesses and air quality health index data for Alberta through their provincial open data portal. To analyze respiratory illnesses, we use air pollution measured through the AQHI and specifically the particulate matter 2.5 (PM2.5) air pollutant as a predictor of mortality related to respiratory illnesses. In total, we will be assessing the overall relationship between AQHI and respiratory illnesses, the relationship between PM2.5 and respiratory illnesses, as well as the relevance of PM2.5 levels in lung and heart disease values as a means to draw any notable significance of PM2.5 in different types of illnesses.
+Finally, we'll talk about what we can do to fight back against cyber threats. This includes using smart technology, making rules and policies to keep things safe, and teaching people how to be careful online. By learning more about cyber risks and working together to stay safe, we can make sure our digital world is a lot safer for everyone.
 
-Using negative binomial regression, this study seeks to uncover trends and correlations between AQHI and the prevalence of respiratory illnesses. Negative binomial regression is a type of generalized linear model (GLM) that is specifically designed to model count data. In our paper, we are using it to predict the number of deaths, based on the year and illness, for the pollutants present in the air.
-By analyzing this relationship, we provide valuable insights that can inform policymakers, healthcare professionals, and the public about the impact of air pollution on respiratory health in Alberta. This research aims to contribute to a better understanding of the health effects of air pollution and to support the development of targeted strategies for air quality improvement and public health protection in Alberta. Our analytical framework explores whether the variables assessed seem to correlate, if at all, to the total deaths in respiratory-related illnesses through 2012-2022. 
-
-
-This paper is organized as follows: In the Data section, we outline the sources of three different datasets, detail the data-cleaning processes applied to each dataset, and describe any data merging procedures used to prepare the data for input into various models. The Results section focuses on analyzing trends and correlations between AQHI, PM2.5, and respiratory and cardiac illnesses. Additionally, we discuss the trends and patterns identified by our model, along with the correlation analysis between these variables. In the Discussion section, we present our overall findings, discuss any biases and weaknesses in the data that may have influenced these findings, and explain our approach to analyzing these limitations. 
- 
-Overall, this research has the potential to inform public health strategies and interventions aimed at reducing respiratory illnesses and improving overall health in Alberta and beyond. 
 
 
 # Data {#sec-data}
 
 ## Data Source and Collection: 
+
+**TODO**
 
 The study relies on datasets obtained from the provincial open databases of Alberta, accessible through the official website @alberta. Three key datasets were utilized to extract relevant variables for analysis, aiming to uncover the relationship between air quality and mortality rates in Alberta.
 The analysis begins with the leading causes of death dataset for Alberta, sourced from the provincial open data portal @deaths. This dataset provides insights into mortality rates associated with various illnesses, facilitating the examination of trends related to respiratory and heart-related illnesses.
@@ -371,227 +363,99 @@ breach_data %>%
 
 ```
 
-```{r}
-ggplot(breach_data, aes(x = log1p(number_of_users_affected))) +
-  geom_density() +
-  labs(x = "Log(Number of Users Affected + 1)", y = "Density") +
-  theme_minimal()
-```
-
-```{r}
-library(modelsummary)
-lrmodel <- readRDS(file = here::here("models/lrmodel.rds"))
-
-modelsummary(list("Linear Regression" = lrmodel))
-
-ggplot(yearly_attacks, aes(x = year, y = number_of_attacks)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE, color = "blue") +
-  theme_minimal() +
-  labs(title = "Trend of Cyberattacks Over Years",
-       x = "Year", y = "Number of Attacks")
-
-library(broom)
-# Augment the data with model diagnostics
-augmented_data <- augment(lrmodel)
-
-# Plot 1: Histogram of Residuals
-ggplot(augmented_data, aes(x = .resid)) +
-  geom_histogram(binwidth = 1, fill = "blue", color = "black") +
-  theme_minimal() +
-  labs(title = "Histogram of Residuals", y = "Number of Occurrences", x = "Residuals")
-
-# Plot 2: Residuals vs. Predictor Variable (year)
-ggplot(augmented_data, aes(x = year, y = .resid)) +
-  geom_point(color = "red") +
-  geom_hline(yintercept = 0, linetype = "dotted", color = "grey") +
-  theme_minimal() +
-  labs(title = "Residuals vs. Year", y = "Residuals", x = "Year")
-
-# Plot 3: Residuals vs. Fitted Values
-ggplot(augmented_data, aes(x = .fitted, y = .resid)) +
-  geom_point(color = "green") +
-  geom_hline(yintercept = 0, linetype = "dotted", color = "grey") +
-  theme_minimal() +
-  labs(title = "Residuals vs. Fitted Values", y = "Residuals", x = "Fitted Values")
-
-# Plot 4: Actual vs. Predicted Values
-ggplot(augmented_data, aes(x = number_of_users_affected, y = .fitted)) +
-  geom_point(color = "purple") +
-  geom_abline(intercept = 0, slope = 1, linetype = "dashed") +
-  theme_minimal() +
-  labs(title = "Actual vs. Predicted Values", y = "Predicted", x = "Actual")
-
-```
 
 
 ```{r}
-liner_model <- readRDS(file = here::here("models/linear_model.rds"))
 
-
-# Compare the actual outcomes with simulations from the posterior distribution
-pp_check(liner_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-```
-
-```{r}
-augmented_data <- augment(sensitivity_model)
-
-# Residuals vs. Fitted Values
-ggplot(augmented_data, aes(x = .fitted, y = .resid)) +
-  geom_point() +
-  geom_hline(yintercept = 0, linetype = "dotted") +
-  theme_minimal() +
-  labs(title = "Residuals vs. Fitted Values", x = "Fitted Values", y = "Residuals")
-
-# Actual vs. Predicted Values
-ggplot(augmented_data, aes(x = number_of_users_affected, y = .fitted)) +
-  geom_point() +
-  geom_abline(intercept = 0, slope = 1, linetype = "dotted") +
-  theme_minimal() +
-  labs(title = "Actual vs. Predicted Values", x = "Actual Values", y = "Predicted Values")
 ```
 
 
 
 
+
+
 ```{r}
-cyberattack_neg_binomial <- readRDS(file = here::here("models/cyberattack_neg_binomial.rds"))
-cyberattack_poisson <- readRDS(file = here::here("models/cyberattack_poisson.rds"))
 
-#### Posterior Predictive Checks ####
-# Poisson model
-pp_poisson <- pp_check(cyberattack_poisson) + 
-  theme(legend.position = "bottom") +
-  labs(title = "Posterior Predictive Check for Poisson Model")
-
-# Negative Binomial model
-pp_neg_binomial <- pp_check(cyberattack_neg_binomial) + 
-  theme(legend.position = "bottom") +
-  labs(title = "Posterior Predictive Check for Negative Binomial Model")
-
-# Display the plots
-print(pp_poisson)
-print(pp_neg_binomial)
 
 ```
 
 ```{r}
-library(ggplot2)
-library(dplyr)
-library(forcats) # For fct_collapse
+breach_data$year <- as.numeric(as.character(breach_data$year))
 
-# Assuming breach_data is already loaded and has columns named 'year', 'country', and 'frequency'
-# and frequency is already calculated
-
-# Prepare the dataset
+# Now proceed with your data manipulation
 breach_data_summary <- breach_data %>%
   mutate(country = fct_collapse(country,
-                                "Other countries" = setdiff(unique(country), 
-                                                              c("USA", "Australia", "Canada", "Global", "Japan", "UK")))) %>%
+                                "Other" = setdiff(unique(country), 
+                                                   c("USA", "Australia", "Canada", "Global", "Japan", "UK")))) %>%
   group_by(year, country) %>%
   summarize(frequency = n(), .groups = 'drop')
 
 # Separating the data by country for ease of plotting
 country_data <- breach_data_summary %>%
-  filter(country %in% c("Australia", "Canada", "Global", "Japan", "UK", "Other countries"))
+  filter(country != "USA")
 
 usa_data <- breach_data_summary %>%
-  filter(country == "USA")
+  filter(country == "USA") %>%
+  arrange(year)
 
-# Find the max frequency for USA to scale the secondary axis accordingly
-max_usa_frequency <- max(usa_data$frequency)
+# Ensure year is numeric for the line plot
+breach_data_summary$year <- as.numeric(as.character(breach_data_summary$year))
 
+# Recalculate max frequencies if necessary
+max_usa_freq <- max(usa_data$frequency, na.rm = TRUE)
+max_other_freq <- max(country_data$frequency, na.rm = TRUE)
+
+# Determine scale factor for secondary axis
+scale_factor <- max_other_freq / max_usa_freq
+breach_data_summary$year <- as.numeric(as.character(breach_data_summary$year))
+breach_data_summary <- breach_data_summary %>% filter(!is.na(year))
+
+# Plot
 # Define a color palette
-color_palette <- c("Australia" = "#1b9e77", "Canada" = "#d95f02", "Global" = "#7570b3", "Japan" = "#e7298a", "UK" = "#66a61e", "Other countries" = "#e6ab02", "USA" = "#666666")
+formal_palette <- c("Australia" = "#4878D0", "Canada" = "#6ACC65", "Global" = "#D65F5F", 
+                    "Japan" = "#B47CC7", "UK" = "#C4AD66", "Other" = "#77BEDB")
 
 # Plot
 gg <- ggplot() +
-  # Add bar plots for all countries except USA
-  geom_bar(data = country_data, aes(x = as.factor(year), y = frequency, fill = country), stat = "identity", position = "dodge") +
-  # Add line for USA with points
-  geom_line(data = usa_data, aes(x = as.factor(year), y = frequency), color = color_palette["USA"]) +
-  geom_point(data = usa_data, aes(x = as.factor(year), y = frequency), color = color_palette["USA"]) +
-  # Add primary y-axis for "Other countries"
-  scale_y_continuous(name = "Frequency of Cyber Attacks (Other Countries)", labels = scales::comma) +
-  # Add secondary y-axis for USA
-  scale_y_continuous(name = "Frequency of Cyber Attacks (USA)",
-                     sec.axis = sec_axis(~ . * max_usa_frequency / max(breach_data_summary$frequency), name = "USA", labels = scales::comma)) +
-  # Set the breaks for x-axis to every year level
-  scale_x_discrete(breaks = levels(as.factor(breach_data$year))) +
-  scale_fill_manual(values = color_palette) +
+  # Add bars for all countries except USA
+  geom_bar(data = country_data, aes(x = year, y = frequency, fill = country), stat = "identity", position = position_stack()) +
+  # Add line for USA
+  geom_line(data = usa_data, aes(x = year, y = frequency * scale_factor, group = 1), color = "#4D4D4D", size = 1) +
+  # Define the primary y-axis with the secondary axis for the USA
+  scale_y_continuous(
+    name = "Frequency of Cyber Attacks (Other Countries)", 
+    limits = c(0, max_other_freq * 1.1),  # Set limits for better control, slightly above max to ensure space for the line
+    sec.axis = sec_axis(~ . / scale_factor, name = "Frequency of USA Cyber Attacks", labels = scales::comma)
+  ) +
+  # Set breaks for the x-axis to unique years
+  scale_x_continuous(breaks = sort(unique(breach_data_summary$year))) +
+  # Apply the formal color palette
+  scale_fill_manual(values = formal_palette) +
   labs(title = "Overview of Cyber Attacks by Year and Country",
-       subtitle = "Bar plots for countries; line plot for USA scaled on secondary axis") +
+       subtitle = "Bar plots for countries; line plot for USA") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1), # Rotate x-axis labels
-        legend.position = "bottom") # Adjust the position of the legend
+        legend.position = "bottom", # Adjust the position of the legend
+        plot.title = element_text(hjust = 0.5), # Center the plot title
+        plot.subtitle = element_text(hjust = 0.5)) # Center the plot subtitle
+
 
 # Print the plot
 print(gg)
 
-# Save the plot
-ggsave("cyber_attacks_overview.png", plot = gg, width = 12, height = 8, dpi = 300)
-
 ```
-
 
 ```{r}
 
-library(ggplot2)
-library(dplyr)
-library(forcats) # For fct_collapse to group levels into "Other countries"
-
-# Assuming breach_data is already loaded and has columns named 'year', 'country', and 'frequency'
-# and frequency is already calculated (e.g., it is not just a raw count of rows)
-
-# Prepare the dataset
-breach_data_summary <- breach_data %>%
-  mutate(country = fct_collapse(country,
-                                "Other countries" = setdiff(unique(country), 
-                                                              c("USA", "Australia", "Canada", "Global", "Japan", "UK")))) %>%
-  group_by(year, country) %>%
-  summarize(frequency = n(), .groups = 'drop')
-
-# Separating the data by country for ease of plotting
-country_data <- breach_data_summary %>%
-  filter(country %in% c("Australia", "Canada", "Global", "Japan", "UK", "Other countries"))
-
-usa_data <- breach_data_summary %>%
-  filter(country == "USA")
-
-# Find the max frequency for USA to scale the secondary axis accordingly
-max_usa_frequency <- max(usa_data$frequency)
-
-# Plot
-gg <- ggplot() +
-  # Add bar plots for all countries except USA
-  geom_bar(data = country_data, aes(x = as.factor(year), y = frequency, fill = country), stat = "identity", position = "dodge") +
-  # Add line for USA with points
-  geom_line(data = usa_data, aes(x = as.factor(year), y = frequency), color = "blue") +
-  geom_point(data = usa_data, aes(x = as.factor(year), y = frequency), color = "blue") +
-  # Add primary y-axis for "Other countries"
-  scale_y_continuous(name = "Frequency of Cyber Attacks (Other Countries)") +
-  # Add secondary y-axis for USA
-  scale_y_continuous(name = "Frequency of Cyber Attacks (USA)",
-                     sec.axis = sec_axis(~ . * max_usa_frequency / max(breach_data_summary$frequency), name = "USA")) +
-  # Set the breaks for x-axis to every year level
-  scale_x_discrete(breaks = levels(as.factor(breach_data$year))) +
-  scale_fill_manual(values = c("Australia" = "color1", "Canada" = "color2", "Global" = "color3", "Japan" = "color4", "UK" = "color5", "Other countries" = "color6")) +
-  labs(title = "Overview of Cyber Attacks by Year and Country",
-       subtitle = "Bar plots for countries; line plot for USA scaled on secondary axis") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1), # Rotate x-axis labels
-        legend.position = "bottom") # Adjust the position of the legend
-
-# Print the plot
-print(gg)
 
 ```
 
-Make sure to replace "color1", "color2", etc., with the actual colors you want for the bars. Adjust the names of the columns if needed, based on your dataset. The `scale_y_continuous` for the USA might need to be adjusted based on the actual frequencies in your dataset. The `sec.axis` function is used to create the secondary
 
-```
+
+
+
+
+
 
 
 \newpage

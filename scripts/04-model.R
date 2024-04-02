@@ -46,6 +46,50 @@ yearly_attacks <- breach_data %>%
   group_by(year) %>%
   summarise(number_of_attacks = n())
 
+yearly_data <- breach_data %>%
+  group_by(year) %>%
+  summarise(
+    number_of_attacks = n(), sector
+    number_of_users_affected = sum(number_of_users_affected, na.rm = TRUE)
+    # You can add more summary stats if needed
+  )
+
+library(forecast)
+
+# Assuming 'number_of_attacks' is aggregated by year
+ts_data <- ts(yearly_data$number_of_attacks, start=min(yearly_data$year), frequency=1)
+
+# Fit ARIMA model
+arima_model <- auto.arima(ts_data)
+
+# Future predictions
+future_values <- forecast(arima_model, h=5)  # Forecast next 5 years
+
+# Plot
+autoplot(future_values)
+
+
+trend_model <- lm(number_of_users_affected ~ year, data = yearly_data)
+
+
+# For linear regression with interaction terms
+interaction_model <- lm(number_of_attacks ~ year * sector, data = yearly_data)
+
+# For separate time series in each sector
+sector_ts_models <- breach_data %>%
+  group_by(sector) %>%
+  do(trend_model = auto.arima(.$number_of_users_affected))
+
+
+# Plotting the trend of total number of users affected over the years
+ggplot(yearly_data, aes(x = year, y = number_of_users_affected)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Yearly Trend of Number of Users Affected by Cyberattacks",
+       x = "Year",
+       y = "Total Number of Users Affected")
+
+
 # Linear regression model
 lrmodel <- lm(number_of_attacks ~ year, data = yearly_attacks)
 
@@ -78,7 +122,7 @@ cyberattack_poisson <- stan_glm(
 
 #### Fit Negative Binomial Model with stan_glm ####
 cyberattack_neg_binomial <- stan_glm(
-  number_of_attacks ~ year + sector + organisation_size, 
+  number_of_attacks ~  sector + organisation_size, 
   data = aggregated_data, 
   family = neg_binomial_2(link = "log"), 
   seed = 853

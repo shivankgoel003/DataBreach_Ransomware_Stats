@@ -31,13 +31,10 @@ breach_data <- breach_data %>%
 # Replace both NA values and "NA" strings with "Unknown" in 'organisation_size' column
 breach_data <- breach_data %>%
   mutate(organisation_size = ifelse(is.na(organisation_size) | organisation_size == "NA", "Unknown", organisation_size))
-
-
 breach_data <- breach_data %>%
   filter(number_of_users_affected != "Missing")
 
 breach_data$number_of_users_affected <- as.numeric(as.character(breach_data$number_of_users_affected))
-
 
 # Saving cleaned data
 write.csv(breach_data, file = "data/analysis_data/breach_data.csv", row.names = FALSE)
