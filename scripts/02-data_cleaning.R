@@ -20,13 +20,6 @@ breach_data <- read_excel("data/raw_data/Dataset-cyberattacks-06102020.xlsx", sh
 # Simplifying names
 breach_data <- clean_names(breach_data)
 
-# Filtering data from years 2010 to 2020
-breach_data <- breach_data %>%
-  filter(year >= 2010 & year <= 2020)
-
-# Dropping 'settlement_paid', 'effect_on_share_price', 'summary' columns
-breach_data <- breach_data %>%
-  select(-c(settlement_paid, effect_on_share_price, summary))
 
 # Ensure 'attack_type' is treated as a character
 breach_data$attack_type <- as.character(breach_data$attack_type)
@@ -40,7 +33,10 @@ breach_data <- breach_data %>%
   mutate(organisation_size = ifelse(is.na(organisation_size) | organisation_size == "NA", "Unknown", organisation_size))
 
 
+breach_data <- breach_data %>%
+  filter(number_of_users_affected != "Missing")
 
+breach_data$number_of_users_affected <- as.numeric(as.character(breach_data$number_of_users_affected))
 
 
 # Saving cleaned data

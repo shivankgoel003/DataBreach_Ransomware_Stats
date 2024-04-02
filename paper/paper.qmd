@@ -87,16 +87,13 @@ Overall, our methodology ensured the creation of comprehensive datasets that all
 
 
 ```{r}
-#| label: fig-all
-#| fig-cap: Provincial Average PM2.5 Quantity Vs Total Deaths
-#| echo: false
-#| warning: false
-
 breach_data %>%
   count(year) %>%
-  ggplot(aes(x = year, y = n)) +
-  geom_line() +
-  labs(title = "Cyberattacks Over Time", x = "Year", y = "Number of Attacks")
+  ggplot(aes(x = as.factor(year), y = n)) +  # Convert year to factor to treat it as discrete
+  geom_line(group=1) +  # Ensure geom_line treats the data as connected points
+  scale_x_discrete(breaks = levels(as.factor(breach_data$year))) +  # Specify breaks at every level of the factor
+  labs(title = "Cyberattacks Over Time", x = "Year", y = "Number of Attacks") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))  # Rotate x labels to fit them all
 
 ``` 
 ```{r}
@@ -190,7 +187,6 @@ breach_data %>%
   labs(title = "Stacked Bar Chart of Attack Types by Year",
        x = "Year",
        y = "Number of Attacks")
-
 
 ```
 ```{r}
@@ -313,8 +309,289 @@ ggplot(breach_data, aes(x = organisation_size, y = predicted_prob)) +
   labs(x = "Organisation Size", y = "Predicted Probability of Restructuring")
 
 ```
+```{r}
+ggplot(breach_data, aes(x = number_of_users_affected)) +
+  stat_ecdf(geom = "step") +
+  labs(title = "Cumulative Distribution of Number of Users Affected",
+       x = "Number of Users Affected",
+       y = "Cumulative Probability")
+```
+```{r}
+breach_data %>%
+  group_by(year) %>%
+  summarize(total_users_affected = sum(number_of_users_affected, na.rm = TRUE)) %>%
+  ggplot(aes(x = year, y = total_users_affected)) +
+  geom_line() +
+  labs(title = "Number of Users Affected Over Years",
+       x = "Year",
+       y = "Total Number of Users Affected") +
+  theme_minimal()
 
 
+```
+
+```{r}
+breach_data %>%
+  ggplot(aes(x = sector, y = number_of_users_affected)) +
+  geom_boxplot() +
+  labs(title = "Spread of Number of Users Affected Across Sectors",
+       x = "Sector",
+       y = "Number of Users Affected") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+```{r}
+breach_data %>%
+  ggplot(aes(x = number_of_users_affected)) +
+  geom_histogram(bins = 30, fill = "blue", color = "black") +
+  labs(title = "Distribution of Number of Users Affected by Cyberattacks",
+       x = "Number of Users Affected",
+       y = "Frequency") +
+  theme_minimal()
+
+```
+```{r}
+breach_data %>%
+  filter(year == 2013) %>%
+  summarise(
+    median_users = median(number_of_users_affected, na.rm = TRUE),
+    iqr_users = IQR(number_of_users_affected, na.rm = TRUE),
+    upper_bound = median_users + 1.5 * iqr_users
+  )
+
+breach_data %>% filter(year == 2019)
+
+breach_data %>%
+  filter(year == 2019)%>%
+  summarise(
+    median_users = median(number_of_users_affected, na.rm = TRUE),
+    iqr_users = IQR(number_of_users_affected, na.rm = TRUE),
+    upper_bound = median_users + 1.5 * iqr_users
+  )
+
+```
+
+```{r}
+ggplot(breach_data, aes(x = log1p(number_of_users_affected))) +
+  geom_density() +
+  labs(x = "Log(Number of Users Affected + 1)", y = "Density") +
+  theme_minimal()
+```
+
+```{r}
+library(modelsummary)
+lrmodel <- readRDS(file = here::here("models/lrmodel.rds"))
+
+modelsummary(list("Linear Regression" = lrmodel))
+
+ggplot(yearly_attacks, aes(x = year, y = number_of_attacks)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  theme_minimal() +
+  labs(title = "Trend of Cyberattacks Over Years",
+       x = "Year", y = "Number of Attacks")
+
+library(broom)
+# Augment the data with model diagnostics
+augmented_data <- augment(lrmodel)
+
+# Plot 1: Histogram of Residuals
+ggplot(augmented_data, aes(x = .resid)) +
+  geom_histogram(binwidth = 1, fill = "blue", color = "black") +
+  theme_minimal() +
+  labs(title = "Histogram of Residuals", y = "Number of Occurrences", x = "Residuals")
+
+# Plot 2: Residuals vs. Predictor Variable (year)
+ggplot(augmented_data, aes(x = year, y = .resid)) +
+  geom_point(color = "red") +
+  geom_hline(yintercept = 0, linetype = "dotted", color = "grey") +
+  theme_minimal() +
+  labs(title = "Residuals vs. Year", y = "Residuals", x = "Year")
+
+# Plot 3: Residuals vs. Fitted Values
+ggplot(augmented_data, aes(x = .fitted, y = .resid)) +
+  geom_point(color = "green") +
+  geom_hline(yintercept = 0, linetype = "dotted", color = "grey") +
+  theme_minimal() +
+  labs(title = "Residuals vs. Fitted Values", y = "Residuals", x = "Fitted Values")
+
+# Plot 4: Actual vs. Predicted Values
+ggplot(augmented_data, aes(x = number_of_users_affected, y = .fitted)) +
+  geom_point(color = "purple") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed") +
+  theme_minimal() +
+  labs(title = "Actual vs. Predicted Values", y = "Predicted", x = "Actual")
+
+```
+
+
+```{r}
+liner_model <- readRDS(file = here::here("models/linear_model.rds"))
+
+
+# Compare the actual outcomes with simulations from the posterior distribution
+pp_check(liner_model) +
+  theme_classic() +
+  theme(legend.position = "bottom")
+```
+
+```{r}
+augmented_data <- augment(sensitivity_model)
+
+# Residuals vs. Fitted Values
+ggplot(augmented_data, aes(x = .fitted, y = .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  theme_minimal() +
+  labs(title = "Residuals vs. Fitted Values", x = "Fitted Values", y = "Residuals")
+
+# Actual vs. Predicted Values
+ggplot(augmented_data, aes(x = number_of_users_affected, y = .fitted)) +
+  geom_point() +
+  geom_abline(intercept = 0, slope = 1, linetype = "dotted") +
+  theme_minimal() +
+  labs(title = "Actual vs. Predicted Values", x = "Actual Values", y = "Predicted Values")
+```
+
+
+
+
+```{r}
+cyberattack_neg_binomial <- readRDS(file = here::here("models/cyberattack_neg_binomial.rds"))
+cyberattack_poisson <- readRDS(file = here::here("models/cyberattack_poisson.rds"))
+
+#### Posterior Predictive Checks ####
+# Poisson model
+pp_poisson <- pp_check(cyberattack_poisson) + 
+  theme(legend.position = "bottom") +
+  labs(title = "Posterior Predictive Check for Poisson Model")
+
+# Negative Binomial model
+pp_neg_binomial <- pp_check(cyberattack_neg_binomial) + 
+  theme(legend.position = "bottom") +
+  labs(title = "Posterior Predictive Check for Negative Binomial Model")
+
+# Display the plots
+print(pp_poisson)
+print(pp_neg_binomial)
+
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(forcats) # For fct_collapse
+
+# Assuming breach_data is already loaded and has columns named 'year', 'country', and 'frequency'
+# and frequency is already calculated
+
+# Prepare the dataset
+breach_data_summary <- breach_data %>%
+  mutate(country = fct_collapse(country,
+                                "Other countries" = setdiff(unique(country), 
+                                                              c("USA", "Australia", "Canada", "Global", "Japan", "UK")))) %>%
+  group_by(year, country) %>%
+  summarize(frequency = n(), .groups = 'drop')
+
+# Separating the data by country for ease of plotting
+country_data <- breach_data_summary %>%
+  filter(country %in% c("Australia", "Canada", "Global", "Japan", "UK", "Other countries"))
+
+usa_data <- breach_data_summary %>%
+  filter(country == "USA")
+
+# Find the max frequency for USA to scale the secondary axis accordingly
+max_usa_frequency <- max(usa_data$frequency)
+
+# Define a color palette
+color_palette <- c("Australia" = "#1b9e77", "Canada" = "#d95f02", "Global" = "#7570b3", "Japan" = "#e7298a", "UK" = "#66a61e", "Other countries" = "#e6ab02", "USA" = "#666666")
+
+# Plot
+gg <- ggplot() +
+  # Add bar plots for all countries except USA
+  geom_bar(data = country_data, aes(x = as.factor(year), y = frequency, fill = country), stat = "identity", position = "dodge") +
+  # Add line for USA with points
+  geom_line(data = usa_data, aes(x = as.factor(year), y = frequency), color = color_palette["USA"]) +
+  geom_point(data = usa_data, aes(x = as.factor(year), y = frequency), color = color_palette["USA"]) +
+  # Add primary y-axis for "Other countries"
+  scale_y_continuous(name = "Frequency of Cyber Attacks (Other Countries)", labels = scales::comma) +
+  # Add secondary y-axis for USA
+  scale_y_continuous(name = "Frequency of Cyber Attacks (USA)",
+                     sec.axis = sec_axis(~ . * max_usa_frequency / max(breach_data_summary$frequency), name = "USA", labels = scales::comma)) +
+  # Set the breaks for x-axis to every year level
+  scale_x_discrete(breaks = levels(as.factor(breach_data$year))) +
+  scale_fill_manual(values = color_palette) +
+  labs(title = "Overview of Cyber Attacks by Year and Country",
+       subtitle = "Bar plots for countries; line plot for USA scaled on secondary axis") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), # Rotate x-axis labels
+        legend.position = "bottom") # Adjust the position of the legend
+
+# Print the plot
+print(gg)
+
+# Save the plot
+ggsave("cyber_attacks_overview.png", plot = gg, width = 12, height = 8, dpi = 300)
+
+```
+
+
+```{r}
+
+library(ggplot2)
+library(dplyr)
+library(forcats) # For fct_collapse to group levels into "Other countries"
+
+# Assuming breach_data is already loaded and has columns named 'year', 'country', and 'frequency'
+# and frequency is already calculated (e.g., it is not just a raw count of rows)
+
+# Prepare the dataset
+breach_data_summary <- breach_data %>%
+  mutate(country = fct_collapse(country,
+                                "Other countries" = setdiff(unique(country), 
+                                                              c("USA", "Australia", "Canada", "Global", "Japan", "UK")))) %>%
+  group_by(year, country) %>%
+  summarize(frequency = n(), .groups = 'drop')
+
+# Separating the data by country for ease of plotting
+country_data <- breach_data_summary %>%
+  filter(country %in% c("Australia", "Canada", "Global", "Japan", "UK", "Other countries"))
+
+usa_data <- breach_data_summary %>%
+  filter(country == "USA")
+
+# Find the max frequency for USA to scale the secondary axis accordingly
+max_usa_frequency <- max(usa_data$frequency)
+
+# Plot
+gg <- ggplot() +
+  # Add bar plots for all countries except USA
+  geom_bar(data = country_data, aes(x = as.factor(year), y = frequency, fill = country), stat = "identity", position = "dodge") +
+  # Add line for USA with points
+  geom_line(data = usa_data, aes(x = as.factor(year), y = frequency), color = "blue") +
+  geom_point(data = usa_data, aes(x = as.factor(year), y = frequency), color = "blue") +
+  # Add primary y-axis for "Other countries"
+  scale_y_continuous(name = "Frequency of Cyber Attacks (Other Countries)") +
+  # Add secondary y-axis for USA
+  scale_y_continuous(name = "Frequency of Cyber Attacks (USA)",
+                     sec.axis = sec_axis(~ . * max_usa_frequency / max(breach_data_summary$frequency), name = "USA")) +
+  # Set the breaks for x-axis to every year level
+  scale_x_discrete(breaks = levels(as.factor(breach_data$year))) +
+  scale_fill_manual(values = c("Australia" = "color1", "Canada" = "color2", "Global" = "color3", "Japan" = "color4", "UK" = "color5", "Other countries" = "color6")) +
+  labs(title = "Overview of Cyber Attacks by Year and Country",
+       subtitle = "Bar plots for countries; line plot for USA scaled on secondary axis") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), # Rotate x-axis labels
+        legend.position = "bottom") # Adjust the position of the legend
+
+# Print the plot
+print(gg)
+
+```
+
+Make sure to replace "color1", "color2", etc., with the actual colors you want for the bars. Adjust the names of the columns if needed, based on your dataset. The `scale_y_continuous` for the USA might need to be adjusted based on the actual frequencies in your dataset. The `sec.axis` function is used to create the secondary
+
+```
 
 
 \newpage
