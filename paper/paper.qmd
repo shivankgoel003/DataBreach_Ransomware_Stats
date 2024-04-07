@@ -402,12 +402,61 @@ breach_data %>%
        fill = "Attack Type") +
   scale_fill_manual(values = attack_type_palette)
 ```
-# Model {# sec-model}
+# Model {#sec-model}
 
+## Model Set-up
+
+After performing exploratory data analysis, we got a broad overview of the general trend between different variables of our dataset. To strengthen answers to our research question claims made earlier, we implement  regression models and take a close look at what makes an organization good at dealing with cyber threats. We use these models to understand how certain factors, like the size of a company or the industry, affect its ability to handle a cyberattack.
+
+**Simple Models for Numbers (Linear Regression):**
+
+We were interested in knowing how often cyberattacks happen and how bad they are based on the company's size or the kind of work it does. We use linear regression for this. 
+The basic form of a linear regression equation is 
+
+$Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ... + \beta_n X_n + \varepsilon$
+
+Where:
+- $Y$ is the outcome we're interested in.
+
+- $\beta_0$ is the intercept, the starting point of our equation when all our predictors (Xs) are zero.
+
+- $\beta_1, \beta_2, ..., \beta_n$ are the coefficients. These tell us how much change we expect in $Y$ for a one-unit change in each predictor $X$, assuming all other predictors are held constant.
+
+- $X_1, X_2, ..., X_n$ are the predictor variables. 
+
+- $\varepsilon$ represents the error term. It accounts for the difference between our predicted value of $Y$ and its actual value.
+
+We expected to study if bigger companies, for example, have more cyberattacks or not. In form of equation we can represent it as follows:
+
+$\text{Impact} = (\text{Base Impact}) + (\text{Effect of Company Size}) + (\text{Effect of Industry}) + \dots$
+
+
+**Complex Models for Yes/No Outcomes (Bayesian Logistic Regression)**:
+
+Now, what if we want to know if a company will take action after an attack, like starting an investigation? This is a yes/no type of question. We use a different method called logistic regression, which is good for when the outcome is not a number but a choice between two things. We make this model even better by using what we call a Bayesian approach. It means we use past knowledge to make better guesses. So, we can say:
+
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+#| 
+library(modelsummary)
+
+breach_severity_model <- readRDS(file = here::here("models/breach_severity_model.rds"))
+
+modelsummary(list("Linear Regression" = breach_severity_model))
+
+```
 
 
 
 ```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+#| 
 library(modelsummary)
 
 logistic_model <- readRDS(file = here::here("models/restructuring_model.rds"))
@@ -415,27 +464,15 @@ logistic_model <- readRDS(file = here::here("models/restructuring_model.rds"))
 modelsummary(list("Logistic Regression" = logistic_model))
 
 ```
-```{r}
-breach_data <- breach_data %>% mutate(row_id = row_number())
 
-# Adjust factors in your data to match the model's training data
-breach_data <- breach_data %>%
-  mutate(country = factor(country, levels = levels(logistic_model$model$country)))
 
-# Generate predictions
-breach_predictions <- predict(logistic_model, newdata = breach_data, type = "response")
-
-# Combine the predictions with the original data
-breach_data <- breach_data %>% mutate(predicted_prob = breach_predictions)
-
-# Scatter plot with jitter
-ggplot(breach_data, aes(x = organisation_size, y = predicted_prob)) +
-  geom_jitter(alpha = 0.3) +
-  labs(x = "Organisation Size", y = "Predicted Probability of Restructuring")
-
-```
 
 ```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+
 breach_data %>%
   group_by(year) %>%
   summarize(total_users_affected = sum(number_of_users_affected, na.rm = TRUE)) %>%
@@ -446,13 +483,16 @@ breach_data %>%
        y = "Total Number of Users Affected") +
   theme_minimal()
 
-
 ```
 
 
 
 
 ```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
 # Summary statistics for numerical variables
 summary(breach_data$number_of_users_affected)
 summary(breach_data$year)
@@ -486,7 +526,13 @@ ggplot(breach_data, aes(x = number_of_users_affected)) +
   labs(title = "Histogram of Number of Users Affected", x = "Number of Users Affected", y = "Frequency")
 
 ```
+
 ```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+
 linear_model_RQ2 <- readRDS(file = here::here("models/linear_model_RQ2.rds"))
 # Plotting diagnostics for the linear regression model (Example: linear_model_RQ2)
 ggplot(breach_data, aes(x = year, y = number_of_users_affected)) +
@@ -524,8 +570,6 @@ ggplot(model_investigation_frame, aes(x = .resid)) +
   geom_histogram(binwidth = 1) +
   theme_classic() +
   labs(y = "Number of occurrences", x = "Residuals")
-
-
 
 ```
 $\begin{table}[!htbp] \centering 
