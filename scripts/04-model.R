@@ -9,12 +9,150 @@
 library(tidyverse)
 library(rstanarm)
 library(bayesplot)
+library(forcats)
 library(readr)
 library(MASS)
+library(broom)
+library(vcd)
+library(caret)
 
 #### Read data ####
 # Assuming the data file is directly in the current working directory
 breach_data <- read_csv("data/analysis_data/breach_data.csv")
+
+
+#########
+calculate_breach_severity <- function(impact, credit_card_leak_1, credit_card_leak_2, ssn_leak, fraudulent_use) {
+  if (is.na(impact) || is.na(credit_card_leak_1) || is.na(credit_card_leak_2) || is.na(ssn_leak) || is.na(fraudulent_use)) {
+    return(NA)  # Return NA if any of the inputs is NA
+  } else if (impact == 'High' || fraudulent_use == 'Yes') {
+    return('High')
+  } else if ((credit_card_leak_1 == 'Yes' || credit_card_leak_2 == 'Yes' || ssn_leak == 'Yes') && impact != 'Low') {
+    # If any credit card or SSN data is leaked, and impact is not 'Low', consider it 'Medium' severity
+    return('Medium')
+  } else {
+    return('Low')
+  }
+}
+
+# Apply the function to each row in the dataframe
+breach_data$breach_severity <- mapply(calculate_breach_severity,
+                                      breach_data$aspect_of_confidentiality_integrity_availability_triad_affected,
+                                      breach_data$track_1_credit_card_details_leaked_exposed,
+                                      breach_data$track_2_credit_card_details_leaked_exposed,
+                                      breach_data$social_security_number_tax_number_leaked_exposed,
+                                      breach_data$subsequent_fraudulent_use_of_data)
+
+
+# Fit the linear regression model using the dataframe without NAs
+breach_data$breach_severity_numeric <- as.numeric(factor(breach_data$breach_severity, levels = c("Low", "Medium", "High")))
+
+# Now, let's select the independent variables and convert categorical variables to factors
+# (make sure to replace these variable names with the actual column names in your dataset)
+breach_data$organisation_size <- as.factor(breach_data$organisation_size)
+breach_data$level_of_digital_intensity <- as.factor(breach_data$level_of_digital_intensity)
+breach_data$sector <- as.factor(breach_data$sector)
+breach_data$country <- as.factor(breach_data$country)
+
+
+
+# Check unique values in the country variable
+unique_countries <- unique(breach_data$country)
+
+# Simplify the country variable
+breach_data$country_simplified <- breach_data$country %>% 
+  fct_lump(5) %>%    # This keeps the top 5 countries and lumps the rest into "Other"
+  fct_relevel("USA", "Australia", "Canada", "Global", "Japan", "UK", "Other")
+
+# Check unique values in the sector variable
+unique_sectors <- unique(breach_data$sector)
+
+# Simplify the sector variable based on significance (you will need domain knowledge or statistical tests to decide which ones to keep)
+significant_sectors <- c("Finance and insurance", "IT and other information services", "Health activities", "Public administration and defence", "Other")
+breach_data$sector_simplified <- breach_data$sector %>% 
+  fct_lump(length(significant_sectors)) %>% 
+  fct_relevel(significant_sectors)
+
+
+
+# Next, we fit the linear regression model
+# (you might need to modify this formula based on the actual predictors you wish to include)
+model <- lm(breach_severity_numeric ~ organisation_size + level_of_digital_intensity + sector_simplified + country_simplified, data = breach_data)
+
+# Finally, let's look at the summary of the model to interpret the results
+summary(model)
+
+breach_data <- breach_data %>%
+  mutate(across(c(organisation_size, sector, country), as.factor)) %>%
+  mutate_at(vars(sector), funs(relevel(., ref = "Health")))
+
+# Now, run the linear regression model.
+model2 <- lm(investigations_penalties ~ prevention_detection_and_recovery + 
+              cyber_security_role + 
+              cyber_security_frameworks + 
+              organisation_size + 
+              sector,
+            data = breach_data)
+
+# Summary of the model to view coefficients, p-values, etc.
+summary(model2)
+
+
+predicted_values <- predict(model)
+
+residuals <- residuals(model)
+
+# Get the fitted values
+fitted_values <- fitted(model)
+
+# Plot residuals versus fitted values
+plot(fitted_values, residuals,
+     xlab = "Fitted Values", ylab = "Residuals",
+     main = "Residuals vs Fitted Values")
+
+# Add a horizontal line at y = 0
+abline(h = 0, col = "red")
+
+# Add grid for better visualization
+grid()
+############
+
+
+
+# Assuming your model is named 'model'
+# Tidy the model to get a dataframe of residuals and fitted values
+tidied_model <- augment(model)
+
+# Residuals vs Fitted Plot
+ggplot(tidied_model, aes(.fitted, .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  labs(x = "Fitted Values", y = "Residuals") +
+  theme_minimal()
+
+# Normal Q-Q Plot
+ggplot(tidied_model, aes(sample = .std.resid)) +
+  stat_qq() +
+  stat_qq_line() +
+  theme_minimal()
+
+# Scale-Location Plot (Spread vs Level)
+ggplot(tidied_model, aes(.fitted, .std.resid^0.5)) +
+  geom_point() +
+  labs(x = "Fitted Values", y = "Square Root of Standardized Residuals") +
+  theme_minimal()
+
+# Residuals vs Leverage Plot (to identify influential cases)
+ggplot(tidied_model, aes(.hat, .std.resid)) +
+  geom_point(aes(size = .cooksd)) +
+  geom_smooth(se = FALSE) +
+  labs(x = "Leverage", y = "Standardized Residuals") +
+  theme_minimal()
+
+##############
+
+
+
 
 # Check the structure of the dataset
 str(breach_data)
@@ -26,6 +164,23 @@ breach_data$organisation_size <- as.factor(breach_data$organisation_size)
 breach_data$sector <- as.factor(breach_data$sector)
 breach_data$critical_industry <- as.factor(breach_data$critical_industry)
 breach_data$level_of_digital_intensity <- as.factor(breach_data$level_of_digital_intensity)
+breach_data$number_of_users_affected <- as.numeric(breach_data$number_of_users_affected)
+
+
+
+breach_data$critical_industry <- ifelse(breach_data$critical_industry == "Yes", 1, 0)
+breach_data$cyber_security_role <- ifelse(breach_data$cyber_security_role == "Yes", 1, 0)
+breach_data$undertook_investigation <- ifelse(breach_data$undertook_investigation == "Yes", 1, 0)
+
+
+model_investigation <- lm(undertook_investigation ~ critical_industry + organisation_size +
+                            level_of_digital_intensity + sector + 
+                           country, data = breach_data)
+
+# Evaluate the model
+summary(model_investigation)
+
+
 
 
 # Fit logistic regression model
@@ -49,7 +204,7 @@ yearly_attacks <- breach_data %>%
 yearly_data <- breach_data %>%
   group_by(year) %>%
   summarise(
-    number_of_attacks = n(), sector
+    number_of_attacks = n(), sector,
     number_of_users_affected = sum(number_of_users_affected, na.rm = TRUE)
     # You can add more summary stats if needed
   )
@@ -144,6 +299,22 @@ saveRDS(linear_model, "models/linear_model.rds")
 
 # Save model
 saveRDS(restructuring_model, "models/restructuring_model.rds")
+
+# Example for RQ2 with additional variables
+linear_model_RQ2 <- lm(number_of_users_affected ~ sector + organisation_size + critical_industry + level_of_digital_intensity + cyber_security_role + cyber_security_frameworks, data = breach_data)
+summary(linear_model_RQ2)
+
+# Example for RQ3 focusing on different aspects
+linear_model_RQ3 <- lm(number_of_users_affected ~ country + policy + prevention_detection_and_recovery + detector + restructuring_after_attack, data = breach_data)
+summary(linear_model_RQ3)
+
+# Save the models
+saveRDS(linear_model_RQ2, "models/linear_model_RQ2.rds")
+saveRDS(linear_model_RQ3, "models/linear_model_RQ3.rds")
+
+saveRDS(model_investigation, "models/model_investigation.rds")
+
+
 
 
 

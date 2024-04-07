@@ -8,6 +8,11 @@ thanks: "Code and data are available at: https://github.com/shivankgoel003/DataB
 date: today
 date-format: long
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+header-includes:
+   - \usepackage{tikz}
+   - \usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, calc}
+   - \usepackage{pgfplots} 
+   - \usepackage{float}
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -28,358 +33,287 @@ breach_data <- read.csv(here("data/analysis_data/breach_data.csv"))
 
 # Introduction
 
+In today's digital world, every click, every online transaction, and every shared piece of data is a potential entry point for cyber threats. Cybercrime is not just evolving, rather it is expanding at an alarming rate, with both the frequency and severity of attacks rising every year. The purpose of these attacks is to harm companies and organizations financially, however, in some cases these attacks can have military or political purposes. “According to a report published by the Identity Theft Resource Center (ITRC), a record number of 1862 data breaches occurred in 2021 in the US. Sectors like healthcare, finance, business, and retail are the most commonly attacked, impacting millions of Americans every year” (https://www.upguard.com/blog/biggest-data-breaches-us)
 
-*TODO* today's world, where everything is connected online, cybersecurity is super important. It's all about keeping our digital stuff safe from bad guys who try to steal or mess with it. Cyber threats, like hackers breaking into computer systems or stealing personal information, are becoming more common and tricky to deal with.
+Despite such severe threats and impacts of cyberattacks, still certain companies tend to oversee this concern. As per PWC 2024 Global Digital Trust Insights report, “about one-third of organisations have no risk management plan to address cloud service provider challenges. Half are ‘very satisfied’ with their technology capabilities in key cybersecurity areas. More than 30% of companies don’t consistently follow what should be standard practices of cyber defence.” (https://www.pwc.com/us/en/services/consulting/cybersecurity-risk-regulatory/library/global-digital-trust-insights.html)
 
-This paper is all about diving into the world of cybersecurity to learn about the problems we face, the trends we're seeing, and how we can protect ourselves better. We'll start by looking at some big cyber incidents that have happened recently. By understanding what happened in these incidents, we can figure out how to stop similar attacks in the future.
+Therefore, in response to such attacks, there is a need for a plan, that not just keep the intruder or hackers out but also quickly alert if an attack does happen. Our study looks at cyber resilience, which is “ the ability to anticipate, withstand, recover from, and adapt to adverse conditions, stresses, attacks, or compromises on systems that use or are enabled by cyber resources.” as defined by National Institute of Standards and Technology (https://csrc.nist.gov/glossary/term/cyber_resiliency). To thoroughly analyze our study, we break it into three major research questions :
 
-Then, we'll talk about the new kinds of cyber threats that are popping up all the time. From sneaky tricks like ransomware to people tricking us into giving away our info, we'll explore the different ways bad guys try to break into our digital stuff.
+**RQ1**: How do things like the size of the company and the type of business it does affect its ability to handle cyber attacks?
 
-Finally, we'll talk about what we can do to fight back against cyber threats. This includes using smart technology, making rules and policies to keep things safe, and teaching people how to be careful online. By learning more about cyber risks and working together to stay safe, we can make sure our digital world is a lot safer for everyone.
+**RQ2**: Which methods or strategies used by companies work best to reduce the damage from cyber attacks?
+
+**RQ3**: How does the business’s specific situation, like its industry or how much it relies on digital tools, change the impact of cyber attacks on it?
+
+The estimand of our study is the measurable effect of specific characteristics of an organization including size, sector and digital intensity on their cyber resilience. As a key finding, our regression models reveal factors such as organizational size, sector, and digital intensity significantly influence an organization's cyber resilience posture.For example, larger companies often have stronger defenses against cyber attacks, and on the other hand, companies that use a lot of digital technology in their work have different levels of protection.
+
+We aim to study and answer these questions by performing an analysis on a dataset of data breaches and ransomware attacks over 14 years from 2004, published by the University of Queensland. 
+
+The remainder of this paper is structured as follows: @sec-data provides an overview of our methodology, including the data collection process and the analytical techniques used to explore the dataset of cyber attacks. We provide the background and overview of the study in @sec-background. @sec-model presents the regression models, discussing how we applied these models to understand the impact of various factors like organizational size, sector, and digital intensity on cyber resilience, @sec-results displays the interpretations of the model alongside other findings from analyzing the data, and @sec-discussion provides a discussion on the implications of the findings as well as the weaknesses of this paper and its next steps for further study on this subject.
+
+# Background {#sec-background}
+
+As discussed earlier, cyber resilience is about an organization's ability to keep its operations running smoothly in the face of cyber threats. It is not just about preventing cyber attacks, but also being prepared to deal with them effectively when they do happen. It is about recovery and adaptation, and extends beyond traditional cyber security measures. Cyber resilience surrounds various elements:
+
+1. Governance: This is the structure and processes that define the organization's approach to cyber threats. It is about leadership, accountability, and ensuring that the policies are in place and followed as desired.An effective governance is characterized by use of well defined frameworks, and presence of dedicated cybersecurity roles.
+
+- The use of well-defined frameworks that guide the organization's cybersecurity protocols.
+- The presence of dedicated cybersecurity roles such as a Chief Information Security Officer can prevent damage to IT systems and network.
+
+
+2. Prevention, Detection, and Recovery: These are the specific controls and strategies used to prevent attacks, detect them promptly, and recover from any damage caused. This approach involves:
+
+- Setting up appropriate remote access controls to secure unauthorized access.
+- Implementing proper network segmentation to control traffic flow and prevent the spread of threats within networks.
+- Adding an encryption to protect confidential data.
+- Utilizing detection systems to identify potential threats.
+- Developing restructuring plans as part of recovery measures to restore systems after the attack.
+
+3. Learning and Adapting: An organization needs to continuously learn from past incidents and attacks. It must adapt its strategies accordingly. This could involve updating its policies, training employees, and revising its approach to security.
+ 
+4.External Factors: Factors like the industry the organization is in, its size, and its digital intensity (how much it relies on digital technology) can also impact its cyber resilience.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=2.5 cm and 1.5 cm, % Distance between nodes
+    mynode/.style={ % Style for the nodes
+        ellipse, 
+        draw, 
+        align=center, 
+        minimum width=3cm, 
+        minimum height=1cm
+    },
+    myarrow/.style={ % Style for the arrows
+        ->, 
+        >=stealth, 
+        thick,
+        shorten <=2pt,
+        shorten >=2pt
+    },
+    mydoublearrow/.style={ % Style for double-sided arrows
+        <->, 
+        >=stealth, 
+        thick,
+        shorten <=2pt,
+        shorten >=2pt
+    }
+]
+
+% Nodes
+\node[mynode] (cyberres) {Cyber resilience};
+\node[mynode, above left=of cyberres] (gov) {Governance};
+\node[mynode, above right=of cyberres] (prev) {Prevention,\\ detection\\ and recovery};
+\node[mynode, below=of cyberres] (response) {Organisation's\\ responses};
+\node[mynode, left=of cyberres] (nature) {Nature of attack};
+\node[mynode, right=of response] (outcomes) {Outcomes};
+\node[mynode, below=of response] (exposure) {Exposure\\ factors};
+\node[mynode, below=of outcomes] (severity) {Breach\\ severity};
+\node[mynode, below=of exposure] (stakeholder) {Stakeholder\\ response};
+
+% Arrows
+\draw[myarrow] (gov) to[out=270,in=135] (cyberres);
+\draw[myarrow] (prev) to[out=270,in=45] (cyberres);
+\draw[myarrow] (nature) to[out=270,in=180] (cyberres);
+\draw[myarrow] (cyberres) -- (response);
+\draw[mydoublearrow] (cyberres) -- (outcomes);
+\draw[mydoublearrow] (cyberres) -- (exposure);
+
+% Reverse the direction of these arrows to point from 'outcomes' to its subcategories
+\draw[myarrow] (outcomes) -- (severity);
+\draw[myarrow] (outcomes) -- (stakeholder);
+
+\end{tikzpicture}
+\caption{Conceptual model of organizational cyber resilience}
+\label{fig:cyber_res_model}
+\end{figure}
 
 
 
 # Data {#sec-data}
 
 ## Data Source and Collection: 
+Our analysis is based on sampling of 514 data breaches and ransomware attacks spanning over 14 years from 2004 to 2019. The dataset was obtained from the website of University of Queensland, and was prepared and compiled by researchers Tsen, Elinor, Ko, Ryan, and Slapnicar, Sergeja https://espace.library.uq.edu.au/view/UQ:dfe5027  at the University of Queensland. The data is thorough and encompasses a wide range of cyber attack incidents. It offers insights into various aspects of these incidents, including the types of breaches, affected organizations, and the extent of impact.
 
-**TODO**
-
-The study relies on datasets obtained from the provincial open databases of Alberta, accessible through the official website @alberta. Three key datasets were utilized to extract relevant variables for analysis, aiming to uncover the relationship between air quality and mortality rates in Alberta.
-The analysis begins with the leading causes of death dataset for Alberta, sourced from the provincial open data portal @deaths. This dataset provides insights into mortality rates associated with various illnesses, facilitating the examination of trends related to respiratory and heart-related illnesses.
-To explore potential correlations between air quality and mortality rates, the study incorporates the Air Quality Health Index (AQHI) dataset for Alberta, sourced from the provincial open data portal @air. This dataset offers comprehensive information on the AQHI across different municipalities in Alberta over multiple years.
-Additionally, the study utilizes PM2.5 air pollutant concentration level data sourced from Alberta's official resources @pollution. This dataset provides detailed information on the concentration levels of PM2.5 pollutants over several years, offering valuable insights into air quality trends.
-The following subsections outline the sources, collection methodologies, and data-cleaning procedures implemented to ensure the accuracy and reliability of the datasets used in the analysis. This meticulous approach ensures that the data is prepared for thorough analysis, facilitating the exploration of correlations between air quality indicators and mortality rates in Alberta.
-
-
-Leading Causes of Death in Alberta Data: The disease data is found from the government of Alberta’s open data portal, and was last updated on September 22, 2023 and continues to be updated annually.  This dataset encompasses mortality data related to the top 30 common causes of death. It reports on types of diseases, causes of death, mortality denoted by total death counts, and ranking for 2000-2022.  Due to our focus on respiratory illnesses, in the leading cause of death dataset, we grouped diseases by categories. Our category of focus included filtering on illnesses like acute myocardial infarction, malignant neoplasms of the trachea, bronchus, and lung, other chronic obstructive pulmonary disease, and all other forms of chronic ischemic heart disease. Leading causes of death are measured and ranked by the top 30 most common death causes each specific year. The causes of death are classified based on the International Classification of Diseases 10th Edition.
-
-
-AQHI Data: The second dataset we used is the air quality health index (AQHI) dataset found at the government of Alberta’s open data portal. This dataset contains AQHI by municipality for the years 2012-2022 and reports air quality health index, and health risk both quantitatively and qualitatively.  To use the AQHI dataset we employed simple data-cleaning practice to maintain descriptive variable names and readability. The data is measured by the percentage of hours for each year at a given air quality level, by municipality. The Air Quality Health Index is calculated based on the relative risks of a combination of common air pollutants that is known to harm human health. These pollutants are ozone (O3) at ground level, particulate matter (PM2.5), and nitrogen dioxide (NO2). Risks are defined as follows: 1-3 High Quality; 4-6 Moderate Quality; 7-9 Low Quality; 10+ Very Low Quality.
-
-PM2.5 Data: We used the PM2.5 data set retrieved from Alberta.ca (Government of Alberta) which was last updated in April 2023. It reports on average PM2.5 concentration levels through the years 2000-2021 using a provincial average, the 10th percentile quantities, and the 90th percentile quantities, with a focus on 8 municipalities Edmonton, Fort McMurray, Grande Prairie, Lethbridge, Medicine Hat, and Red Deer respectively and lastly reports the Canadian Ambient Air Quality Standard (CAAQS) value. 
-
-The Alberta Air Zone report @report, which is linked to our dataset, provides a detailed explanation of the measurement and processing of the PM2.5 quantity. Alberta Air Zones divides Alberta into six air zones which are aligned with Alberta’s Land-use Framework regional boundaries. Ambient air quality in Alberta is monitored at continuous air monitoring stations located within these air zones. PM2.5 quantities are taken throughout these stations across Alberta, and they measure the quantities in µg (micrograms per cubic meter of air).  
+The dataset represents a detailed aggregation of data breaches and ransomware attacks, and as per authors, it was originally sourced from publicly disclosed media reports. The data integrates information from multiple public databases such as Privacy Rights Clearinghouse, Information is Beautiful, the Repository of Industrial Security Incidents, and Carnegie Mellon’s list of Banking Cyber Incidents. These sources were chosen for their public accessibility and frequent citation in academic and industry literature. The approach to data collection was guided by the PRISMA methodology which ensured a systematic and thorough compilation process. 
 
 ## Data Cleaning 
 
 We used R [@citeR] and @rohan for data cleaning and processing, utilizing packages like tidyverse [@tidy] for data manipulation and janitor [@jan] for cleaning column names. Other packages used includes `ggplot2` [@ggplot], `dplyr` [@dp], `readr` [@read], `tibble` [@tib], `janitor` [@jan],`reshape2` [@reshape], `knitr` [@knit], `ggbeeswarm` [@gg], `ggrepel` [@repel], `kableExtra`[@kable], `readxl`[@readxl], `MASS`[@mass], `rstanarm`[@rstan], `modelsummary`[@model] and `here` [@here].
 
-The raw air quality data were preprocessed to remove inconsistencies and irrelevant information. Specifically, we filtered the dataset to include observations from the years 2012 to 2021, which are relevant to our analysis. Additionally, we merged this dataset with additional information on peak pollution levels for comprehensive analysis. 
-Similar to the previous datasets, the raw mortality data underwent cleaning procedures to focus on specific causes relevant to our analysis. We filtered the dataset to include observations up to 2021 and merged it with additional information on air quality for correlation analysis. 
-The raw data on AQHI were filtered to include observations from the years 2011 to 2021 for consistency with other datasets. Additionally, the data were aggregated at the municipal level for further analysis. 
+The cyber breach data was preprocessed to remove inconsistencies and irrelevant information. Firstly,
+variable names were simplified and standardized for consistency and ease of analysis. A key challenge  faced was the significant number of missing values in the 'number of users affected' column. This variable was central to our study as we aimed to study trends related to the scale of impact using linear regression analysis. To address this issue, a choice was made to exclude records with missing or uncertain values in this column. While this decision resulted in some data loss, it was a necessary measure to maintain the integrity and accuracy of our trend analysis. Also, in columns like 'attack_type' and 'organisation_size', missing values were replaced with "Unknown" to maintain data integrity. 
+
+## Measurement and Exploratory Data Analysis
+
+As part of the measurement, we converted  real-world cyber incidents into quantifiable data within our dataset. The dataset variables were defined and measured based on the nature of the cyber incidents they represent. Each entry in the dataset corresponds to a distinct cyber incident, with variables relating to the incident. Here is how we defined and measured key variables:
+
+- **`organisation_size`**: This categorical variable categorizes the size of the affected organization into 'Small', 'Medium', 'Large', or 'Unknown', based on the number of employees or annual revenue as per commonly accepted business standards.
+
+- **`sector`**: The sector to which the affected organization belongs is classified according to standard industry classifications. This ensures each entry aligns with the appropriate economic sector.
+
+- **`cyber_security_role`**: This binary variable indicates the presence (`Yes`) or absence (`No`) of a dedicated cybersecurity role within the organization, at the time of the incident.
+
+- **`number_of_users_affected`**: Represented as a numerical variable, this measures the estimated number of individuals whose data was compromised during the breach
+
+- **`undertook_investigation`**: It captures whether an investigation was initiated following the cyber incident (1 for Yes, 0 for No).
+
+- **`breach_severity`**: To highlight the complexity and impact of cyber incidents, we introduced a custom variable, `breach_severity`. This variable was constructed to study the nature of cyber breaches, combining several key aspects of an incident:
 
 
-## Data Modifications
+- **`impact_on_data`**: This reflects the nature of data compromise during the breach (categorized as 'High', 'Medium', or 'Low').
 
-In this study, we constructed unique datasets by thoughtfully selecting and merging data from the Government of Alberta's open data portal, Alberta.ca, spanning the years 2012 to 2022. Our process involved merging variables from various datasets to create specific datasets tailored for model building and analysis.
-One such dataset, 'cleaned_chart_data,' was created by merging variables such as causes of death, total deaths, provincial average PM2.5 levels, and CAAQS. This dataset was designed to facilitate our analysis of any significant correlations between these variables. A snapshot of this data is referenced in Table X. 
-Additionally, we derived two other datasets, 'merged_data' and 'merged_heart_data,' by merging variables related to heart disease numbers, lung disease numbers, and provincial average PM2.5 values. These datasets were instrumental in examining the impact of PM2.5 on each type of illness, as previously discussed.
-Overall, our methodology ensured the creation of comprehensive datasets that allowed for a detailed investigation into the relationships between PM2.5 levels and various health outcomes in Alberta. 
+- **`subsequent_fraudulent_use_of_data`**: Considers if the breached data was later used for fraudulent activities.
+
+The `breach_severity` variable was formulated through a custom function in our data processing script, which combined these elements to classify each incident into 'High', 'Medium', or 'Low' severity categories. This classification was based on the overall impact, the nature of data compromised, and the extent of misuse of data. This measure provides an understanding of the impact of each breach, beyond the simple binary or categorical measures commonly used. 
+
+To achieve a clear understanding of the data, we include a variety of graphs and tables that represent the characteristics of each variable within our dataset. These visualizations illustrate the distribution and relationships among key variables, offering a broad picture of the patterns and trends among our data. @tbl-summary
+shows the summary statistics for organization size and sector. For each category within these variables, we present the count and the relative frequency, expressed as a percentage of the total sample. The frequency distribution of variables such as organisation_size and sector indicates the diversity of the dataset showing various sizes of organizations and a range of sectors. Table \ref{cyber_security_stats} shows  the decripitive statistics for certain variables. 
+
+*CS Role Yes (27.27%)*: This shows that approximately 27% of the organizations in the dataset have a designated Cyber Security (CS) role. 
+
+*CS Role No (72.73%)*: Conversely, nearly 73% of organizations do not have a designated CS role.
+
+*Framework Yes (36.36%)*: About 36% of the organizations adhere to a cyber security framework. Such frameworks provide structured guidelines and best practices for managing cyber security risks.
+
+*Framework No (63.64%)*: The majority, approximately 64%, do not follow a specific cyber security framework. 
+
+*Prevention Low (45%)*:  45% of the organizations were categorized as having Low prevention measures, indicating basic or minimal preventive security measures. 
+
+*Prevention Medium (36.36%)*: 36.36% fell into the Medium prevention category, suggesting more substantial but not so strong security measures. 
+
+*Prevention High (18.18%)*: Only 18.18% were classified under High prevention, reflecting strong preventive strategies against cyber threats.
 
 
 ```{r}
+#| label: tbl-summary
+#| fig-cap: Summary Statistics for Organization Size and Sector
+#| echo: false
+#| warning: false
+#| message: false
+# Load the necessary libraries
+library(dplyr)
+library(knitr)
+library(kableExtra)
+
+# Assuming 'organisation_size' and 'sector' are some of the variables you want summarized
+# Create a function that will return the summary statistics you need
+get_summary_stats <- function(data, variable_name) {
+  summary_stats <- data %>%
+    group_by(!!sym(variable_name)) %>%
+    summarise(
+      Count = n(),
+      Frequency = n() / nrow(data) * 100
+    ) %>%
+    ungroup() %>%
+    arrange(desc(Frequency))
+  
+  return(summary_stats)
+}
+
+# Call the function for 'organisation_size'
+summary_organisation_size <- get_summary_stats(breach_data, "organisation_size")
+
+# Call the function for 'sector'
+summary_sector <- get_summary_stats(breach_data, "sector")
+
+
+summary_combined <- rbind(
+  data.frame(
+    Variable = rep("a. Organization Size", nrow(summary_organisation_size)),
+    Category = summary_organisation_size$organisation_size,
+    Count = summary_organisation_size$Count,
+    `Frequency (%)` = round(summary_organisation_size$Frequency, 2)
+  ),
+  data.frame(
+    Variable = rep("b. Sector", nrow(summary_sector)),
+    Category = summary_sector$sector,
+    Count = summary_sector$Count,
+    `Frequency (%)` = round(summary_sector$Frequency, 2)
+  )
+)
+
+# Create the table using kable and add LaTeX formatting
+kable(summary_combined, format = "latex", booktabs = TRUE, escape = FALSE) %>%
+  kable_styling(latex_options = c("striped", "scale_down")) %>%
+  add_header_above(c(" " = 1, "Summary Statistics" = 3)) %>%
+  pack_rows("Organization Size", 1, nrow(summary_organisation_size), bold = TRUE) %>%
+  pack_rows("Sector", nrow(summary_organisation_size) + 1, nrow(summary_combined), bold = TRUE)
+
+```
+
+
+\begin{table}[H]
+\centering
+\caption{Descriptive Statistics for Cyber Security Variables}
+\label{cyber_security_stats} 
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Variable} & \textbf{Frequency (\%)} \\ \midrule
+\multicolumn{2}{@{}l}{\textit{a. Governance (N = 514)}} \\
+CS Role Yes & 27.27 \\
+CS Role No & 72.73 \\ \addlinespace
+\multicolumn{2}{@{}l}{\textit{b. Cyber Security Frameworks (N = 514)}} \\
+Framework Yes & 36.36 \\
+Framework No & 63.64 \\ \addlinespace
+\multicolumn{2}{@{}l}{\textit{c. Prevention, Detection and Recovery}} \\
+Prevention Low & 45.45 \\
+Prevention Medium & 36.36 \\
+Prevention High & 18.18 \\ \addlinespace
+\end{tabular}
+\end{table}
+
+In order to observe the trend of number of cyberattacks over a span of years, from 2004 to 2019,
+we plotted a line graph [@fig-attacks]. It is evident from the plot that the frequency of attacks has fluctuated over the years, with a peak in 2017. However, the decline following this peak may indicate the impact of improved cybersecurity measures, or a possible transition to different types of cyber threats not captured in this dataset. This visualization provides an overview of the nature of cyber threats and the ongoing battle between cybersecurity efforts and threat actors.
+
+
+```{r}
+#| label: fig-attacks
+#| fig-cap: Cyberattacks Over Time
+#| echo: false
+#| warning: false
+
 breach_data %>%
   count(year) %>%
   ggplot(aes(x = as.factor(year), y = n)) +  # Convert year to factor to treat it as discrete
   geom_line(group=1) +  # Ensure geom_line treats the data as connected points
   scale_x_discrete(breaks = levels(as.factor(breach_data$year))) +  # Specify breaks at every level of the factor
-  labs(title = "Cyberattacks Over Time", x = "Year", y = "Number of Attacks") +
+  labs(x = "Year", y = "Number of Attacks") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))  # Rotate x labels to fit them all
 
 ``` 
-```{r}
-breach_data %>%
-  count(sector) %>%
-  ggplot(aes(x = reorder(sector, n), y = n)) +
-  geom_bar(stat = "identity") +
-  coord_flip() +
-  labs(title = "Cyberattacks by Sector", x = "Sector", y = "Number of Attacks")
-```
+We also plotted a bar graph @fig-sector to count the number of incidents across various sectors. The bar chart clearly indicates that the 'Human Health Activities' sector has the highest count of incidents, standing out significantly from the other sectors. This might suggest that health sector is a more frequent target for cyber incidents or probably it is more diligent in reporting such events. The other sectors show a range of incident counts, with most appearing to have far fewer incidents in comparison. This could point to different levels of risk exposure, varying security measures, or reporting practices across these sectors. 
 
 ```{r}
-breach_data %>%
-  count(country) %>%
-  ggplot(aes(x = reorder(country, n), y = n)) +
-  geom_bar(stat = "identity") +
-  coord_flip() +
-  labs(title = "Cyberattacks by Country", x = "Country", y = "Number of Attacks")
+#| label: fig-sector
+#| fig-cap: Bar Plot of Sector
+#| echo: false
+#| warning: false
 
-```
-
-```{r}
-breach_data %>%
-  count(country) %>%
-  ggplot(aes(x = reorder(country, n), y = n, fill = country)) +
-  geom_bar(stat = "identity") +
-  coord_flip() +
-  labs(title = "Cyberattacks by Country", x = "Country", y = "Number of Attacks") +
-  theme_minimal() +
-  theme(legend.position = "none") # Hides the legend
-
-```
-
-
-
-```{r}
-breach_data %>%
-  count(attack_type) %>%
-  ggplot(aes(x = "", y = n, fill = attack_type)) +
-  geom_bar(width = 1, stat = "identity") +
-  coord_polar("y") +
-  labs(title = "Distribution of Attack Types")
-
-```
-Talk more about it.
-
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
-
-
-```{r}
-breach_data %>%
-  ggplot(aes(x = as.factor(year), y = impact_on_data)) +
-  geom_boxplot() +
-  labs(title = "Impact on Data by Year", x = "Year", y = "Impact on Data")
-
-```
-```{r}
-breach_data %>%
-  count(year, attack_type) %>%
-  ggplot(aes(x = year, y = n, fill = attack_type)) +
-  geom_area(position = 'stack') +
-  labs(title = "Attack Types Over Years", x = "Year", y = "Count")
-
-```
-
-```{r}
-library(ggplot2)
-library(dplyr)
-
-# Assuming 'overall_nature_of_attack' is your categorical variable indicating the nature/type of attack
-# and 'number_of_users_affected' is a numeric variable indicating the number of users impacted
-
-# First, let's calculate summary statistics for each nature of attack
-
-breach_data %>%
-  count(year, sector) %>%
-  ggplot(aes(x = year, y = sector, fill = n)) +
-  geom_tile() +
-  scale_fill_gradient(low = "lightblue", high = "red") +
-  labs(title = "Heatmap of Cyberattacks per Year and Sector",
-       x = "Year",
-       y = "Sector")
-
-```
-```{r}
-breach_data %>%
-  count(year, overall_nature_of_attack) %>%
-  ggplot(aes(x = as.factor(year), y = n, fill = overall_nature_of_attack)) +
-  geom_bar(stat = "identity") +
-  labs(title = "Stacked Bar Chart of Attack Types by Year",
-       x = "Year",
-       y = "Number of Attacks")
-
-```
-```{r}
-library(ggplot2)
-
-ggplot(breach_data, aes(x = as.factor(year), y = number_of_users_affected)) +
-  geom_boxplot() +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  labs(title = "Boxplot of Number of Users Affected Across Years",
-       x = "Year",
-       y = "Number of Users Affected")
-```
-
-
-```{r}
-
-breach_data %>%
-  filter(year == 2013) %>%
-  arrange(desc(number_of_users_affected)) %>%
-  head()  # This shows the top entries for 2013
-
-breach_data %>%
-  filter(year == 2014) %>%
-  arrange(desc(number_of_users_affected)) %>%
-  head()  # This shows the top entries for 2013
-
-# Install and load the scales package
-if (!requireNamespace("scales", quietly = TRUE)) {
-  install.packages("scales")
-}
-library(scales)
-
+ggplot(breach_data, aes(x = sector)) +
+  geom_bar(fill = "coral", color = "black") +
+  labs(x = "Sector", y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = rel(0.8)),
+        plot.margin = unit(c(1,1,1,4), "lines")) 
 
 
 ```
 
+[@fig-overviewofattack] is a creative visualization that effectively depicts the distribution and comparison of cyber attacks across various countries, with a specific emphasis on the United States. It combines a stacked bar chart for multiple countries and a line plot for the USA allowing for a dual-axis comparison due to the disproportionate number of attacks in the USA compared to other countries.
+
+The bar segments represent the frequency of attacks in countries such as Australia, Canada, Japan, the UK, and others, with each color corresponding to a different country. The stacked nature of the bars shows how the total number of attacks is divided among these countries within each year.
+
+The line plot, on the other hand, tracks the frequency of cyber attacks in the USA across the same timeframe, adjusted by a scale factor for direct comparison on a secondary y-axis. This representation highlights the stark contrast in the volume of attacks between the USA and other countries while providing a clear year-by-year trend analysis.
+
+The choice to categorize all countries with fewer attacks under a consolidated "Other" category is a practical approach to maintain clarity in the visualization, avoiding overcrowding the chart with too many individual country representations.
 
 
 ```{r}
-breach_data %>%
-  count(country) %>%
-  mutate(percentage = n / sum(n) * 100) %>%
-  ggplot(aes(x = reorder(country, percentage), y = percentage)) +
-  geom_bar(stat = "identity") +
-  coord_flip() +
-  labs(title = "Percentage of Total Cyberattacks by Country",
-       x = "Country",
-       y = "Percentage of Attacks")
+#| label: fig-overviewofattack
+#| fig-cap: Overview of Cyber Attacks by Year and Country
+#| echo: false
+#| warning: false
 
-
-
-```
-
-```{r}
-
-
-breach_data %>%
-  mutate(impact_score = case_when(
-    impact_on_data == "Low" ~ 1,
-    impact_on_data == "Medium" ~ 2,
-    impact_on_data == "High" ~ 3,
-    TRUE ~ NA_real_
-  )) %>%
-  group_by(organisation_size) %>%
-  summarize(average_impact = mean(impact_score, na.rm = TRUE)) %>%
-  ggplot(aes(x = organisation_size, y = average_impact, fill = organisation_size)) +
-  geom_col() +
-  labs(title = "Average Impact Severity by Organization Size",
-       x = "Organisation Size",
-       y = "Average Impact Score") +
-  theme_minimal()
-
-```
-
-```{r}
-ggplot(breach_data, aes(x = number_of_users_affected)) +
-  geom_density(fill = "blue", alpha = 0.5) +
-  labs(title = "Density Plot of Number of Users Affected by Cyberattacks",
-       x = "Number of Users Affected",
-       y = "Density")
-
-```
-
-
-```{r}
-ggplot(breach_data, aes(x = organisation_size, fill = organisation_size)) +
-  geom_bar() +
-  labs(title = "Number of Cyberattacks by Organization Size",
-       x = "Organization Size",
-       y = "Number of Cyberattacks") +
-  theme_minimal()
-
-
-```
-```{r}
-library(modelsummary)
-
-logistic_model <- readRDS(file = here::here("models/restructuring_model.rds"))
-
-modelsummary(list("Logistic Regression" = logistic_model))
-
-```
-```{r}
-breach_data <- breach_data %>% mutate(row_id = row_number())
-
-# Adjust factors in your data to match the model's training data
-breach_data <- breach_data %>%
-  mutate(country = factor(country, levels = levels(logistic_model$model$country)))
-
-# Generate predictions
-breach_predictions <- predict(logistic_model, newdata = breach_data, type = "response")
-
-# Combine the predictions with the original data
-breach_data <- breach_data %>% mutate(predicted_prob = breach_predictions)
-
-# Scatter plot with jitter
-ggplot(breach_data, aes(x = organisation_size, y = predicted_prob)) +
-  geom_jitter(alpha = 0.3) +
-  labs(x = "Organisation Size", y = "Predicted Probability of Restructuring")
-
-```
-```{r}
-ggplot(breach_data, aes(x = number_of_users_affected)) +
-  stat_ecdf(geom = "step") +
-  labs(title = "Cumulative Distribution of Number of Users Affected",
-       x = "Number of Users Affected",
-       y = "Cumulative Probability")
-```
-```{r}
-breach_data %>%
-  group_by(year) %>%
-  summarize(total_users_affected = sum(number_of_users_affected, na.rm = TRUE)) %>%
-  ggplot(aes(x = year, y = total_users_affected)) +
-  geom_line() +
-  labs(title = "Number of Users Affected Over Years",
-       x = "Year",
-       y = "Total Number of Users Affected") +
-  theme_minimal()
-
-
-```
-
-```{r}
-breach_data %>%
-  ggplot(aes(x = sector, y = number_of_users_affected)) +
-  geom_boxplot() +
-  labs(title = "Spread of Number of Users Affected Across Sectors",
-       x = "Sector",
-       y = "Number of Users Affected") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-```
-```{r}
-breach_data %>%
-  ggplot(aes(x = number_of_users_affected)) +
-  geom_histogram(bins = 30, fill = "blue", color = "black") +
-  labs(title = "Distribution of Number of Users Affected by Cyberattacks",
-       x = "Number of Users Affected",
-       y = "Frequency") +
-  theme_minimal()
-
-```
-```{r}
-breach_data %>%
-  filter(year == 2013) %>%
-  summarise(
-    median_users = median(number_of_users_affected, na.rm = TRUE),
-    iqr_users = IQR(number_of_users_affected, na.rm = TRUE),
-    upper_bound = median_users + 1.5 * iqr_users
-  )
-
-breach_data %>% filter(year == 2019)
-
-breach_data %>%
-  filter(year == 2019)%>%
-  summarise(
-    median_users = median(number_of_users_affected, na.rm = TRUE),
-    iqr_users = IQR(number_of_users_affected, na.rm = TRUE),
-    upper_bound = median_users + 1.5 * iqr_users
-  )
-
-```
-
-
-
-```{r}
-
-```
-
-
-
-
-
-
-```{r}
-
-
-```
-
-```{r}
 breach_data$year <- as.numeric(as.character(breach_data$year))
 
 # Now proceed with your data manipulation
@@ -423,7 +357,7 @@ gg <- ggplot() +
   geom_line(data = usa_data, aes(x = year, y = frequency * scale_factor, group = 1), color = "#4D4D4D", size = 1) +
   # Define the primary y-axis with the secondary axis for the USA
   scale_y_continuous(
-    name = "Frequency of Cyber Attacks (Other Countries)", 
+    name = "Frequency of Cyber Attacks (Other Countries except USA)", 
     limits = c(0, max_other_freq * 1.1),  # Set limits for better control, slightly above max to ensure space for the line
     sec.axis = sec_axis(~ . / scale_factor, name = "Frequency of USA Cyber Attacks", labels = scales::comma)
   ) +
@@ -431,8 +365,7 @@ gg <- ggplot() +
   scale_x_continuous(breaks = sort(unique(breach_data_summary$year))) +
   # Apply the formal color palette
   scale_fill_manual(values = formal_palette) +
-  labs(title = "Overview of Cyber Attacks by Year and Country",
-       subtitle = "Bar plots for countries; line plot for USA") +
+  labs(subtitle = "Bar plots for Other countries; line plot for USA") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1), # Rotate x-axis labels
         legend.position = "bottom", # Adjust the position of the legend
@@ -444,8 +377,74 @@ gg <- ggplot() +
 print(gg)
 
 ```
+[@fig-attacktype] represents a stacked area chart, with each colored layer representing a different type of attack, allowing for an easy comparison of their occurrences over time. It is clear that some attack types, like installed malware, show peaks and troughs, possibly depicting the nature of cyber threats and security measures. These trends can be helpful for understanding the changing landscape of cyber risks and preparing for future security strategies.
 
 ```{r}
+#| label: fig-attacktype
+#| fig-cap: Attack Types Over Years
+#| echo: false
+#| warning: false
+
+attack_type_palette <- c(
+  "Installed malware" = "#4878D0", 
+  "Misuse of resources" = "#6ACC65", 
+  "Physical Theft" = "#D65F5F", 
+  "Unknown" = "#B47CC7", 
+  "Web compromise" = "#C4AD66"
+)
+
+breach_data %>%
+  count(year, attack_type) %>%
+  ggplot(aes(x = year, y = n, fill = attack_type)) +
+  geom_area(position = 'stack') +
+  labs(x = "Year", 
+       y = "Count", 
+       fill = "Attack Type") +
+  scale_fill_manual(values = attack_type_palette)
+```
+# Model {# sec-model}
+
+
+
+
+```{r}
+library(modelsummary)
+
+logistic_model <- readRDS(file = here::here("models/restructuring_model.rds"))
+
+modelsummary(list("Logistic Regression" = logistic_model))
+
+```
+```{r}
+breach_data <- breach_data %>% mutate(row_id = row_number())
+
+# Adjust factors in your data to match the model's training data
+breach_data <- breach_data %>%
+  mutate(country = factor(country, levels = levels(logistic_model$model$country)))
+
+# Generate predictions
+breach_predictions <- predict(logistic_model, newdata = breach_data, type = "response")
+
+# Combine the predictions with the original data
+breach_data <- breach_data %>% mutate(predicted_prob = breach_predictions)
+
+# Scatter plot with jitter
+ggplot(breach_data, aes(x = organisation_size, y = predicted_prob)) +
+  geom_jitter(alpha = 0.3) +
+  labs(x = "Organisation Size", y = "Predicted Probability of Restructuring")
+
+```
+
+```{r}
+breach_data %>%
+  group_by(year) %>%
+  summarize(total_users_affected = sum(number_of_users_affected, na.rm = TRUE)) %>%
+  ggplot(aes(x = year, y = total_users_affected)) +
+  geom_line() +
+  labs(title = "Number of Users Affected Over Years",
+       x = "Year",
+       y = "Total Number of Users Affected") +
+  theme_minimal()
 
 
 ```
@@ -453,6 +452,152 @@ print(gg)
 
 
 
+```{r}
+# Summary statistics for numerical variables
+summary(breach_data$number_of_users_affected)
+summary(breach_data$year)
+
+# Frequency tables for categorical variables
+table(breach_data$sector)
+table(breach_data$organisation_size)
+table(breach_data$critical_industry)
+table(breach_data$level_of_digital_intensity)
+table(breach_data$country)
+table(breach_data$cyber_security_role)
+table(breach_data$cyber_security_frameworks)
+table(breach_data$education_and_awareness_policy)
+table(breach_data$policy)
+table(breach_data$prevention_detection_and_recovery)
+table(breach_data$detector)
+table(breach_data$restructuring_after_attack)
+table(breach_data$bribe_ransom_paid)
+table(breach_data$free_identity_or_credit_theft_monitoring)
+table(breach_data$additional_disclosure_of_information)
+table(breach_data$overall_nature_of_attack)
+table(breach_data$attack_type)
+table(breach_data$attacker)
+table(breach_data$attack_vector)
+table(breach_data$impact_on_data)
+# ... continue for other categorical variables as needed
+
+# Histogram for a continuous variable (e.g., number_of_users_affected)
+ggplot(breach_data, aes(x = number_of_users_affected)) +
+  geom_histogram(binwidth = 1000, fill = "blue", color = "black") +
+  labs(title = "Histogram of Number of Users Affected", x = "Number of Users Affected", y = "Frequency")
+
+```
+```{r}
+linear_model_RQ2 <- readRDS(file = here::here("models/linear_model_RQ2.rds"))
+# Plotting diagnostics for the linear regression model (Example: linear_model_RQ2)
+ggplot(breach_data, aes(x = year, y = number_of_users_affected)) +
+  geom_point() +
+  geom_smooth(method = "lm", color = "blue") +
+  labs(title = "Linear Regression of Number of Users Affected Over Years", 
+       x = "Year", 
+       y = "Number of Users Affected")
+
+# Assuming breach_data is your dataset and you have already created models named linear_model_severity and linear_model_investigations
+
+# Partial regression plot for breach severity with a specific predictor (e.g., 'organisation_size')
+# install.packages("car") # Uncomment if the car package is not installed
+
+```
+
+
+
+```{r regression-table, results='asis', echo=FALSE}
+
+library(broom)
+library(stargazer)
+model_investigation <- readRDS(file = here::here("models/model_investigation.rds"))
+
+model_investigation_frame <- augment(model_investigation)
+
+
+ggplot(model_investigation_frame, aes(x = organisation_size, y = .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0, linetype = "dotted", color = "grey") +
+  theme_classic() +
+  labs(y = "Residuals", x = "Organisation Size")
+
+ggplot(model_investigation_frame, aes(x = .resid)) +
+  geom_histogram(binwidth = 1) +
+  theme_classic() +
+  labs(y = "Number of occurrences", x = "Residuals")
+
+
+
+```
+$\begin{table}[!htbp] \centering 
+  \caption{Linear regression analysis with dependent variable} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & undertook\_investigation \\ 
+\hline \\[-1.8ex] 
+ critical\_industry & $-$0.03 (0.12) \\ 
+  organisation\_sizeMedium & $-$0.04 (0.06) \\ 
+  organisation\_sizeSmall & 0.07 (0.08) \\ 
+  organisation\_sizeUnknown & $-$0.03 (0.06) \\ 
+  level\_of\_digital\_intensityLow & $-$0.03 (0.62) \\ 
+  level\_of\_digital\_intensityLow-Medium & $-$0.29 (0.67) \\ 
+  level\_of\_digital\_intensityMedium-High & $-$0.31 (0.66) \\ 
+  sectorAdministrative and support service & $-$0.62 (0.72) \\ 
+  sectorAdvertising and other business services & $-$0.48 (0.66) \\ 
+  sectorArts, entertainment and recreation & $-$0.14 (0.12) \\ 
+  sectorChemicals and chemical products & 0.20 (0.37) \\ 
+  sectorComputer, electronic and optical products & 0.19 (0.23) \\ 
+  sectorConstruction & $-$0.61 (0.45) \\ 
+  sectorEducation & $-$0.11 (0.18) \\ 
+  sectorElectrical equipment & $-$0.23 (0.51) \\ 
+  sectorElectricity, gas, steam and air conditioning & $-$0.56 (0.34) \\ 
+  sectorFinance and insurance & $-$0.09 (0.63) \\ 
+  sectorFood products, beverages and tobacco & $-$0.06 (0.26) \\ 
+  sectorHuman health activities & $-$0.14 (0.22) \\ 
+  sectorIT and other information services & $-$0.29 (0.63) \\ 
+  sectorLegal and accounting activities & $-$0.63 (0.69) \\ 
+  sectorMachine equipment & $-$0.08 (0.24) \\ 
+  sectorPharmaceutical products & $-$0.27 (0.38) \\ 
+  sectorPublishing, audiovisual and broadcasting & $-$0.12 (0.22) \\ 
+  sectorResidential care and social work activities & $-$0.18 (0.24) \\ 
+  sectorScientific research and development & $-$0.37 (0.68) \\ 
+  sectorTelecommunications & $-$0.40 (0.65) \\ 
+  sectorTextiles, wearing apparel and leather &  \\ 
+  sectorTransportation storage & 0.06 (0.31) \\ 
+  sectorWholesale, retail trade and repair &  \\ 
+  countryChina & 0.88 (0.51) \\ 
+  countryFrance & $-$0.17 (0.51) \\ 
+  countryGermany & $-$0.01 (0.40) \\ 
+  countryGlobal & 0.28 (0.29) \\ 
+  countryHong Kong & 0.56 (0.57) \\ 
+  countryIndia & $-$0.33 (0.51) \\ 
+  countryJapan & 0.13 (0.35) \\ 
+  countryNorway & 0.04 (0.50) \\ 
+  countryPhilippines & $-$0.15 (0.51) \\ 
+  countryQatar & $-$0.33 (0.51) \\ 
+  countryRussia & $-$0.12 (0.41) \\ 
+  countrySingapore & 0.83$^{*}$ (0.36) \\ 
+  countrySouth Africa & 0.85 (0.51) \\ 
+  countrySouth Korea & 0.53 (0.36) \\ 
+  countryTurkey & 0.85 (0.51) \\ 
+  countryUAE & 0.60 (0.57) \\ 
+  countryUK & 0.35 (0.31) \\ 
+  countryUSA & 0.19 (0.26) \\ 
+  Constant & 0.45 (0.70) \\ 
+ \hline \\[-1.8ex] 
+Observations & 513 \\ 
+R$^{2}$ & 0.15 \\ 
+Adjusted R$^{2}$ & 0.07 \\ 
+Residual Std. Error & 0.43 (df = 465) \\ 
+F Statistic & 1.80$^{**}$ (df = 47; 465) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.05; $^{**}$p$<$0.01; $^{***}$p$<$0.001} \\ 
+\end{tabular} 
+\end{table} $
 
 
 
