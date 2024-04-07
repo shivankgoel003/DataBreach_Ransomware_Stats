@@ -71,7 +71,7 @@ As discussed earlier, cyber resilience is about an organization's ability to kee
 
 3. Learning and Adapting: An organization needs to continuously learn from past incidents and attacks. It must adapt its strategies accordingly. This could involve updating its policies, training employees, and revising its approach to security.
  
-4.External Factors: Factors like the industry the organization is in, its size, and its digital intensity (how much it relies on digital technology) can also impact its cyber resilience.
+4. External Factors: Factors like the industry the organization is in, its size, and its digital intensity (how much it relies on digital technology) can also impact its cyber resilience.
 
 \begin{figure}[H]
 \centering
@@ -433,12 +433,48 @@ $\text{Impact} = (\text{Base Impact}) + (\text{Effect of Company Size}) + (\text
 
 **Complex Models for Yes/No Outcomes (Bayesian Logistic Regression)**:
 
-Now, what if we want to know if a company will take action after an attack, like starting an investigation? This is a yes/no type of question. We use a different method called logistic regression, which is good for when the outcome is not a number but a choice between two things. We make this model even better by using what we call a Bayesian approach. It means we use past knowledge to make better guesses. So, we can say:
+Now, what if we want to know if a company will take action after an attack, like starting an investigation? This is a yes/no type of question. We use a different method called logistic regression, which is good for when the outcome is not a number but a choice between two things.
+
+## Specific models for Research Question 
+
+**RQ1: Organizational attributes and cyberattack handling**
+
+To address the first research question about how an organization's size and business type affect its ability to handle cyber attacks, we developed a specific linear regression model. This model examines the relationships between various organizational attributes and the handling of cyberattacks. It predicts the severity of cyber breaches based on:
+
+1. Organizational Size (Medium, Small, Unknown)
+2. Digital Intensity (Low, Low-Medium, Medium-High)
+3. Sector (e.g., Public Administration and Defence, Education, Health)
+4. Country
+
+- Dependent Variable: Severity of cyber breaches.
+
+- Independent Variables: Organizational size, sector, digital intensity, and geographical location.
+
+[@tbl-modelbreachseverity] summarises the results from model.
+
+1. Organisation Size: The coefficients for different organization sizes (Medium, Small, Unknown) indicate how the severity of breaches changes with these categories compared to the baseline category. Medium (0.015) and Small (0.103) have positive coefficients, which suggests potentially higher severity compared to the baseline. Unknown (-0.072) indicates a lower severity than the baseline, which might reflect missing data issues or other factors.
+
+2. Level of Digital Intensity & Sector: These coefficients show how levels of digital intensity and different sectors affect breach severity. Negative coefficients, like for the public administration and defence sector (-0.581), suggest a lower severity compared to the baseline sector.
+
+3. Country: Similar to sectors, the coefficients for different countries compared to the baseline indicate variations in breach severity across geographical locations.
+
+R-squared (0.137): Indicates the proportion of variance in the dependent variable that's predictable from the independent variables. A value of 0.137 suggests the model explains about 13.7% of the variability in breach severity.
+
+Adjusted R-squared (0.099): It adjusts the R-squared for the number of predictors in the model. It is lower than the R-squared, which is common in models with many predictors.
+
+AIC (665.5) and BIC (746.7): These are measures for model comparison.
+
+
+**RQ2: Effectiveness of cybersecurity methods**
+
+**RQ3: Impact of specific business situations**
 
 ```{r}
 #| echo: false
 #| eval: true
 #| warning: false
+#| label: tbl-modelbreachseverity
+#| tbl-cap: "Linear Regression Model Summary for RQ1"
 #| message: false
 #| 
 library(modelsummary)

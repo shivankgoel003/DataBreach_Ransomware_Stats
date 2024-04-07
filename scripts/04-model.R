@@ -2,7 +2,7 @@
 # Purpose: Models different relations between variables such as cyberattack outcomes and organizational attributes. 
 # Author: Shivank Goel  
 # Date: 7th April 2024
-# Contact: [Your Contact Information]
+# Contact: shivankg.goel@mail.utoronto.ca
 # License: MIT
 
 #### Workspace setup ####
@@ -34,6 +34,20 @@ breach_data$number_of_users_affected <- as.numeric(breach_data$number_of_users_a
 breach_data$critical_industry <- ifelse(breach_data$critical_industry == "Yes", 1, 0)
 breach_data$cyber_security_role <- ifelse(breach_data$cyber_security_role == "Yes", 1, 0)
 breach_data$undertook_investigation <- ifelse(breach_data$undertook_investigation == "Yes", 1, 0)
+
+
+
+binary_columns <- c("cyber_security_role", "cyber_security_frameworks", "education_and_awareness_policy", "prevention_detection_and_recovery")
+breach_data[binary_columns] <- lapply(breach_data[binary_columns], function(x) as.numeric(x == "Yes"))
+
+# Building the Linear Regression Model
+rq2model <- lm(number_of_users_affected ~ cyber_security_role + cyber_security_frameworks + education_and_awareness_policy + prevention_detection_and_recovery + as.factor(organisation_size) + as.factor(sector) + as.numeric(level_of_digital_intensity), data = breach_data)
+
+# Summary of the Model
+summary(rq2model)
+
+
+
 
 
 ######### Model 1
@@ -240,7 +254,7 @@ saveRDS(restructuring_model, "models/restructuring_model.rds")
 saveRDS(linear_model_RQ2, "models/linear_model_RQ2.rds")
 saveRDS(linear_model_RQ3, "models/linear_model_RQ3.rds")
 saveRDS(model_investigation, "models/model_investigation.rds")
-
+saveRDS(rq2model, "models/rq2model.rds")
 
 
 
