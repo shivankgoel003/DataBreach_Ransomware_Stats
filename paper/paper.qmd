@@ -13,6 +13,9 @@ header-includes:
    - \usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, calc}
    - \usepackage{pgfplots} 
    - \usepackage{float}
+   - \usepackage{booktabs}
+   - \usepackage{longtable}
+
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -446,11 +449,12 @@ To address the first research question about how an organization's size and busi
 3. Sector (e.g., Public Administration and Defence, Education, Health)
 4. Country
 
+
 - Dependent Variable: Severity of cyber breaches.
 
 - Independent Variables: Organizational size, sector, digital intensity, and geographical location.
 
-[@tbl-modelbreachseverity] summarises the results from model.
+[@breach_severity_model] summaries the results from model.
 
 1. Organisation Size: The coefficients for different organization sizes (Medium, Small, Unknown) indicate how the severity of breaches changes with these categories compared to the baseline category. Medium (0.015) and Small (0.103) have positive coefficients, which suggests potentially higher severity compared to the baseline. Unknown (-0.072) indicates a lower severity than the baseline, which might reflect missing data issues or other factors.
 
@@ -458,48 +462,111 @@ To address the first research question about how an organization's size and busi
 
 3. Country: Similar to sectors, the coefficients for different countries compared to the baseline indicate variations in breach severity across geographical locations.
 
-R-squared (0.137): Indicates the proportion of variance in the dependent variable that's predictable from the independent variables. A value of 0.137 suggests the model explains about 13.7% of the variability in breach severity.
+R-squared (0.137): Indicates the proportion of variance in the dependent variable that's predictable from the independent variables. A value of 0.137 suggests that approximately 13.71% of the variation in breach severity is explained by the included predictors.
 
-Adjusted R-squared (0.099): It adjusts the R-squared for the number of predictors in the model. It is lower than the R-squared, which is common in models with many predictors.
+Adjusted R-squared (0.099): This value is slightly lower than the R-squared, and accounts for the number of predictors,. It suggests a good fit of the model considering the complexity introduced by multiple variables.
 
-AIC (665.5) and BIC (746.7): These are measures for model comparison.
+F-statistic of 3.619 and a p-value of 1.12e-06, suggests that the model demonstrates the statistical significance overall, indicating that at least some of the predictors are likely to be genuinely associated with variations in breach severity.
+
+\begin{longtable}{lcccc}
+\caption{Linear regression analysis with breach severity numeric as dependent variable} \label{tab:breach_severity_model} \\
+\toprule
+Predictor & Estimate & Std. Error & t value & Pr(>|t|) \\
+\midrule
+\endfirsthead
+
+\multicolumn{5}{c}%
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\toprule
+Predictor & Estimate & Std. Error & t value & Pr(>|t|) \\
+\midrule
+\endhead
+
+\midrule \multicolumn{5}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+\endlastfoot
+
+Intercept & 2.08715 & 0.09139 & 22.837 & $<$ 2e-16 *** \\
+Organisation Size - Medium & 0.01467 & 0.08055 & 0.182 & 0.855 \\
+Organisation Size - Small & 0.10336 & 0.10093 & 1.024 & 0.306 \\
+Organisation Size - Unknown & -0.07151 & 0.07166 & -0.998 & 0.319 \\
+Level of Digital Intensity - Low & -0.29052 & 0.22750 & -1.277 & 0.202 \\
+Level of Digital Intensity - Low-Medium & 0.11865 & 0.16894 & 0.702 & 0.483 \\
+Level of Digital Intensity - Medium-High & 0.45764 & 0.15186 & 3.013 & 0.0027 ** \\
+Sector - Public Administration and Defence & -0.58112 & 0.20077 & -2.894 & 0.0040 ** \\
+Sector - Other & -0.44159 & 0.12026 & -3.672 & 0.0003 *** \\
+Sector - Arts, Entertainment and Recreation & -0.80423 & 0.20009 & -4.019 & 6.94e-05 *** \\
+Sector - Education & -0.27055 & 0.20130 & -1.344 & 0.180 \\
+Sector - Human Health Activities & -0.20620 & 0.19467 & -1.059 & 0.290 \\
+Country - Canada & -0.55895 & 0.30172 & -1.853 & 0.0646 . \\
+Country - Global & -0.41952 & 0.16428 & -2.554 & 0.0110 * \\
+Country - Japan & -0.21109 & 0.26805 & -0.788 & 0.431 \\
+Country - UK & 0.07899 & 0.30459 & 0.259 & 0.795 \\
+Country - Other & 0.13767 & 0.15593 & 0.883 & 0.378 \\
+Country - Singapore & -0.68348 & 0.30035 & -2.276 & 0.0234 * \\
+Country - South Korea & -0.74056 & 0.52226 & -1.418 & 0.157 \\
+\midrule
+Residual standard error & \multicolumn{4}{c}{0.5131 on 410 DF} \\
+Multiple R-squared & \multicolumn{4}{c}{0.1371} \\
+Adjusted R-squared & \multicolumn{4}{c}{0.09921} \\
+F-statistic & \multicolumn{4}{c}{3.619 on 18 and 410 DF} \\
+P-value & \multicolumn{4}{c}{1.12e-06} \\
+\bottomrule
+\end{longtable}
+
+
+**RQ3: Impact of specific business situations**
 
 
 **RQ2: Effectiveness of cybersecurity methods**
 
-**RQ3: Impact of specific business situations**
 
-```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| label: tbl-modelbreachseverity
-#| tbl-cap: "Linear Regression Model Summary for RQ1"
-#| message: false
-#| 
-library(modelsummary)
 
-breach_severity_model <- readRDS(file = here::here("models/breach_severity_model.rds"))
 
-modelsummary(list("Linear Regression" = breach_severity_model))
+\begin{longtable}{lrrrr}
+\caption{Linear regression analysis with number of users affected as dependent variable} \label{tab:my_label} \\
+\toprule
+Model & Coefficients & Standard errors & T value & Sig \\
+\midrule
+\endfirsthead
 
+\multicolumn{5}{c}%
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\toprule
+Model & Coefficients & Standard errors & T value & Sig \\
+\midrule
+\endhead
+
+\midrule \multicolumn{5}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+\endlastfoot
+
+Intercept & 36,687,660 & 32,842,060 & 1.117 & 0.264 \\
+Cyber Security Role & NA & NA & NA & NA \\
+Cyber Security Frameworks & -13,994,198 & 139,505,210 & -0.100 & 0.920 \\
+Education and Awareness Policy & 38,460,000 & 194,290,149 & 0.198 & 0.843 \\
+Prevention, Detection, and Recovery & NA & NA & NA & NA \\
+Organization Size - Medium & -7,347,889 & 29,571,997 & -0.248 & 0.804 \\
+Organization Size - Large & 8,946,092 & 25,705,975 & 0.348 & 0.728 \\
+Organization Size - Unknown & -14,379,354 & 28,602,186 & -0.503 & 0.615 \\
+Sector - Public Administration and Defence & 81,232,193 & 41,730,689 & 1.947 & 0.052 \\
+Sector - Other & 73,186,958 & 25,457,748 & 2.875 & 0.004 \\
+Sector - Arts, Entertainment and Recreation & 93,277,310 & 41,274,076 & 2.260 & 0.024 \\
+Sector - Education & 40,468,643 & 31,559,658 & 1.282 & 0.200 \\
+Sector - Human Health Activities & 47,359,281 & 28,602,617 & 1.656 & 0.098 \\
+Level of Digital Intensity & -28,344,216 & 9,431,846 & -3.005 & 0.003 \\
+\midrule
+R Squared & \multicolumn{4}{c}{0.093} \\
+Adjusted R Squared & \multicolumn{4}{c}{0.037} \\
+F Statistic & \multicolumn{4}{c}{1.648} \\
+Significance of F & \multicolumn{4}{c}{0.018} \\
+\bottomrule
+\end{longtable}
 ```
 
 
-
-```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| message: false
-#| 
-library(modelsummary)
-
-logistic_model <- readRDS(file = here::here("models/restructuring_model.rds"))
-
-modelsummary(list("Logistic Regression" = logistic_model))
-
-```
 
 
 
@@ -525,37 +592,6 @@ breach_data %>%
 
 
 ```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| message: false
-# Summary statistics for numerical variables
-summary(breach_data$number_of_users_affected)
-summary(breach_data$year)
-
-# Frequency tables for categorical variables
-table(breach_data$sector)
-table(breach_data$organisation_size)
-table(breach_data$critical_industry)
-table(breach_data$level_of_digital_intensity)
-table(breach_data$country)
-table(breach_data$cyber_security_role)
-table(breach_data$cyber_security_frameworks)
-table(breach_data$education_and_awareness_policy)
-table(breach_data$policy)
-table(breach_data$prevention_detection_and_recovery)
-table(breach_data$detector)
-table(breach_data$restructuring_after_attack)
-table(breach_data$bribe_ransom_paid)
-table(breach_data$free_identity_or_credit_theft_monitoring)
-table(breach_data$additional_disclosure_of_information)
-table(breach_data$overall_nature_of_attack)
-table(breach_data$attack_type)
-table(breach_data$attacker)
-table(breach_data$attack_vector)
-table(breach_data$impact_on_data)
-# ... continue for other categorical variables as needed
-
 # Histogram for a continuous variable (e.g., number_of_users_affected)
 ggplot(breach_data, aes(x = number_of_users_affected)) +
   geom_histogram(binwidth = 1000, fill = "blue", color = "black") +

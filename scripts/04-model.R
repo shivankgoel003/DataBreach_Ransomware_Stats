@@ -35,21 +35,6 @@ breach_data$critical_industry <- ifelse(breach_data$critical_industry == "Yes", 
 breach_data$cyber_security_role <- ifelse(breach_data$cyber_security_role == "Yes", 1, 0)
 breach_data$undertook_investigation <- ifelse(breach_data$undertook_investigation == "Yes", 1, 0)
 
-
-
-binary_columns <- c("cyber_security_role", "cyber_security_frameworks", "education_and_awareness_policy", "prevention_detection_and_recovery")
-breach_data[binary_columns] <- lapply(breach_data[binary_columns], function(x) as.numeric(x == "Yes"))
-
-# Building the Linear Regression Model
-rq2model <- lm(number_of_users_affected ~ cyber_security_role + cyber_security_frameworks + education_and_awareness_policy + prevention_detection_and_recovery + as.factor(organisation_size) + as.factor(sector) + as.numeric(level_of_digital_intensity), data = breach_data)
-
-# Summary of the Model
-summary(rq2model)
-
-
-
-
-
 ######### Model 1
 
 calculate_breach_severity <- function(impact, credit_card_leak_1, credit_card_leak_2, ssn_leak, fraudulent_use) {
@@ -109,7 +94,22 @@ summary(breach_severity_model)
 
 ############
 
+#####
 
+binary_columns <- c("cyber_security_role", "cyber_security_frameworks", "education_and_awareness_policy", "prevention_detection_and_recovery")
+breach_data[binary_columns] <- lapply(breach_data[binary_columns], function(x) as.numeric(x == "Yes"))
+
+# Building the Linear Regression Model
+breach_data$organisation_size <- factor(breach_data$organisation_size, 
+                                        levels = c("Small", "Medium", "Large", "Unknown"),
+                                        labels = c("Small", "Medium", "Large", "Unknown"))
+
+rq2model <- lm(number_of_users_affected ~ cyber_security_role + cyber_security_frameworks + education_and_awareness_policy + prevention_detection_and_recovery + as.factor(organisation_size) + as.factor(sector_simplified) + as.numeric(level_of_digital_intensity), data = breach_data)
+
+# Summary of the Model
+summary(rq2model)
+
+####
 
 ######### Model 2
 
