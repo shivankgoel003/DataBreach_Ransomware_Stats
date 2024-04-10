@@ -12,8 +12,7 @@ This repository is part of a statistical analysis project that investigates data
 We looked closely at information on cyberattacks that the University of Queensland collected over 15 years. This data helped us understand how different companies are affected by these online threats. It showed us who gets hit the most and what can help protect them. The raw data can be found under `data/raw_data`
 
 ## Authors and Acknowledgements
-The paper is an  We extend our gratitude to the academic community and the data providers for their contributions to this research.
-
+The paper is an indiviual work, and I extend my gratitude to the academic community at University of Queensland, especially researches Tsen, Elinor, Ko, Ryan, and Slapnicar, Sergeja for providing dataset and a study related to this subject. I also sincerly thanks Dr. Rohan Alexander for guiding and providing feedback on the paper. 
 
 ## File Structure
 
