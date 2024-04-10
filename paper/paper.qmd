@@ -19,6 +19,7 @@ header-includes:
 format: pdf
 number-sections: true
 bibliography: references.bib
+toc: true
 ---
 
 ```{r}
@@ -36,23 +37,23 @@ breach_data <- read.csv(here("data/analysis_data/breach_data.csv"))
 
 # Introduction
 
-In today's digital world, every click, every online transaction, and every shared piece of data is a potential entry point for cyber threats. Cybercrime is not just evolving, rather it is expanding at an alarming rate, with both the frequency and severity of attacks rising every year. The purpose of these attacks is to harm companies and organizations financially, however, in some cases these attacks can have military or political purposes. “According to a report published by the Identity Theft Resource Center (ITRC), a record number of 1862 data breaches occurred in 2021 in the US. Sectors like healthcare, finance, business, and retail are the most commonly attacked, impacting millions of Americans every year” (https://www.upguard.com/blog/biggest-data-breaches-us)
+In today's digital world, every click, every online transaction, and every shared piece of data poses an entry point for cyber threats. Cybercrime is not just growing quickly, rather it is turning out to be more of a serious concern with both the frequency and severity of attacks rising every year. The purpose of these attacks is to harm companies and organizations financially, however, in some cases these attacks can have military or political purposes. “According to a report published by the Identity Theft Resource Center (ITRC), a record number of 1862 data breaches occurred in 2021 in the US. Sectors like healthcare, finance, business, and retail are the most commonly attacked, impacting millions of Americans every year” [@UpGuard2024]
 
-Despite such severe threats and impacts of cyberattacks, still certain companies tend to oversee this concern. As per PWC 2024 Global Digital Trust Insights report, “about one-third of organisations have no risk management plan to address cloud service provider challenges. Half are ‘very satisfied’ with their technology capabilities in key cybersecurity areas. More than 30% of companies don’t consistently follow what should be standard practices of cyber defence.” (https://www.pwc.com/us/en/services/consulting/cybersecurity-risk-regulatory/library/global-digital-trust-insights.html)
+Despite such severe threats and impacts of cyberattacks, still certain companies tend to oversee this concern. As per PWC 2024 Global Digital Trust Insights report, “about one-third of organisations have no risk management plan to address cloud service provider challenges. Half are ‘very satisfied’ with their technology capabilities in key cybersecurity areas. More than 30% of companies don’t consistently follow what should be standard practices of cyber defence.” [@PwC2023]
 
-Therefore, in response to such attacks, there is a need for a plan, that not just keep the intruder or hackers out but also quickly alert if an attack does happen. Our study looks at cyber resilience, which is “ the ability to anticipate, withstand, recover from, and adapt to adverse conditions, stresses, attacks, or compromises on systems that use or are enabled by cyber resources.” as defined by National Institute of Standards and Technology (https://csrc.nist.gov/glossary/term/cyber_resiliency). To thoroughly analyze our study, we break it into three major research questions :
+Therefore, in response to such attacks, there is a need for a plan, that not just keep the intruder or hackers out but also quickly alert if an attack does happen. Our study looks at cyber resilience, which is “ the ability to anticipate, withstand, recover from, and adapt to adverse conditions, stresses, attacks, or compromises on systems that use or are enabled by cyber resources.” as defined by National Institute of Standards and Technology [@NISTGlossary2023]. We break our study into three major research questions, which forms the thesis of our study:
 
-**RQ1**: How do things like the size of the company and the type of business it does affect its ability to handle cyber attacks?
+**RQ1**: How do organizational factors such as size and sector, influence the severity of cyber breaches experienced by companies?
 
-**RQ2**: Which methods or strategies used by companies work best to reduce the damage from cyber attacks?
+**RQ2**: Which cybersecurity strategies, including frameworks, policies, and preventive measures, are the most effective one, in reducing the damage caused by cyber attacks?
 
-**RQ3**: How does the business’s specific situation, like its industry or how much it relies on digital tools, change the impact of cyber attacks on it?
+**RQ3**: In what ways do the industry type and digital dependence of a business affect the overall impact of a cyber attack, in terms of preserving confidentiality, integrity and availability of data?
 
-The estimand of our study is the measurable effect of specific characteristics of an organization including size, sector and digital intensity on their cyber resilience. As a key finding, our regression models reveal factors such as organizational size, sector, and digital intensity significantly influence an organization's cyber resilience posture.For example, larger companies often have stronger defenses against cyber attacks, and on the other hand, companies that use a lot of digital technology in their work have different levels of protection.
+The estimand of our study is the measurable effect of specific characteristics of an organization including size, sector and digital intensity on their cyber resilience. As a key finding, our regression models reveal factors such as organizational size, sector, and digital intensity significantly influence an organization's cyber resilience. For example, larger companies often have stronger defenses against cyber attacks, and on the other hand, companies that use a lot of digital technology in their work have different levels of protection.
 
 We aim to study and answer these questions by performing an analysis on a dataset of data breaches and ransomware attacks over 14 years from 2004, published by the University of Queensland. 
 
-The remainder of this paper is structured as follows: @sec-data provides an overview of our methodology, including the data collection process and the analytical techniques used to explore the dataset of cyber attacks. We provide the background and overview of the study in @sec-background. @sec-model presents the regression models, discussing how we applied these models to understand the impact of various factors like organizational size, sector, and digital intensity on cyber resilience, @sec-results displays the interpretations of the model alongside other findings from analyzing the data, and @sec-discussion provides a discussion on the implications of the findings as well as the weaknesses of this paper and its next steps for further study on this subject.
+The remainder of this paper is structured as follows:  We provide the background and overview of the study in @sec-background. @sec-data provides an overview of our methodology, including the data collection process and the analytical techniques used to explore the dataset of cyber attacks. @sec-model presents the regression models, discussing how we applied these models to understand the impact of various factors like organizational size, sector, and digital intensity on cyber resilience, @sec-results displays the interpretations of the model alongside other findings from analyzing the data, and @sec-discussion provides a discussion on the implications of the findings as well as the weaknesses of this paper and its next steps for further study on this subject.
 
 # Background {#sec-background}
 
@@ -136,7 +137,7 @@ As discussed earlier, cyber resilience is about an organization's ability to kee
 # Data {#sec-data}
 
 ## Data Source and Collection: 
-Our analysis is based on sampling of 514 data breaches and ransomware attacks spanning over 14 years from 2004 to 2019. The dataset was obtained from the website of University of Queensland, and was prepared and compiled by researchers Tsen, Elinor, Ko, Ryan, and Slapnicar, Sergeja https://espace.library.uq.edu.au/view/UQ:dfe5027  at the University of Queensland. The data is thorough and encompasses a wide range of cyber attack incidents. It offers insights into various aspects of these incidents, including the types of breaches, affected organizations, and the extent of impact.
+Our analysis is based on sampling of 514 data breaches and ransomware attacks spanning over 14 years from 2004 to 2019. The dataset was obtained from the website of University of Queensland, and was prepared and compiled by researchers Tsen, Elinor, Ko, Ryan, and Slapnicar, Sergeja [@tsen_dataset_2020] at the University of Queensland. The data is thorough and encompasses a wide range of cyber attack incidents. It offers insights into various aspects of these incidents, including the types of breaches, affected organizations, and the extent of impact.
 
 The dataset represents a detailed aggregation of data breaches and ransomware attacks, and as per authors, it was originally sourced from publicly disclosed media reports. The data integrates information from multiple public databases such as Privacy Rights Clearinghouse, Information is Beautiful, the Repository of Industrial Security Incidents, and Carnegie Mellon’s list of Banking Cyber Incidents. These sources were chosen for their public accessibility and frequent citation in academic and industry literature. The approach to data collection was guided by the PRISMA methodology which ensured a systematic and thorough compilation process. 
 
@@ -267,7 +268,7 @@ Prevention High & 18.18 \\ \addlinespace
 \end{table}
 
 In order to observe the trend of number of cyberattacks over a span of years, from 2004 to 2019,
-we plotted a line graph [@fig-attacks]. It is evident from the plot that the frequency of attacks has fluctuated over the years, with a peak in 2017. However, the decline following this peak may indicate the impact of improved cybersecurity measures, or a possible transition to different types of cyber threats not captured in this dataset. This visualization provides an overview of the nature of cyber threats and the ongoing battle between cybersecurity efforts and threat actors.
+we plotted a line graph @fig-attacks. It is evident from the plot that the frequency of attacks has fluctuated over the years, with a peak in 2017. However, the decline following this peak may indicate the impact of improved cybersecurity measures, or a possible transition to different types of cyber threats not captured in this dataset. This visualization provides an overview of the nature of cyber threats and the ongoing battle between cybersecurity efforts and threat actors.
 
 
 ```{r}
@@ -289,7 +290,7 @@ We also plotted a bar graph @fig-sector to count the number of incidents across 
 
 ```{r}
 #| label: fig-sector
-#| fig-cap: Bar Plot of Sector
+#| fig-cap: Bar Plot of Count of Cyber Attacks by Sector
 #| echo: false
 #| warning: false
 
@@ -302,7 +303,7 @@ ggplot(breach_data, aes(x = sector)) +
 
 ```
 
-[@fig-overviewofattack] is a creative visualization that effectively depicts the distribution and comparison of cyber attacks across various countries, with a specific emphasis on the United States. It combines a stacked bar chart for multiple countries and a line plot for the USA allowing for a dual-axis comparison due to the disproportionate number of attacks in the USA compared to other countries.
+@fig-overviewofattack is a creative visualization that effectively depicts the distribution and comparison of cyber attacks across various countries, with a specific emphasis on the United States. It combines a stacked bar chart for multiple countries and a line plot for the USA allowing for a dual-axis comparison due to the disproportionate number of attacks in the USA compared to other countries.
 
 The bar segments represent the frequency of attacks in countries such as Australia, Canada, Japan, the UK, and others, with each color corresponding to a different country. The stacked nature of the bars shows how the total number of attacks is divided among these countries within each year.
 
@@ -380,7 +381,7 @@ gg <- ggplot() +
 print(gg)
 
 ```
-[@fig-attacktype] represents a stacked area chart, with each colored layer representing a different type of attack, allowing for an easy comparison of their occurrences over time. It is clear that some attack types, like installed malware, show peaks and troughs, possibly depicting the nature of cyber threats and security measures. These trends can be helpful for understanding the changing landscape of cyber risks and preparing for future security strategies.
+@fig-attacktype represents a stacked area chart, with each colored layer representing a different type of attack, allowing for an easy comparison of their occurrences over time. It is clear that some attack types, like installed malware, show peaks and troughs, possibly depicting the nature of cyber threats and security measures. These trends can be helpful for understanding the changing landscape of cyber risks and preparing for future security strategies.
 
 ```{r}
 #| label: fig-attacktype
@@ -438,7 +439,7 @@ $\text{Impact} = (\text{Base Impact}) + (\text{Effect of Company Size}) + (\text
 
 Now, what if we want to know if a company will take action after an attack, like starting an investigation? This is a yes/no type of question. We use a different method called logistic regression, which is good for when the outcome is not a number but a choice between two things.
 
-## Specific models for Research Question 
+## Specific models for Research Questions 
 
 **RQ1: Organizational attributes and cyberattack handling**
 
@@ -454,22 +455,22 @@ To address the first research question about how an organization's size and busi
 
 - Independent Variables: Organizational size, sector, digital intensity, and geographical location.
 
-[@breach_severity_model] summaries the results from model.
+Table \ref{breach_severity_model} summaries the results from model.
 
-1. Organisation Size: The coefficients for different organization sizes (Medium, Small, Unknown) indicate how the severity of breaches changes with these categories compared to the baseline category. Medium (0.015) and Small (0.103) have positive coefficients, which suggests potentially higher severity compared to the baseline. Unknown (-0.072) indicates a lower severity than the baseline, which might reflect missing data issues or other factors.
+1. Organisation Size: The coefficients for different organization sizes (Medium, Small, Unknown) indicate how the severity of breaches changes with these categories compared to the baseline category.As compared to a baseline (Large), Medium (0.015) and Small (0.103) sizes have positive coefficients, suggesting potentially higher breach severity. Unknown (-0.072) indicates lower severity.
 
-2. Level of Digital Intensity & Sector: These coefficients show how levels of digital intensity and different sectors affect breach severity. Negative coefficients, like for the public administration and defence sector (-0.581), suggest a lower severity compared to the baseline sector.
+2. Level of Digital Intensity & Sector: These coefficients compare each level and sector against baselines, "Medium-High" for digital intensity and "Finance and Insurance" for the sector. The public administration and defence sector (-0.581) shows a lower severity.
 
-3. Country: Similar to sectors, the coefficients for different countries compared to the baseline indicate variations in breach severity across geographical locations.
+3. Country: Coefficients for countries are relative to the USA (reference level). They indicate variations in breach severity across geographical locations.
 
-R-squared (0.137): Indicates the proportion of variance in the dependent variable that's predictable from the independent variables. A value of 0.137 suggests that approximately 13.71% of the variation in breach severity is explained by the included predictors.
+R-squared (0.137): It indicates the proportion of variance in the dependent variable that's predictable from the independent variables. A value of 0.137 suggests that approximately 13.71% of the variation in breach severity is explained by the model.
 
-Adjusted R-squared (0.099): This value is slightly lower than the R-squared, and accounts for the number of predictors,. It suggests a good fit of the model considering the complexity introduced by multiple variables.
+Adjusted R-squared (0.099): This value is slightly lower than the R-squared, and accounts for the number of predictors. It suggests a good fit of the model considering the complexity introduced by multiple variables.
 
 F-statistic of 3.619 and a p-value of 1.12e-06, suggests that the model demonstrates the statistical significance overall, indicating that at least some of the predictors are likely to be genuinely associated with variations in breach severity.
 
 \begin{longtable}{lcccc}
-\caption{Linear regression analysis with breach severity numeric as dependent variable} \label{tab:breach_severity_model} \\
+\caption{Linear regression analysis with breach severity numeric as dependent variable} \label{breach_severity_model} \\
 \toprule
 Predictor & Estimate & Std. Error & t value & Pr(>|t|) \\
 \midrule
@@ -516,11 +517,37 @@ P-value & \multicolumn{4}{c}{1.12e-06} \\
 \end{longtable}
 
 
-**RQ3: Impact of specific business situations**
-
-
 **RQ2: Effectiveness of cybersecurity methods**
 
+To answer our second research question regarding the most effective strategies and methodsused by organizations to reduce the damage from cyberattacks, we constructed a linear regression model. This model shows the number of users impacted by cyber incidents, considering a relationship between cybersecurity strategies and organizational attributes :
+
+1. Implementation of Cybersecurity Frameworks
+2. Adoption of Education and Awareness Policies
+3. Execution of Prevention, Detection, and Recovery Measures
+4. Organizational Size (Medium, Large, Unknown)
+5. Sector Specificity
+6. Level of Digital Intensity
+
+- Dependent Variable: Number of users affected by cyberattacks.
+
+- Independent Variables: Cybersecurity measures, organizational size, sector, and digital intensity level.
+
+Table \ref{tab:my_label} depicts the results derived from the model.
+
+
+1. Cybersecurity Frameworks(-13,994,198) - The negative coefficient implies that cybersecurity frameworks might reduce the number of users affected.
+
+2. Education and Awareness Policies (38,460,000): A positive coefficient suggests a correlation between the implementation of these policies and an increase in the number of users affected.  However, the insignificance of this result (p = 0.843) implies caution in interpreting this finding.
+
+3. Organizational size - Medium size (-7,347,889, p = 0.804), Large size (8,946,092, p = 0.728), and Unknown size (-14,379,354, p = 0.615): The model suggests no significant effect of organization size on the number of users affected, as all the p-values greater than 0.05.
+
+4. Sector Specifics: The model reveals significant positive relationships for 'Other' sectors (73,186,958, p = 0.004) and 'Arts, Entertainment, and Recreation' (93,277,310, p = 0.024), indicating these areas are likely to witness a higher number of users affected by cyberattacks.
+
+5. Digital Intensity Level (-28,344,216): A negative coefficient with p = 0.003 shows that increased digital intensity is associated with a greater number of users affected.
+
+The model's R-squared (0.093) signifies that about 9.3% of the variance in the number of users affected is explained by the model, while the adjusted R-squared (0.037) factors in the number of predictors.
+
+An F-statistic of 1.648 along with a p-value of 0.018 shows the model's overall significance, indicating that specific factors, particularly sector and digital intensity level, are helpful in understanding the scale of cyberattack impacts.
 
 
 
@@ -564,162 +591,169 @@ F Statistic & \multicolumn{4}{c}{1.648} \\
 Significance of F & \multicolumn{4}{c}{0.018} \\
 \bottomrule
 \end{longtable}
-```
+Note: NA indicates that the variable was not applicable or not included in the model. 
 
-
+Also, the trend of our dependent variable `number_of_users_affcted` in RQ2 model, can be seen in @fig-numofusersaffected  
 
 
 
 ```{r}
+#| label: fig-numofusersaffected 
+#| fig-cap: Number of Users Affected Over Years16
 #| echo: false
-#| eval: true
 #| warning: false
-#| message: false
 
 breach_data %>%
   group_by(year) %>%
   summarize(total_users_affected = sum(number_of_users_affected, na.rm = TRUE)) %>%
   ggplot(aes(x = year, y = total_users_affected)) +
   geom_line() +
-  labs(title = "Number of Users Affected Over Years",
-       x = "Year",
+  labs(x = "Year",
        y = "Total Number of Users Affected") +
   theme_minimal()
 
 ```
+**RQ3: Impact of Organizational Attributes on Cyberattack Consequences**
+
+To analyze  how specific attributes of a business, like its industry or dependency on digital tools, impact the consequences of cyberattacks, we used a multinomial logistic regression model. This model helps to determine the relationship between organizational characteristics and the level of impact on data, classified as 'Low', 'Medium', or 'High'.
+
+1. Organizational Size (Medium, Small, Unknown) – with 'Large' as the reference category.
+2. Digital Intensity (Low, Low-Medium, Medium-High) – with 'High' as the reference category.
+3. Sector – 'Public Administration and Defence', 'Other', 'Arts, Entertainment and Recreation', etc., with 'Finance and Insurance' as the reference category.
+4. Country – including Canada, Global, Japan, etc., with 'USA' as the reference category.
+5. Dependent Variable: The level of impact on data (Low, Medium, High).
+
+- Independent Variables: Organizational size, digital intensity, sector, country.
+
+Table \ref{tab:impact_multinom_model} displays the model outcomes.
+
+1. Organizational Size: Medium (-0.793, p = Medium) and Small (0.308, p = Small) sizes show different degrees of impact compared to the baseline 'Large' size, suggesting the size of the organization plays a role in the impact level of cyberattacks.
+
+2. Level of Digital Intensity: A higher digital intensity has a correlation with a greater likelihood of 'High' impact breaches, as indicated by the positive coefficients for 'Low-Medium' (2.037) and 'Medium-High' (3.073) intensity levels.
+
+3. Sector Specifics: Significant variations are observed across sectors. For example, 'Public Administration and Defence' (-1.907, p = Public Administration) and 'Arts, Entertainment and Recreation' (-4.116, p = Arts) sectors show a specific pattern in their vulnerability to cyberattacks.
+
+4. Geographical Location: The impact of cyberattacks also differs based on geographical location. Canada (-14.948, p = Canada) and Singapore (-15.594, p = Singapore) shows a significant differences in the 'High' impact category, depiciting regional variations in cyberattack severity.
+
+The coefficients represent log odds ratios, where a positive value implies a higher likelihood of the respective impact level compared to the baseline ('High' impact).
+
+\footnotesize
+\begin{longtable}{| p{4cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} |}
+\caption{Multinomial logistic regression analysis with impact on data as dependent variable} \label{tab:impact_multinom_model} \\
+\toprule
+Predictor & Coefficients (Medium) & Coefficients (High) & Std. Errors (Medium) & Std. Errors (High) \\
+\midrule
+\endfirsthead
+
+\multicolumn{5}{c}%
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\toprule
+Predictor & Coefficients (Medium) & Coefficients (High) & Std. Errors (Medium) & Std. Errors (High) \\
+\midrule
+\endhead
+
+\midrule \multicolumn{5}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+\endlastfoot
 
 
+Intercept & 1.305595 & 1.442978 & 0.4671905 & 0.4506995 \\
+Organisation Size - Medium & -0.7934138 & 0.3656129 & 0.3944130 & 0.3923776 \\
+Organisation Size - Small & 0.308093 & 2.674162 & 0.8033055 & 0.7916091 \\
+Organisation Size - Unknown & -0.8242923 & 0.1584841 & 0.3454811 & 0.3649247 \\
+Level of Digital Intensity - Low & 0.6370277 & 1.6435254 & 0.7712827 & 0.6704278 \\
+Level of Digital Intensity - Low-Medium & 2.037751 & 1.534643 & 0.8804760 & 0.8738375 \\
+Level of Digital Intensity - Medium-High & 2.085403 & 3.073733 & 0.8548181 & 0.8186515 \\
+Sector - Public Administration and Defence & -1.907019 & -5.743329 & 1.076650 & 1.186423 \\
+Sector - Other & -1.499581 & -1.889906 & 0.5814518 & 0.5479577 \\
+Sector - Arts, Entertainment and Recreation & -4.116223 & -5.118463 & 1.085765 & 1.012404 \\
+Sector - Education & -1.795158 & -4.288260 & 1.047509 & 1.174420 \\
+Sector - Human Health Activities & -1.850178 & -3.236125 & 1.007041 & 1.004086 \\
+Country - Canada & 0.03118258 & -14.94830280 & 1.335552e+00 & 1.259128e-05 \\
+Country - Global & -0.7303029 & -0.9285532 & 0.7006000 & 0.6770341 \\
+Country - Japan & 0.8169932 & -0.8046899 & 1.265776 & 1.554310 \\
+Country - UK & -0.6114617 & 0.2831945 & 1.500414 & 1.192295 \\
+Country - Other & -0.9633399 & 0.2562872 & 0.7914678 & 0.6999920 \\
+Country - Singapore & -0.7333256 & -15.5943691 & 1.251740e+00 & 3.353692e-06 \\
+Country - South Korea & -12.880809 & -1.007852 & 488.290745 & 1.410714 \\
+
+\bottomrule
+\end{longtable}
+
+# Results {#sec-results}
+
+\normalsize
+
+## Statistical Results
+
+In this section, we discuss the outcomes from our statistical analysis about cyberattack impacts on organizations and model results. The findings are discussed across three research questions (RQs), where each question aimed at understanding different aspects of cyberattack consequences and responses.
+
+**Summary Statistics** : Most of the organizations we looked at are large ones as they make up about 64% of our data. This could mean that big companies are more often the targets of cyberattacks, or maybe the big institutes just report these incidents more because they are more noticeable and rely a lot on computers and the internet. We also see that hospitals and schools get attacked a lot. Since they have a lot of sensitive information, hackers target them more.
+
+Our result matches with earlier discussed PWC 2024 Global Digital Trust Insights report that more than 30% of companies don’t consistently follow what should be standard practices of cyber defence. Based on our data we also found that only about 27% of these organizations have someone in charge of keeping their computers safe, and only about 36% follow a set of rules to protect themselves online. This makes us think that maybe not all companies are ready to defend themselves against cyberattacks.
+
+When we look at how they try to stop attacks, almost half of them are only doing the very basic things. This tells us that many organizations might need to do more to keep their data safe.
+
+**Cyberattacks Over Time** : The surge in cyberattacks observed in 2017 @fig-attacks might be linked to various factors, including an increase in attack surfaces, the prevalence of more sophisticated attack methods, or a better reporting system that has led to higher incidents. This upward trend could signal the need for enhanced security measures and more proactive threat detection systems.
+
+**Sector and Country Analysis**: The disparity in the frequency of attacks among sectors @fig-sector suggests different levels of cyber hygiene or different attacker motivations, such as financial gain or data theft, which are particularly high in sectors dealing with personal data. The dominance of attacks in the USA, alongside high frequencies in other countries too @fig-overviewofattack, might reflect not only the attractive target that the USA presents but also the global disparity of cyber threats.
+
+**Attack Types**: The attack types distribution @fig-attacktype indicates a strong nature of cyber threats, with installed malware and web compromises becoming increasingly common. This pattern could be might indicate that attackers have increased the use of more sophisticated tools and thus, there is a need for businesses to focus on securing web interfaces and being cautious against malwares.
+
+## Model Results
+
+**RQ1: Organizational Attributes and Cyberattack Handling**
+
+The model about how organizational size and sector influence cyberattack handling shows significant sector-specific effects. Public administration and defence (-0.581, p < 0.005), Other (-0.441, p < 0.001), and Arts, Entertainment and Recreation (-0.804, p < 0.001) sectors show a lower breach severity score, which indicates a better handling or lower impact of cyberattacks compared to the reference sector, Finance and Insurance. Conversely, the effect of organizational size is not statistically significant, further telling us that size alone does not reflect an organization's capacity to handle cyberattacks effectively.
+
+**RQ2: Cybersecurity Methods Effectiveness**
+
+Regarding the effectiveness of cybersecurity methods, the model reveals a complex picture. The negative coefficient for Cyber Security Frameworks (-13,994,198) suggests that such frameworks might reduce the number of users affected. However, the positive coefficient for Education and Awareness Policy (38,460,000), though not statistically significant (p = 0.843), may require a cautious interpretation, as it suggests a possible correlation with an increase in the number of users affected.
+
+**RQ3: Specific Organizational Contexts**
+
+For RQ3, the multinomial logistic regression model depicts the variable impact levels of cyberattacks across different organization sizes, sectors, and countries. Precisely, sectors such as Public Administration and Defence (coefficients ranging from -1.907 to -5.743) and countries like Canada and Singapore show varying degrees of vulnerability to high-impact breaches.
+
+# Discussion {#sec-discussion}
+
+## Findings
+Our study finds that larger organizations report cyberattacks more often, which might be due to their larger online operations and valuable information. Health and educational institutions are also common targets, probably because they hold sensitive personal data. The rising concern is that only about one in three organizations has a dedicated cyber security role or follows a cyber security framework. This suggests that many are not as prepared as they could be. Our models reveal that the presence of cybersecurity frameworks might be linked to a lower number of affected users, suggesting their potential protective effect. However, the implementation of education and awareness policies did not show a significant impact on reducing the number of users affected by cyberattacks.
+
+The models also indicate that sectors such as arts, entertainment, and recreation, alongside 'Other' sectors, tend to see a higher number of users affected, showing possible sector-specific vulnerabilities. Increased digital intensity correlates with a greater number of affected users, which implies that as organizations become more digitally dependent, the potential impact of cyber incidents also rises.
 
 
-```{r}
-# Histogram for a continuous variable (e.g., number_of_users_affected)
-ggplot(breach_data, aes(x = number_of_users_affected)) +
-  geom_histogram(binwidth = 1000, fill = "blue", color = "black") +
-  labs(title = "Histogram of Number of Users Affected", x = "Number of Users Affected", y = "Frequency")
-
-```
-
-```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| message: false
-
-linear_model_RQ2 <- readRDS(file = here::here("models/linear_model_RQ2.rds"))
-# Plotting diagnostics for the linear regression model (Example: linear_model_RQ2)
-ggplot(breach_data, aes(x = year, y = number_of_users_affected)) +
-  geom_point() +
-  geom_smooth(method = "lm", color = "blue") +
-  labs(title = "Linear Regression of Number of Users Affected Over Years", 
-       x = "Year", 
-       y = "Number of Users Affected")
-
-# Assuming breach_data is your dataset and you have already created models named linear_model_severity and linear_model_investigations
-
-# Partial regression plot for breach severity with a specific predictor (e.g., 'organisation_size')
-# install.packages("car") # Uncomment if the car package is not installed
-
-```
+## Limitations and Bias
 
 
+The analysis we performed hold many limitations. A major challenge  we encountered was the high number of missing values within the dataset, which can introduce bias and limit the accuracy of our findings. For example, missing information may lead to under-representation of certain attack types or organizational responses, resulting in skewness of our understanding regarding the cyber threats.
 
-```{r regression-table, results='asis', echo=FALSE}
+The other obstacle was that the dataset contained just one numerical column (number of users affected), which provided a limited quantitative perspective. 
 
-library(broom)
-library(stargazer)
-model_investigation <- readRDS(file = here::here("models/model_investigation.rds"))
+Apart from this, the dataset reflected a biasness as it was more centered on cyber attacks from U.S..  Cybersecurity is a global issue, and the dominance of U.S. data could potentially overshadow the experiences of organizations in other regions. This geographical issues highlights the need for a more diverse compilation of data to study cyber risks more effectively.
 
-model_investigation_frame <- augment(model_investigation)
+These limitations suggests that there is the necessity for a more extensive dataset to study trends in cybercrime. 
 
+The weaknesses of the dataset are:
 
-ggplot(model_investigation_frame, aes(x = organisation_size, y = .resid)) +
-  geom_point() +
-  geom_hline(yintercept = 0, linetype = "dotted", color = "grey") +
-  theme_classic() +
-  labs(y = "Residuals", x = "Organisation Size")
+- The dataset spans over 15 years and was from 2004 to 2020, however, cyber threats are growing rapidly. Data from earlier years may not accurately reflect current trends and vulnerabilities.
 
-ggplot(model_investigation_frame, aes(x = .resid)) +
-  geom_histogram(binwidth = 1) +
-  theme_classic() +
-  labs(y = "Number of occurrences", x = "Residuals")
+- Not all organizations may report cyber incidents with the same transparency. This may result in a dataset that does not fully capture the extent of cyber threats across different sectors or sizes of organizations.
 
-```
-$\begin{table}[!htbp] \centering 
-  \caption{Linear regression analysis with dependent variable} 
-  \label{} 
-\begin{tabular}{@{\extracolsep{5pt}}lc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
- & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
-\cline{2-2} 
-\\[-1.8ex] & undertook\_investigation \\ 
-\hline \\[-1.8ex] 
- critical\_industry & $-$0.03 (0.12) \\ 
-  organisation\_sizeMedium & $-$0.04 (0.06) \\ 
-  organisation\_sizeSmall & 0.07 (0.08) \\ 
-  organisation\_sizeUnknown & $-$0.03 (0.06) \\ 
-  level\_of\_digital\_intensityLow & $-$0.03 (0.62) \\ 
-  level\_of\_digital\_intensityLow-Medium & $-$0.29 (0.67) \\ 
-  level\_of\_digital\_intensityMedium-High & $-$0.31 (0.66) \\ 
-  sectorAdministrative and support service & $-$0.62 (0.72) \\ 
-  sectorAdvertising and other business services & $-$0.48 (0.66) \\ 
-  sectorArts, entertainment and recreation & $-$0.14 (0.12) \\ 
-  sectorChemicals and chemical products & 0.20 (0.37) \\ 
-  sectorComputer, electronic and optical products & 0.19 (0.23) \\ 
-  sectorConstruction & $-$0.61 (0.45) \\ 
-  sectorEducation & $-$0.11 (0.18) \\ 
-  sectorElectrical equipment & $-$0.23 (0.51) \\ 
-  sectorElectricity, gas, steam and air conditioning & $-$0.56 (0.34) \\ 
-  sectorFinance and insurance & $-$0.09 (0.63) \\ 
-  sectorFood products, beverages and tobacco & $-$0.06 (0.26) \\ 
-  sectorHuman health activities & $-$0.14 (0.22) \\ 
-  sectorIT and other information services & $-$0.29 (0.63) \\ 
-  sectorLegal and accounting activities & $-$0.63 (0.69) \\ 
-  sectorMachine equipment & $-$0.08 (0.24) \\ 
-  sectorPharmaceutical products & $-$0.27 (0.38) \\ 
-  sectorPublishing, audiovisual and broadcasting & $-$0.12 (0.22) \\ 
-  sectorResidential care and social work activities & $-$0.18 (0.24) \\ 
-  sectorScientific research and development & $-$0.37 (0.68) \\ 
-  sectorTelecommunications & $-$0.40 (0.65) \\ 
-  sectorTextiles, wearing apparel and leather &  \\ 
-  sectorTransportation storage & 0.06 (0.31) \\ 
-  sectorWholesale, retail trade and repair &  \\ 
-  countryChina & 0.88 (0.51) \\ 
-  countryFrance & $-$0.17 (0.51) \\ 
-  countryGermany & $-$0.01 (0.40) \\ 
-  countryGlobal & 0.28 (0.29) \\ 
-  countryHong Kong & 0.56 (0.57) \\ 
-  countryIndia & $-$0.33 (0.51) \\ 
-  countryJapan & 0.13 (0.35) \\ 
-  countryNorway & 0.04 (0.50) \\ 
-  countryPhilippines & $-$0.15 (0.51) \\ 
-  countryQatar & $-$0.33 (0.51) \\ 
-  countryRussia & $-$0.12 (0.41) \\ 
-  countrySingapore & 0.83$^{*}$ (0.36) \\ 
-  countrySouth Africa & 0.85 (0.51) \\ 
-  countrySouth Korea & 0.53 (0.36) \\ 
-  countryTurkey & 0.85 (0.51) \\ 
-  countryUAE & 0.60 (0.57) \\ 
-  countryUK & 0.35 (0.31) \\ 
-  countryUSA & 0.19 (0.26) \\ 
-  Constant & 0.45 (0.70) \\ 
- \hline \\[-1.8ex] 
-Observations & 513 \\ 
-R$^{2}$ & 0.15 \\ 
-Adjusted R$^{2}$ & 0.07 \\ 
-Residual Std. Error & 0.43 (df = 465) \\ 
-F Statistic & 1.80$^{**}$ (df = 47; 465) \\ 
-\hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.05; $^{**}$p$<$0.01; $^{***}$p$<$0.001} \\ 
-\end{tabular} 
-\end{table} $
+- There might be some years when more number of cyber incidents may be reported than other, leading to biasness in the study.
 
 
+## Future Research 
 
+Our study provides a foundational understanding of cyberattack patterns and their relationship with organizational factors and characteristics. However, it also open doors for future research in this area. For example, further investigation into the specific types of cybersecurity frameworks and their effectiveness across different sectors could help us to learn better hoe to deal with cyber attacks. It would also be beneficial to examine the role of cybersecurity education in different organizational cultures and its impact on reducing cyber risks.
 
+It would be valuable if future research is conducted considering more geographic data and more multiple years to understand the long-term effect of preventive measures undertook by companies.Research on the global variations in cyberattacks, specifically focusing on countries outside the USA can be more helpful in providing accurate findings.
 
 \newpage
+
+
+
+
 
 
 # References

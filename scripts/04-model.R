@@ -7,17 +7,13 @@
 
 #### Workspace setup ####
 library(tidyverse)
-library(rstanarm)
-library(bayesplot)
 library(forcats)
 library(readr)
+library(nnet)
 library(MASS)
 library(broom)
-library(vcd)
-library(caret)
 
 #### Read data ####
-# Assuming the data file is directly in the current working directory
 breach_data <- read_csv("data/analysis_data/breach_data.csv")
 
 # Convert categorical variables to factors
@@ -34,6 +30,7 @@ breach_data$number_of_users_affected <- as.numeric(breach_data$number_of_users_a
 breach_data$critical_industry <- ifelse(breach_data$critical_industry == "Yes", 1, 0)
 breach_data$cyber_security_role <- ifelse(breach_data$cyber_security_role == "Yes", 1, 0)
 breach_data$undertook_investigation <- ifelse(breach_data$undertook_investigation == "Yes", 1, 0)
+
 
 ######### Model 1
 
@@ -79,37 +76,24 @@ breach_data$country_simplified <- breach_data$country %>%
 # Check unique values in the sector variable
 unique_sectors <- unique(breach_data$sector)
 
-# Simplify the sector variable based on significance (you will need domain knowledge or statistical tests to decide which ones to keep)
+# Simplify the sector variable based on significance 
 significant_sectors <- c("Finance and insurance", "IT and other information services", "Health activities", "Public administration and defence", "Other")
 breach_data$sector_simplified <- breach_data$sector %>% 
   fct_lump(length(significant_sectors)) %>% 
   fct_relevel(significant_sectors)
 
-# Next, we fit the linear regression model
-# (you might need to modify this formula based on the actual predictors you wish to include)
+# Fit the linear regression model
 breach_severity_model <- lm(breach_severity_numeric ~ organisation_size + level_of_digital_intensity + sector_simplified + country_simplified, data = breach_data)
 
-# Finally, let's look at the summary of the model to interpret the results
+# Summary of the model
 summary(breach_severity_model)
+
+levels(breach_data$country_simplified)
+
 
 ############
 
-#####
 
-binary_columns <- c("cyber_security_role", "cyber_security_frameworks", "education_and_awareness_policy", "prevention_detection_and_recovery")
-breach_data[binary_columns] <- lapply(breach_data[binary_columns], function(x) as.numeric(x == "Yes"))
-
-# Building the Linear Regression Model
-breach_data$organisation_size <- factor(breach_data$organisation_size, 
-                                        levels = c("Small", "Medium", "Large", "Unknown"),
-                                        labels = c("Small", "Medium", "Large", "Unknown"))
-
-rq2model <- lm(number_of_users_affected ~ cyber_security_role + cyber_security_frameworks + education_and_awareness_policy + prevention_detection_and_recovery + as.factor(organisation_size) + as.factor(sector_simplified) + as.numeric(level_of_digital_intensity), data = breach_data)
-
-# Summary of the Model
-summary(rq2model)
-
-####
 
 ######### Model 2
 
@@ -127,134 +111,35 @@ summary(model_investigation)
 
 
 
-######### Model 3
-# Fit logistic regression model
-restructuring_model <-
-  stan_glm(
-    restructuring_after_attack ~ organisation_size + country,
-    data = breach_data,
-    family = binomial(link = "logit"),
-    seed = 853
-  )
-
-# Summary of the model
-summary(restructuring_model)
+### Model 3 
 
 
-###### Model 4
-yearly_attacks <- breach_data %>%
-  group_by(year) %>%
-  summarise(number_of_attacks = n())
+# Convert impact_level to a factor if it's not already
+breach_data$impact_on_data <- factor(breach_data$impact_on_data, levels = c("Low", "Medium", "High"))
 
-yearly_data <- breach_data %>%
-  group_by(year) %>%
-  summarise(
-    number_of_attacks = n(), sector,
-    number_of_users_affected = sum(number_of_users_affected, na.rm = TRUE))
+impact_multinom_model <- multinom(impact_on_data ~ organisation_size + level_of_digital_intensity + sector_simplified + country_simplified, data = breach_data)
 
+# Results in terms of relative risk ratios
+exp(coef(impact_multinom_model))
 
-library(forecast)
-
-# Assuming 'number_of_attacks' is aggregated by year
-ts_data <- ts(yearly_data$number_of_attacks, start=min(yearly_data$year), frequency=1)
-
-# Fit ARIMA model
-arima_model <- auto.arima(ts_data)
-
-# Future predictions
-future_values <- forecast(arima_model, h=5)  # Forecast next 5 years
-
-# Plot
-autoplot(future_values)
+model_summary <- summary(impact_multinom_model)
 
 
-trend_model <- lm(number_of_users_affected ~ year, data = yearly_data)
-######
+ref_level_country <- levels(breach_data$country_simplified)[1]
+print(ref_level_country)
 
-########
-# For linear regression with interaction terms
-interaction_model <- lm(number_of_attacks ~ year * sector, data = yearly_data)
+ref_level_sector <- levels(breach_data$sector_simplified)[1]
+print(ref_level_sector)
 
-######
-# For separate time series in each sector
-sector_ts_models <- breach_data %>%
-  group_by(sector) %>%
-  do(trend_model = auto.arima(.$number_of_users_affected))
-
-
-# Plotting the trend of total number of users affected over the years
-ggplot(yearly_data, aes(x = year, y = number_of_users_affected)) +
-  geom_line() +
-  geom_point() +
-  labs(title = "Yearly Trend of Number of Users Affected by Cyberattacks",
-       x = "Year",
-       y = "Total Number of Users Affected")
-
-
-# Linear regression model
-lrmodel <- lm(number_of_attacks ~ year, data = yearly_attacks)
-
-# Save the model
-saveRDS(lrmodel, "models/lrmodel.rds")
-
-######
-
-# Fit a Bayesian linear regression model
-linear_model <- stan_glm(
-  number_of_users_affected ~ year, 
-  data = breach_data, 
-  family = gaussian(),
-  prior = normal(0, 2.5, autoscale = TRUE),
-  prior_intercept = normal(0, 2.5, autoscale = TRUE),
-  seed = 853
-)
-
-
-# Aggregate data to count number of attacks by year, sector, and organisation size
-aggregated_data <- breach_data %>%
-  group_by(sector, organisation_size) %>%
-  summarise(number_of_attacks = n(), .groups = 'drop')
-
-#### Fit Poisson Model with stan_glm ####
-cyberattack_poisson <- stan_glm(
-  number_of_attacks ~  sector + organisation_size, 
-  data = aggregated_data, 
-  family = poisson(link = "log"), 
-  seed = 853
-)
-
-######
-
-#### Fit Negative Binomial Model with stan_glm ####
-cyberattack_neg_binomial <- stan_glm(
-  number_of_attacks ~  sector + organisation_size, 
-  data = aggregated_data, 
-  family = neg_binomial_2(link = "log"), 
-  seed = 853
-)
-
-
-
-
-linear_model_RQ2 <- lm(number_of_users_affected ~ sector + organisation_size + critical_industry + level_of_digital_intensity + cyber_security_role + cyber_security_frameworks, data = breach_data)
-summary(linear_model_RQ2)
-
-# Example for RQ3 focusing on different aspects
-linear_model_RQ3 <- lm(number_of_users_affected ~ country + policy + prevention_detection_and_recovery + detector + restructuring_after_attack, data = breach_data)
-summary(linear_model_RQ3)
+ref_level_di <- levels(breach_data$level_of_digital_intensity)[1]
+print(ref_level_di)
 
 
 # Save the model
 
-saveRDS(breach_severity_model,"models/breach_severity_model")
-saveRDS(cyberattack_poisson, "models/cyberattack_poisson.rds")
-saveRDS(cyberattack_neg_binomial , "models/cyberattack_neg_binomial.rds")
-saveRDS(linear_model, "models/linear_model.rds")
-saveRDS(restructuring_model, "models/restructuring_model.rds")
-saveRDS(linear_model_RQ2, "models/linear_model_RQ2.rds")
-saveRDS(linear_model_RQ3, "models/linear_model_RQ3.rds")
+saveRDS(breach_severity_model,"models/breach_severity_model.rds")
 saveRDS(model_investigation, "models/model_investigation.rds")
-saveRDS(rq2model, "models/rq2model.rds")
+saveRDS(impact_multinom_model, "models/impact_multinom_model.rds")
 
 
 
