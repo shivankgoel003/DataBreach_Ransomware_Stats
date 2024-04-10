@@ -1,17 +1,18 @@
-# Respiratory - Related Mortality Rates Show A Positive Correlation With Increasing Air pollution
-## update sketches
+# Analyzing How Organization Size, Sector, and Cybersecurity Strategies Influence Impacts on Cyberattacks
+
 
 ## Overview
 
-This repository is part of a statistical analysis project that investigates data breaches and ransomware attacks. The project explores various datasets to identify trends, patterns, and insights related to cybersecurity incidents.The focus of this project is to conduct a thorough analysis of historical data breaches and ransomware incidents, utilizing statistical methods and data visualization techniques to enhance the understanding of these events' frequency, severity, and impact.
-
+In our world, where everything is online, the danger of cyberattacks—like hacking—is going up. 
+This repository is part of a statistical analysis project that investigates data breaches and ransomware attacks. The project discusses the influence of organizational size, sector, and cybersecurity strategies on cyberattack impacts. We wanted to know whether being a big company or working in fields like healthcare or schools made it harder to keep safe from these attacks. Using data breach dataset available at the University of Queensland, we looked at a lot of cyberattacks from 2004 to 2019. We learned some big things: big companies often have more cyber problems, and hackers really go after hospitals and schools. But, if a company has a good plan to fight cyberattacks, it can help a lot.
 
 
 ## Data and Methodology
-The study focuses on the use of negative binomial regression to model the count data of mortality rates against the air quality indicators in Alberta. The datasets for AQHI and mortality rates have been sourced from the provincial open data portals and official resources of Alberta. The raw data can be found under `data/raw_data`
+
+We looked closely at information on cyberattacks that the University of Queensland collected over 15 years. This data helped us understand how different companies are affected by these online threats. It showed us who gets hit the most and what can help protect them. The raw data can be found under `data/raw_data`
 
 ## Authors and Acknowledgements
-The paper is a collaborative effort by Vanshika Vanshika, Shivank Goel, and Navya Hooda. We extend our gratitude to the academic community and the data providers for their contributions to this research.
+The paper is an  We extend our gratitude to the academic community and the data providers for their contributions to this research.
 
 
 ## File Structure
@@ -28,5 +29,5 @@ The repo is structured as:
 
 ## Statement on LLM usage
 
-No auto-complete tools such as co-pilot were used in the course of this project, however, Language Learning Model ChatGPT was  used while writing this paper. It was used for the purpose of code debugging, understanding models, and knowledge of certain topics, which we were not aware of. The chat with the AI bot is also attached as a reference under `inputs\llm`..
+No auto-complete tools such as co-pilot were used in the course of this project, however, Language Learning Model ChatGPT was  used while writing this paper. It was used for the purpose of latex coding to draw tables, code debugging, understanding models, and knowledge of certain topics, which I was not aware of. The chat with the AI bot is also attached as a reference under `inputs\llm`..
 
